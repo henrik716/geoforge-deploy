@@ -1,17 +1,17 @@
 {
-  "id": "q4vv4h2",
+  "id": "158zwrb",
   "name": "Hospitals2",
   "namespace": "",
-  "description": "Mitt datasett2",
+  "description": "Sykehus",
   "version": "1.0.0",
   "layers": [
     {
-      "id": "z5hdvcj",
+      "id": "veqwns6",
       "name": "hospitalpoints",
       "description": "",
       "properties": [
         {
-          "id": "3ezhx8p",
+          "id": "i9etmq2",
           "name": "id",
           "title": "Id",
           "type": "integer",
@@ -25,7 +25,7 @@
           "subProperties": []
         },
         {
-          "id": "y4oigqt",
+          "id": "tbc3ctm",
           "name": "dataset",
           "title": "Dataset",
           "type": "string",
@@ -39,7 +39,7 @@
           "subProperties": []
         },
         {
-          "id": "xuq41ta",
+          "id": "mw11nz0",
           "name": "featureType",
           "title": "FeatureType",
           "type": "string",
@@ -53,7 +53,7 @@
           "subProperties": []
         },
         {
-          "id": "t78xp6z",
+          "id": "klxj1vb",
           "name": "name",
           "title": "Name",
           "type": "string",
@@ -67,7 +67,7 @@
           "subProperties": []
         },
         {
-          "id": "lz63tsf",
+          "id": "xg6t02r",
           "name": "type",
           "title": "Type",
           "type": "string",
@@ -81,7 +81,7 @@
           "subProperties": []
         },
         {
-          "id": "cp5t4vd",
+          "id": "40kio5o",
           "name": "emergencyDepartment",
           "title": "EmergencyDepartment",
           "type": "string",
@@ -95,7 +95,7 @@
           "subProperties": []
         },
         {
-          "id": "9idbr9k",
+          "id": "sics69r",
           "name": "doctors",
           "title": "Doctors",
           "type": "integer",
@@ -109,7 +109,7 @@
           "subProperties": []
         },
         {
-          "id": "k8dkza4",
+          "id": "zdh2j9u",
           "name": "nurses",
           "title": "Nurses",
           "type": "integer",
@@ -123,7 +123,7 @@
           "subProperties": []
         },
         {
-          "id": "8eaj2rr",
+          "id": "i8aigi0",
           "name": "operationRooms",
           "title": "OperationRooms",
           "type": "integer",
@@ -137,7 +137,7 @@
           "subProperties": []
         },
         {
-          "id": "an8ob98",
+          "id": "6lgvz7z",
           "name": "beds",
           "title": "Beds",
           "type": "integer",
@@ -151,7 +151,7 @@
           "subProperties": []
         },
         {
-          "id": "oobrsau",
+          "id": "bmxfbu3",
           "name": "employees",
           "title": "Employees",
           "type": "integer",
@@ -165,7 +165,7 @@
           "subProperties": []
         },
         {
-          "id": "vlh0kno",
+          "id": "cvs89ox",
           "name": "address",
           "title": "Address",
           "type": "string",
@@ -179,7 +179,7 @@
           "subProperties": []
         },
         {
-          "id": "kwgqkmt",
+          "id": "bkwoahg",
           "name": "telephoneNumber",
           "title": "TelephoneNumber",
           "type": "integer",
@@ -193,7 +193,7 @@
           "subProperties": []
         },
         {
-          "id": "ksbriwy",
+          "id": "9n3x9j8",
           "name": "email",
           "title": "Email",
           "type": "string",
@@ -207,7 +207,7 @@
           "subProperties": []
         },
         {
-          "id": "lb715dp",
+          "id": "7luwnqm",
           "name": "website",
           "title": "Website",
           "type": "string",
@@ -221,7 +221,7 @@
           "subProperties": []
         },
         {
-          "id": "idh701r",
+          "id": "56z6ciz",
           "name": "latitude",
           "title": "Latitude",
           "type": "number",
@@ -235,7 +235,7 @@
           "subProperties": []
         },
         {
-          "id": "uk7y8gs",
+          "id": "mivciam",
           "name": "longitude",
           "title": "Longitude",
           "type": "number",
@@ -249,7 +249,7 @@
           "subProperties": []
         },
         {
-          "id": "llxkrx3",
+          "id": "6q4xeb1",
           "name": "mgrs",
           "title": "Mgrs",
           "type": "string",
@@ -263,7 +263,7 @@
           "subProperties": []
         },
         {
-          "id": "7g5a3s1",
+          "id": "jwf10cu",
           "name": "classification",
           "title": "Classification",
           "type": "string",
@@ -277,7 +277,7 @@
           "subProperties": []
         },
         {
-          "id": "yh33llv",
+          "id": "h07ca9g",
           "name": "origin",
           "title": "Origin",
           "type": "string",
@@ -291,7 +291,7 @@
           "subProperties": []
         },
         {
-          "id": "er0s1ga",
+          "id": "y2f7ut3",
           "name": "dataWithdrawalDate",
           "title": "DataWithdrawalDate",
           "type": "date",
@@ -305,7 +305,7 @@
           "subProperties": []
         },
         {
-          "id": "n4mds0m",
+          "id": "medzos6",
           "name": "dataCaptureDate",
           "title": "DataCaptureDate",
           "type": "date",
@@ -319,7 +319,7 @@
           "subProperties": []
         },
         {
-          "id": "dumva66",
+          "id": "a04squ3",
           "name": "updateDate",
           "title": "UpdateDate",
           "type": "date",
@@ -333,7 +333,7 @@
           "subProperties": []
         },
         {
-          "id": "uzwvvvo",
+          "id": "2vs7el8",
           "name": "datasettType",
           "title": "DatasettType",
           "type": "string",
@@ -347,7 +347,7 @@
           "subProperties": []
         },
         {
-          "id": "6ev5h6v",
+          "id": "ifvq1gt",
           "name": "gradering",
           "title": "Gradering",
           "type": "string",
@@ -361,7 +361,7 @@
           "subProperties": []
         },
         {
-          "id": "r54zljs",
+          "id": "s6nh9td",
           "name": "opphav",
           "title": "Opphav",
           "type": "string",
@@ -375,7 +375,7 @@
           "subProperties": []
         },
         {
-          "id": "pfrtobr",
+          "id": "040bllw",
           "name": "dgifFeatureAlpha",
           "title": "DgifFeatureAlpha",
           "type": "string",
@@ -389,7 +389,7 @@
           "subProperties": []
         },
         {
-          "id": "t42447t",
+          "id": "bbh0snf",
           "name": "dgifFeature531",
           "title": "DgifFeature531",
           "type": "string",
@@ -403,7 +403,7 @@
           "subProperties": []
         },
         {
-          "id": "ogzuu3x",
+          "id": "t27zsia",
           "name": "dgifAttributeAlpha",
           "title": "DgifAttributeAlpha",
           "type": "string",
@@ -417,7 +417,7 @@
           "subProperties": []
         },
         {
-          "id": "imvx24m",
+          "id": "cvpzv0z",
           "name": "dgifAttribute531",
           "title": "DgifAttribute531",
           "type": "string",
@@ -431,7 +431,7 @@
           "subProperties": []
         },
         {
-          "id": "mg1is2g",
+          "id": "u193g2k",
           "name": "dgifValueAlpha",
           "title": "DgifValueAlpha",
           "type": "string",
@@ -445,7 +445,7 @@
           "subProperties": []
         },
         {
-          "id": "c3dbuhk",
+          "id": "vhrqjtj",
           "name": "dgifValue531",
           "title": "DgifValue531",
           "type": "number",
@@ -459,7 +459,7 @@
           "subProperties": []
         },
         {
-          "id": "crxbban",
+          "id": "bpt2b6n",
           "name": "dgifCCode",
           "title": "DgifCCode",
           "type": "string",
@@ -473,7 +473,7 @@
           "subProperties": []
         },
         {
-          "id": "7yrnxal",
+          "id": "d70eya8",
           "name": "uuid",
           "title": "Uuid",
           "type": "string",
@@ -493,7 +493,7 @@
         "type": "simple",
         "simpleColor": "#DC2626",
         "categorizedColors": {},
-        "pointSize": 35,
+        "pointSize": 23,
         "pointIcon": "circle",
         "lineWidth": 2,
         "lineDash": "solid",
@@ -506,16 +506,14 @@
   ],
   "sharedTypes": [],
   "crs": "EPSG:25833",
-  "createdAt": "2026-03-01T21:20:57.733Z",
-  "updatedAt": "2026-03-01T22:04:25.380Z",
+  "createdAt": "2026-03-01T22:40:42.956Z",
+  "updatedAt": "2026-03-01T22:41:03.169Z",
   "metadata": {
-    "contactName": "Henrik G Schuller",
+    "contactName": "Henrik Schüller",
     "contactEmail": "schhen@kartverket.no",
     "contactOrganization": "Kartverket",
     "keywords": [
-      "Sykehus",
-      "Hospitals",
-      "Test"
+      "Sykehus"
     ],
     "theme": "bu",
     "license": "CC-BY-4.0",

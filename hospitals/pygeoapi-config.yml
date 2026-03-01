@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals2
-# Generated: 2026-03-01T22:04:28.970Z
+# Generated: 2026-03-01T22:41:27.131Z
 # Source: geopackage
 
 server:
@@ -24,21 +24,19 @@ logging:
 metadata:
   identification:
     title: Hospitals2
-    description: Mitt datasett2
+    description: Sykehus
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
       - Sykehus
-      - Hospitals
-      - Test
   license:
     name: CC-BY-4.0
     url: https://creativecommons.org/licenses/by/4.0/
   contact:
-    name: Henrik G Schuller
+    name: Henrik Schüller
     email: schhen@kartverket.no
   provider:
-    name: Henrik G Schuller
+    name: Henrik Schüller
     organization: Kartverket
     email: schhen@kartverket.no
 
