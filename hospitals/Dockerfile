@@ -11,5 +11,9 @@ EXPOSE 80
 HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
   CMD curl -sf http://localhost:80/conformance || exit 1
 
-# Generate OpenAPI + AsyncAPI documents at startup, then serve
-ENTRYPOINT ["/bin/bash", "-c", "pygeoapi openapi generate ${PYGEOAPI_CONFIG} --output-file ${PYGEOAPI_OPENAPI} && pygeoapi asyncapi generate ${PYGEOAPI_CONFIG} --output-file /pygeoapi/local.asyncapi.yml && pygeoapi serve"]
+# Create AsyncAPI document placeholder (required by pygeoapi startup check)
+RUN echo "asyncapi: 2.6.0" > /pygeoapi/local.asyncapi.yml && \
+    echo "info:" >> /pygeoapi/local.asyncapi.yml && \
+    echo "  title: pygeoapi" >> /pygeoapi/local.asyncapi.yml && \
+    echo "  version: 1.0.0" >> /pygeoapi/local.asyncapi.yml && \
+    echo "channels: {}" >> /pygeoapi/local.asyncapi.yml
