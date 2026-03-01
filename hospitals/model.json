@@ -507,13 +507,14 @@
   "sharedTypes": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-01T22:40:42.956Z",
-  "updatedAt": "2026-03-01T23:04:43.041Z",
+  "updatedAt": "2026-03-01T23:09:28.324Z",
   "metadata": {
     "contactName": "Henrik Schüller",
     "contactEmail": "schhen@kartverket.no",
     "contactOrganization": "Kartverket",
     "keywords": [
-      "Sykehus"
+      "Sykehus",
+      "OK"
     ],
     "theme": "bu",
     "license": "other",
