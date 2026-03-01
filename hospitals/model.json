@@ -1,17 +1,17 @@
 {
-  "id": "gkkjtac",
+  "id": "u8f59cj",
   "name": "Hospitals",
   "namespace": "",
   "description": "",
   "version": "1.0.0",
   "layers": [
     {
-      "id": "v1ufpd5",
+      "id": "oa75qfq",
       "name": "HospitalPoints",
       "description": "",
       "properties": [
         {
-          "id": "6mm1quw",
+          "id": "fhgit5x",
           "name": "dataset",
           "title": "Dataset",
           "type": "string",
@@ -25,7 +25,7 @@
           "subProperties": []
         },
         {
-          "id": "bn2c53r",
+          "id": "lwhg57p",
           "name": "featureType",
           "title": "FeatureType",
           "type": "string",
@@ -39,7 +39,7 @@
           "subProperties": []
         },
         {
-          "id": "7bzri0h",
+          "id": "g341jlq",
           "name": "name",
           "title": "Name",
           "type": "string",
@@ -53,7 +53,7 @@
           "subProperties": []
         },
         {
-          "id": "y8z8hwn",
+          "id": "juretv6",
           "name": "type",
           "title": "Type",
           "type": "string",
@@ -67,7 +67,7 @@
           "subProperties": []
         },
         {
-          "id": "osvh4jx",
+          "id": "u8dhyfz",
           "name": "emergencyDepartment",
           "title": "EmergencyDepartment",
           "type": "string",
@@ -81,7 +81,7 @@
           "subProperties": []
         },
         {
-          "id": "h8h73h8",
+          "id": "emxenex",
           "name": "doctors",
           "title": "Doctors",
           "type": "integer",
@@ -95,7 +95,7 @@
           "subProperties": []
         },
         {
-          "id": "w03vhey",
+          "id": "wqf5upy",
           "name": "nurses",
           "title": "Nurses",
           "type": "integer",
@@ -109,7 +109,7 @@
           "subProperties": []
         },
         {
-          "id": "c8viebk",
+          "id": "0up9jan",
           "name": "operationRooms",
           "title": "OperationRooms",
           "type": "integer",
@@ -123,7 +123,7 @@
           "subProperties": []
         },
         {
-          "id": "v8puiet",
+          "id": "4gevvrc",
           "name": "beds",
           "title": "Beds",
           "type": "integer",
@@ -137,7 +137,7 @@
           "subProperties": []
         },
         {
-          "id": "aedxltc",
+          "id": "gtfy644",
           "name": "employees",
           "title": "Employees",
           "type": "integer",
@@ -151,7 +151,7 @@
           "subProperties": []
         },
         {
-          "id": "9xpolx4",
+          "id": "ay5i510",
           "name": "address",
           "title": "Address",
           "type": "string",
@@ -165,7 +165,7 @@
           "subProperties": []
         },
         {
-          "id": "5l51lc3",
+          "id": "c2u5bbc",
           "name": "telephoneNumber",
           "title": "TelephoneNumber",
           "type": "integer",
@@ -179,7 +179,7 @@
           "subProperties": []
         },
         {
-          "id": "4rrqmpz",
+          "id": "0kt8tgu",
           "name": "email",
           "title": "Email",
           "type": "string",
@@ -193,7 +193,7 @@
           "subProperties": []
         },
         {
-          "id": "ds0zmjv",
+          "id": "to954gz",
           "name": "website",
           "title": "Website",
           "type": "string",
@@ -207,7 +207,7 @@
           "subProperties": []
         },
         {
-          "id": "mifupvc",
+          "id": "xrh37wd",
           "name": "latitude",
           "title": "Latitude",
           "type": "number",
@@ -221,7 +221,7 @@
           "subProperties": []
         },
         {
-          "id": "62x17nj",
+          "id": "7s4tt50",
           "name": "longitude",
           "title": "Longitude",
           "type": "number",
@@ -235,7 +235,7 @@
           "subProperties": []
         },
         {
-          "id": "ptbcza5",
+          "id": "njt2qno",
           "name": "mgrs",
           "title": "Mgrs",
           "type": "string",
@@ -249,7 +249,7 @@
           "subProperties": []
         },
         {
-          "id": "x0adkxr",
+          "id": "aiycgxh",
           "name": "classification",
           "title": "Classification",
           "type": "string",
@@ -263,7 +263,7 @@
           "subProperties": []
         },
         {
-          "id": "8yggkva",
+          "id": "9kbdh8o",
           "name": "origin",
           "title": "Origin",
           "type": "string",
@@ -277,7 +277,7 @@
           "subProperties": []
         },
         {
-          "id": "m4jldgi",
+          "id": "6cxn3sw",
           "name": "dataWithdrawalDate",
           "title": "DataWithdrawalDate",
           "type": "date",
@@ -291,7 +291,7 @@
           "subProperties": []
         },
         {
-          "id": "m3xb2qo",
+          "id": "o5o1kjb",
           "name": "dataCaptureDate",
           "title": "DataCaptureDate",
           "type": "date",
@@ -305,7 +305,7 @@
           "subProperties": []
         },
         {
-          "id": "gpactqq",
+          "id": "69fhnnb",
           "name": "updateDate",
           "title": "UpdateDate",
           "type": "date",
@@ -319,7 +319,7 @@
           "subProperties": []
         },
         {
-          "id": "bxavtrg",
+          "id": "oh6z3rf",
           "name": "datasettType",
           "title": "DatasettType",
           "type": "string",
@@ -333,7 +333,7 @@
           "subProperties": []
         },
         {
-          "id": "ty58y67",
+          "id": "j4qgjhx",
           "name": "gradering",
           "title": "Gradering",
           "type": "string",
@@ -347,7 +347,7 @@
           "subProperties": []
         },
         {
-          "id": "9dtxd1r",
+          "id": "3918eu9",
           "name": "opphav",
           "title": "Opphav",
           "type": "string",
@@ -361,7 +361,7 @@
           "subProperties": []
         },
         {
-          "id": "44sxvfa",
+          "id": "t7ag1f5",
           "name": "dgifFeatureAlpha",
           "title": "DgifFeatureAlpha",
           "type": "string",
@@ -375,7 +375,7 @@
           "subProperties": []
         },
         {
-          "id": "x6b567w",
+          "id": "sa69b1c",
           "name": "dgifFeature531",
           "title": "DgifFeature531",
           "type": "string",
@@ -389,7 +389,7 @@
           "subProperties": []
         },
         {
-          "id": "lfa1984",
+          "id": "yihssr0",
           "name": "dgifAttributeAlpha",
           "title": "DgifAttributeAlpha",
           "type": "string",
@@ -403,7 +403,7 @@
           "subProperties": []
         },
         {
-          "id": "m0i37le",
+          "id": "v3tdjaz",
           "name": "dgifAttribute531",
           "title": "DgifAttribute531",
           "type": "string",
@@ -417,7 +417,7 @@
           "subProperties": []
         },
         {
-          "id": "sneg2l7",
+          "id": "w2z7v8w",
           "name": "dgifValueAlpha",
           "title": "DgifValueAlpha",
           "type": "string",
@@ -431,7 +431,7 @@
           "subProperties": []
         },
         {
-          "id": "0hl89j3",
+          "id": "qp71cn3",
           "name": "dgifValue531",
           "title": "DgifValue531",
           "type": "number",
@@ -445,7 +445,7 @@
           "subProperties": []
         },
         {
-          "id": "me7qkot",
+          "id": "vv2evtl",
           "name": "dgifCCode",
           "title": "DgifCCode",
           "type": "string",
@@ -459,7 +459,7 @@
           "subProperties": []
         },
         {
-          "id": "c7hhyqa",
+          "id": "5omjplg",
           "name": "uuid",
           "title": "Uuid",
           "type": "string",
@@ -477,9 +477,9 @@
       "geometryColumnName": "geom",
       "style": {
         "type": "simple",
-        "simpleColor": "#DC2626",
+        "simpleColor": "#6366F1",
         "categorizedColors": {},
-        "pointSize": 18,
+        "pointSize": 8,
         "pointIcon": "circle",
         "lineWidth": 2,
         "lineDash": "solid",
@@ -492,15 +492,15 @@
   ],
   "sharedTypes": [],
   "crs": "EPSG:25833",
-  "createdAt": "2026-03-01T14:17:31.628Z",
-  "updatedAt": "2026-03-01T15:06:12.269Z",
+  "createdAt": "2026-03-01T15:21:34.439Z",
+  "updatedAt": "2026-03-01T15:23:46.707Z",
   "metadata": {
-    "contactName": "Henrik g Schuller",
+    "contactName": "Henrik S",
     "contactEmail": "hgs716@gmail.com",
-    "contactOrganization": "Testa",
+    "contactOrganization": "Test",
     "keywords": [],
     "theme": "er",
-    "license": "CC0-1.0",
+    "license": "CC-BY-4.0",
     "accessRights": "public",
     "purpose": "",
     "accrualPeriodicity": "unknown",
