@@ -3,6 +3,6 @@
 <maplayer name="HospitalPoints" type="vector">
   <datasource>/data/Hospitals.gpkg|layername=hospitalpoints</datasource>
   <provider encoding="UTF-8">ogr</provider>
-  <symbol type="marker" name="0"><layer class="SimpleMarker"><prop k="color" v="220,38,38,255"/><prop k="size" v="27"/></layer></symbol>
+  <symbol type="marker" name="0"><layer class="SimpleMarker"><prop k="color" v="220,38,38,255"/><prop k="size" v="18"/></layer></symbol>
 </maplayer>
 </qgis>

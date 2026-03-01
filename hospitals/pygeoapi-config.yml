@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals
-# Generated: 2026-03-01T14:06:25.570Z
+# Generated: 2026-03-01T14:18:08.407Z
 # Source: geopackage
 
 server:
@@ -19,17 +19,17 @@ metadata:
   identification:
     title: Hospitals
     description: Spatial data
+    terms_of_service: https://example.com/terms
     keywords:
       - geospatial
       - data
-    terms_of_service: https://example.com/terms
   license:
     name: CC-BY-4.0
     url: https://creativecommons.org/licenses/by/4.0/
   contact:
-    name: Henrik
-    organization: hasdsa
-    email: hgs716@gmail.com
+    name: SSS
+    organization: sdsd
+    email: sdsd@wks.no
 
 resources:
   hospitalpoints:
