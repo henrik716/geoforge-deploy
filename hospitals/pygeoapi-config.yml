@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals
-# Generated: 2026-03-01T15:24:15.199Z
+# Generated: 2026-03-01T15:39:53.103Z
 # Source: geopackage
 
 server:
@@ -32,7 +32,7 @@ metadata:
     email: hgs716@gmail.com
   provider:
     name: Henrik S
-    organization: Test
+    organization: mms
     email: hgs716@gmail.com
 
 resources:
@@ -48,7 +48,7 @@ resources:
       - type: feature
         name: SQLiteGPKG
         data: /data/Hospitals.gpkg
-        table: hospitalpoints
+        table: HospitalPoints
         id_field: fid
         geom_field: geom
 
