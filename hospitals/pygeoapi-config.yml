@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals
-# Generated: 2026-03-01T14:53:34.338Z
+# Generated: 2026-03-01T15:06:15.679Z
 # Source: geopackage
 
 server:
@@ -19,6 +19,7 @@ metadata:
   identification:
     title: Hospitals
     description: Spatial data
+    url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
       - geospatial
@@ -27,12 +28,12 @@ metadata:
     name: CC0-1.0
     url: https://creativecommons.org/publicdomain/zero/1.0/
   contact:
-    name: Henrik  g Schuller
-    email: hgs716@gmail.no
+    name: Henrik g Schuller
+    email: hgs716@gmail.com
   provider:
-    name: Henrik  g Schuller
+    name: Henrik g Schuller
     organization: Testa
-    email: hgs716@gmail.no
+    email: hgs716@gmail.com
 
 resources:
   hospitalpoints:
