@@ -4,4 +4,8 @@ COPY project.qgs /data/project.qgs
 COPY data/ /data/
 
 ENV QGIS_PROJECT_FILE=/data/project.qgs
+# FIX: QGIS_SERVER_SERVICE_URL is set at runtime via .env / Railway / Fly variables
+# so GetCapabilities advertises the correct public HTTPS URL.
+# Default is blank — QGIS Server falls back to request Host header (fine for local use).
+ENV QGIS_SERVER_SERVICE_URL=
 EXPOSE 80

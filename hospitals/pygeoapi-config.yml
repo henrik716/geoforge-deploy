@@ -1,12 +1,12 @@
 # pygeoapi configuration for Hospitals2
-# Generated: 2026-03-01T19:49:39.587Z
+# Generated: 2026-03-01T21:21:48.822Z
 # Source: geopackage
 
 server:
   bind:
     host: 0.0.0.0
-    port: 80
-  url: http://localhost:5000
+    port: ${PORT:-80}
+  url: ${PYGEOAPI_SERVER_URL}
   mimetype: application/json; charset=UTF-8
   encoding: utf-8
   languages:
@@ -22,18 +22,18 @@ metadata:
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
-      - geospatial
-      - data
+      - Sykehus
+      - Hospitals
   license:
     name: CC-BY-4.0
     url: https://creativecommons.org/licenses/by/4.0/
   contact:
-    name: Henrik Ssssasdad
-    email: hgs716@gmail.com
+    name: Henrik G S
+    email: schhen@kartverket.no
   provider:
-    name: Henrik Ssssasdad
-    organization: Megselv
-    email: hgs716@gmail.com
+    name: Henrik G S
+    organization: Kartverket
+    email: schhen@kartverket.no
 
 resources:
   hospitalpoints:

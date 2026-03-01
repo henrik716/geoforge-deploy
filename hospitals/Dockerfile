@@ -4,8 +4,12 @@ FROM geopython/pygeoapi:latest
 COPY pygeoapi-config.yml /pygeoapi/local.config.yml
 COPY data/ /data/
 
-# Tell Railway which port to route to
+# FIX: Default env vars so the container starts correctly when no .env is present.
+# PORT is overridden automatically by Railway. PYGEOAPI_SERVER_URL must be set
+# manually to the public HTTPS URL after first deploy.
 ENV PORT=80
+ENV PYGEOAPI_SERVER_URL=http://localhost:5000
+
 EXPOSE 80
 
 # Create AsyncAPI document placeholder (required by pygeoapi startup check)
