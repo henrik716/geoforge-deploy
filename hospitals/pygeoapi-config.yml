@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals2
-# Generated: 2026-03-01T19:39:51.624Z
+# Generated: 2026-03-01T19:49:39.587Z
 # Source: geopackage
 
 server:
@@ -28,10 +28,10 @@ metadata:
     name: CC-BY-4.0
     url: https://creativecommons.org/licenses/by/4.0/
   contact:
-    name: Henrik Sss
+    name: Henrik Ssssasdad
     email: hgs716@gmail.com
   provider:
-    name: Henrik Sss
+    name: Henrik Ssssasdad
     organization: Megselv
     email: hgs716@gmail.com
 
