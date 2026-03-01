@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals2
-# Generated: 2026-03-01T21:46:42.150Z
+# Generated: 2026-03-01T22:04:28.970Z
 # Source: geopackage
 
 server:
@@ -14,6 +14,9 @@ server:
   map:
     url: https://tile.openstreetmap.org/{z}/{x}/{y}.png
     attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+  limits:
+    default_items: 10
+    max_items: 10000
 
 logging:
   level: INFO
@@ -21,7 +24,7 @@ logging:
 metadata:
   identification:
     title: Hospitals2
-    description: Mitt datasett
+    description: Mitt datasett2
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
