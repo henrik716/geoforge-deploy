@@ -35,8 +35,9 @@ Railway deployer én tjeneste per repo som standard. For å kjøre QGIS Server i
 
 1. Klikk **"+ New"** → **"GitHub Repo"** i samme prosjekt
 2. Velg dette repoet igjen
-3. Under **Settings → Build**, sett Dockerfile path til `Dockerfile.qgis`
-4. Bekreft at porten vises som **80** under **Settings → Networking** (Railway leser `EXPOSE 80` fra imaget)
+3. Under **Settings → Build**, sett Dockerfile path til `Dockerfile.qgis` (eller bruk `railway.qgis.json` i repo-roten)
+4. Under **Settings → Deploy**, sett health check path til `/?SERVICE=WMS&REQUEST=GetCapabilities` og timeout til **300s** — QGIS Server har ingen enkel /health-rute
+5. Bekreft at porten vises som **80** under **Settings → Networking**
 
 ### Data
 
@@ -56,5 +57,6 @@ Railway deployer automatisk ved push til main. Ingen GitHub Actions nødvendig.
 | `pygeoapi-config.yml` | OGC API-konfigurasjon |
 | `Dockerfile.qgis` | QGIS Server container |
 | `project.qgs` | QGIS-prosjekt med lag og stil |
-| `railway.json` | Railway-konfigurasjon |
+| `railway.json` | Railway-konfigurasjon (pygeoapi) |
+| `railway.qgis.json` | Railway-konfigurasjon (QGIS Server) |
 | `.env.template` | Mal for miljøvariabler |

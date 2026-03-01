@@ -507,7 +507,7 @@
   "sharedTypes": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-01T22:40:42.956Z",
-  "updatedAt": "2026-03-01T22:41:03.169Z",
+  "updatedAt": "2026-03-01T22:46:27.971Z",
   "metadata": {
     "contactName": "Henrik Schüller",
     "contactEmail": "schhen@kartverket.no",
@@ -516,7 +516,7 @@
       "Sykehus"
     ],
     "theme": "bu",
-    "license": "CC-BY-4.0",
+    "license": "other",
     "accessRights": "public",
     "purpose": "",
     "accrualPeriodicity": "unknown",
