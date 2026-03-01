@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qgis projectname="Hospitals" version="3.34">
+<maplayer name="HospitalPoints" type="vector">
+  <datasource>/data/Hospitals.gpkg|layername=hospitalpoints</datasource>
+  <provider encoding="UTF-8">ogr</provider>
+  <symbol type="marker" name="0"><layer class="SimpleMarker"><prop k="color" v="99,102,241,255"/><prop k="size" v="14"/></layer></symbol>
+</maplayer>
+</qgis>
