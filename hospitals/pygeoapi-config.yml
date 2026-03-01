@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals2
-# Generated: 2026-03-01T21:43:42.052Z
+# Generated: 2026-03-01T21:46:42.150Z
 # Source: geopackage
 
 server:
@@ -11,6 +11,9 @@ server:
   encoding: utf-8
   languages:
     - nb-NO
+  map:
+    url: https://tile.openstreetmap.org/{z}/{x}/{y}.png
+    attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
 
 logging:
   level: INFO
@@ -29,10 +32,10 @@ metadata:
     name: CC-BY-4.0
     url: https://creativecommons.org/licenses/by/4.0/
   contact:
-    name: Henrik G S
+    name: Henrik G Schuller
     email: schhen@kartverket.no
   provider:
-    name: Henrik G S
+    name: Henrik G Schuller
     organization: Kartverket
     email: schhen@kartverket.no
 
