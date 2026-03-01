@@ -1,0 +1,7 @@
+FROM qgis/qgis-server:ltr
+
+COPY project.qgs /data/project.qgs
+COPY data/ /data/
+
+ENV QGIS_PROJECT_FILE=/data/project.qgs
+EXPOSE 80
