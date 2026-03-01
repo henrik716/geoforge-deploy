@@ -1,5 +1,5 @@
-# pygeoapi configuration for Hospitals
-# Generated: 2026-03-01T16:16:05.257Z
+# pygeoapi configuration for Hospitals2
+# Generated: 2026-03-01T16:33:41.790Z
 # Source: geopackage
 
 server:
@@ -17,8 +17,8 @@ logging:
 
 metadata:
   identification:
-    title: Hospitals
-    description: Text
+    title: Hospitals2
+    description: Spatial data
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
@@ -32,13 +32,13 @@ metadata:
     email: hgs716@gmail.com
   provider:
     name: Henrik S
-    organization: Kv
+    organization: sdsd
     email: hgs716@gmail.com
 
 resources:
   hospitalpoints:
     type: collection
-    title: HospitalPoints
+    title: hospitalpoints
     description: Spatial collection
     extents:
       spatial:
@@ -47,8 +47,8 @@ resources:
     providers:
       - type: feature
         name: SQLiteGPKG
-        data: /data/Hospitals.gpkg
-        table: HospitalPoints
+        data: /data/Hospitals2.gpkg
+        table: hospitalpoints
         id_field: fid
         geom_field: geom
 
