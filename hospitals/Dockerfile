@@ -4,6 +4,10 @@ FROM geopython/pygeoapi:latest
 COPY pygeoapi-config.yml /pygeoapi/local.config.yml
 COPY data/ /data/
 
+# Generate OpenAPI + AsyncAPI documents at build time
+RUN pygeoapi openapi generate ${PYGEOAPI_CONFIG} --output-file ${PYGEOAPI_OPENAPI} && \
+    pygeoapi asyncapi generate ${PYGEOAPI_CONFIG} --output-file /pygeoapi/local.asyncapi.yml
+
 # Expose port
 EXPOSE 80
 
