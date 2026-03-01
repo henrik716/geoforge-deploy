@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals
-# Generated: 2026-03-01T14:28:49.423Z
+# Generated: 2026-03-01T14:45:14.407Z
 # Source: geopackage
 
 server:
@@ -24,9 +24,9 @@ metadata:
       - geospatial
       - data
   license:
-    name: CC0-1.0
-    url: https://creativecommons.org/publicdomain/zero/1.0/
-  contact:
+    name: CC-BY-4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  provider:
     name: Henrik Schuller
     organization: Test
     email: hgs716@gmail.com
