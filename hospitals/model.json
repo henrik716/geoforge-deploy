@@ -507,14 +507,15 @@
   "sharedTypes": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-01T21:20:57.733Z",
-  "updatedAt": "2026-03-01T21:21:27.408Z",
+  "updatedAt": "2026-03-01T21:42:21.321Z",
   "metadata": {
     "contactName": "Henrik G S",
     "contactEmail": "schhen@kartverket.no",
     "contactOrganization": "Kartverket",
     "keywords": [
       "Sykehus",
-      "Hospitals"
+      "Hospitals",
+      "Test"
     ],
     "theme": "bu",
     "license": "CC-BY-4.0",
