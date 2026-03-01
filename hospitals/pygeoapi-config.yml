@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals2
-# Generated: 2026-03-01T21:42:26.143Z
+# Generated: 2026-03-01T21:43:42.052Z
 # Source: geopackage
 
 server:
@@ -18,7 +18,7 @@ logging:
 metadata:
   identification:
     title: Hospitals2
-    description: Spatial data
+    description: Mitt datasett
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
@@ -41,6 +41,9 @@ resources:
     type: collection
     title: hospitalpoints
     description: Spatial collection
+    keywords:
+      - data
+      - hospitalpoints
     extents:
       spatial:
         bbox: [-50553.7180408619, 6468514.74667747, 1076852.81783763, 7863795.19700849]

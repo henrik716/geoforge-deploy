@@ -2,7 +2,7 @@
   "id": "q4vv4h2",
   "name": "Hospitals2",
   "namespace": "",
-  "description": "",
+  "description": "Mitt datasett",
   "version": "1.0.0",
   "layers": [
     {
@@ -507,7 +507,7 @@
   "sharedTypes": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-01T21:20:57.733Z",
-  "updatedAt": "2026-03-01T21:42:21.321Z",
+  "updatedAt": "2026-03-01T21:43:39.098Z",
   "metadata": {
     "contactName": "Henrik G S",
     "contactEmail": "schhen@kartverket.no",
