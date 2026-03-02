@@ -491,10 +491,10 @@
       "geometryColumnName": "geom",
       "style": {
         "type": "simple",
-        "simpleColor": "#D97706",
+        "simpleColor": "#7C3AED",
         "categorizedColors": {},
         "pointSize": 29,
-        "pointIcon": "square",
+        "pointIcon": "triangle",
         "lineWidth": 2,
         "lineDash": "solid",
         "fillOpacity": 0.5,
@@ -507,13 +507,14 @@
   "sharedTypes": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-02T11:00:41.579Z",
-  "updatedAt": "2026-03-02T11:20:23.121Z",
+  "updatedAt": "2026-03-02T11:31:12.498Z",
   "metadata": {
     "contactName": "Henrik S",
     "contactEmail": "schhen@kartverket.no",
     "contactOrganization": "Kartverket",
     "keywords": [
-      "sykehus"
+      "sykehus",
+      "mittsyk"
     ],
     "theme": "bu",
     "license": "CC-BY-4.0",
