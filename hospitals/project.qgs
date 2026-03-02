@@ -10,11 +10,11 @@
         </spatialrefsys>
   </projectCrs>
   <layer-tree-group name="" expanded="1" checked="Qt::Checked">
-    <layer-tree-layer id="hospitalpoints_0_1772451077490" name="hospitalpoints" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
+    <layer-tree-layer id="hospitalpoints_0_1772452069218" name="hospitalpoints" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
   </layer-tree-group>
   <projectlayers>
     <maplayer name="hospitalpoints" type="vector" hasScaleBasedVisibilityFlag="0">
-      <id>hospitalpoints_0_1772451077490</id>
+      <id>hospitalpoints_0_1772452069218</id>
       <datasource>/data/Hospitals2.gpkg|layername=hospitalpoints</datasource>
       <provider encoding="UTF-8">ogr</provider>
       <layername>hospitalpoints</layername>
@@ -30,7 +30,8 @@
         </spatialrefsys>
       </crs>
       <renderer-v2 type="singleSymbol" enableorderby="0" forceraster="0">
-        <symbol type="marker" name="0">
+        <symbols>
+          <symbol type="marker" name="0">
           <layer class="SimpleMarker">
             <prop k="name" v="triangle"/>
             <prop k="color" v="124,58,237,255"/>
@@ -40,6 +41,7 @@
             <prop k="outline_width" v="0"/>
           </layer>
         </symbol>
+        </symbols>
       </renderer-v2>
     </maplayer>
   </projectlayers>
