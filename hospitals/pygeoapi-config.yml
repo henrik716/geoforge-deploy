@@ -1,5 +1,5 @@
-# pygeoapi configuration for areatest
-# Generated: 2026-03-02T13:23:13.550Z
+# pygeoapi configuration for Hospitals2
+# Generated: 2026-03-02T13:27:55.499Z
 # Source: geopackage
 
 server:
@@ -23,41 +23,61 @@ logging:
 
 metadata:
   identification:
-    title: areatest
-    description: test
+    title: Hospitals2
+    description: Test av sykehus
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
-      - styk
+      - Sykehus
   license:
     name: CC-BY-4.0
     url: https://creativecommons.org/licenses/by/4.0/
   contact:
-    name: test
-    email: test@test.no
+    name: Henrik Schüller
+    email: schhen@kartverket.no
   provider:
-    name: test
-    organization: test
-    email: test@test.no
+    name: Henrik Schüller
+    organization: Kartverket
+    email: schhen@kartverket.no
 
 resources:
-  areatest:
+  hospitalpoints:
     type: collection
-    title: areatest
+    title: hospitalpoints
     description: Spatial collection
     keywords:
       - data
-      - areatest
+      - hospitalpoints
     extents:
       spatial:
-        bbox: [5.276797, 58.1627282, 30.0369661, 78.2202717]
+        bbox: [5.661964532092913, 58.01289785641059, 38.86782381574494, 77.1541859902625]
         crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
     providers:
       - type: feature
         name: SQLiteGPKG
-        data: /data/areatest.gpkg
-        table: areatest
+        data: /data/Hospitals2.gpkg
+        table: hospitalpoints
         id_field: fid
         geom_field: geom
-        storage_crs: http://www.opengis.net/def/crs/EPSG/0/4326
+        storage_crs: http://www.opengis.net/def/crs/EPSG/0/25833
+
+  areas:
+    type: collection
+    title: areas
+    description: Spatial collection
+    keywords:
+      - data
+      - areas
+    extents:
+      spatial:
+        bbox: [5.661964532092913, 58.01289785641059, 38.86782381574494, 77.1541859902625]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+      - type: feature
+        name: SQLiteGPKG
+        data: /data/Hospitals2.gpkg
+        table: areas
+        id_field: fid
+        geom_field: geom
+        storage_crs: http://www.opengis.net/def/crs/EPSG/0/25833
 
