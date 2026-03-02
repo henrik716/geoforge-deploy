@@ -3,6 +3,11 @@ FROM qgis/qgis-server:ltr
 COPY project.qgs /data/project.qgs
 COPY data/ /data/
 
+# FIX: SQLite/GeoPackage needs directory write permissions to create temporary 
+# lock/journal files (-wal, -shm) even during read-only operations. 
+# Without this, QGIS Server silently drops the layers.
+RUN chmod -R 777 /data
+
 ENV QGIS_PROJECT_FILE=/data/project.qgs
 # FIX: QGIS_SERVER_SERVICE_URL is set at runtime via .env / Railway / Fly variables
 # so GetCapabilities advertises the correct public HTTPS URL.
