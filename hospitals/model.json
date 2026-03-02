@@ -507,14 +507,15 @@
   "sharedTypes": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-02T08:41:07.750Z",
-  "updatedAt": "2026-03-02T09:37:53.262Z",
+  "updatedAt": "2026-03-02T09:49:35.553Z",
   "metadata": {
     "contactName": "Henrik Schuller",
     "contactEmail": "schhen@kartverket.no",
     "contactOrganization": "Kartverket",
     "keywords": [
       "Sykehus",
-      "Mine"
+      "Mine",
+      "s"
     ],
     "theme": "bu",
     "license": "CC-BY-4.0",

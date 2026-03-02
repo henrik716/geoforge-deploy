@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals2
-# Generated: 2026-03-02T09:37:55.821Z
+# Generated: 2026-03-02T09:49:39.566Z
 # Source: geopackage
 
 server:
@@ -30,6 +30,7 @@ metadata:
     keywords:
       - Sykehus
       - Mine
+      - s
   license:
     name: CC-BY-4.0
     url: https://creativecommons.org/licenses/by/4.0/

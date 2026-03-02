@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <qgis projectname="Hospitals2" version="3.34">
   <layer-tree-group name="" expanded="1" checked="Qt::Checked">
-    <layer-tree-layer id="hospitalpoints_0_1772444275843" name="hospitalpoints" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
+    <layer-tree-layer id="hospitalpoints_0_1772444979616" name="hospitalpoints" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
   </layer-tree-group>
   <projectlayers>
     <maplayer name="hospitalpoints" type="vector" hasScaleBasedVisibilityFlag="0">
-      <id>hospitalpoints_0_1772444275843</id>
+      <id>hospitalpoints_0_1772444979616</id>
       <datasource>/data/Hospitals2.gpkg|layername=hospitalpoints</datasource>
       <provider encoding="UTF-8">ogr</provider>
+      <layername>hospitalpoints</layername>
+      <shortname>hospitalpoints</shortname>
+      <title>hospitalpoints</title>
       <renderer-v2 type="singleSymbol" enableorderby="0" forceraster="0">
         <symbol type="marker" name="0"><layer class="SimpleMarker"><prop k="color" v="220,38,38,255"/><prop k="size" v="27"/></layer></symbol>
       </renderer-v2>
     </maplayer>
   </projectlayers>
+  <properties>
+    <WMSServiceTitle type="QString">Hospitals2</WMSServiceTitle>
+    <WMSRootName type="QString">hospitals2</WMSRootName>
+  </properties>
 </qgis>
