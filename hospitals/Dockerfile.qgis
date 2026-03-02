@@ -9,8 +9,10 @@ COPY data/ /data/
 RUN chmod -R 777 /data
 
 ENV QGIS_PROJECT_FILE=/data/project.qgs
+# QGIS Server 3.x serves all OGC services (WMS, WFS, WCS, WMTS) at /ows/ by default.
 # FIX: QGIS_SERVER_SERVICE_URL is set at runtime via .env / Railway / Fly variables
 # so GetCapabilities advertises the correct public HTTPS URL.
-# Default is blank — QGIS Server falls back to request Host header (fine for local use).
+# Default is blank — QGIS Server falls back to the request Host header (fine for local use).
+# Example: https://<your-app>.up.railway.app/ows/
 ENV QGIS_SERVER_SERVICE_URL=
 EXPOSE 80

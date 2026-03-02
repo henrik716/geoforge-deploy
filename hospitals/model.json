@@ -2,7 +2,7 @@
   "id": "46p5zn5",
   "name": "Hospitals2",
   "namespace": "",
-  "description": "Sykehusdatasett",
+  "description": "Sykehusdatasett2",
   "version": "1.0.0",
   "layers": [
     {
@@ -507,7 +507,7 @@
   "sharedTypes": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-02T08:41:07.750Z",
-  "updatedAt": "2026-03-02T08:41:56.057Z",
+  "updatedAt": "2026-03-02T09:11:31.018Z",
   "metadata": {
     "contactName": "Henrik S",
     "contactEmail": "schhen@kartverket.no",
