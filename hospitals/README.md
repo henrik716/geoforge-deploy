@@ -1,4 +1,4 @@
-# Hospitals2 — Deploy Kit
+# areatest — Deploy Kit
 
 Autogenerert fra GeoForge · Deployment target: **Railway**
 
