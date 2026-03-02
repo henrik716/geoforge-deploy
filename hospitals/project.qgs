@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <qgis projectname="Hospitals2" version="3.34">
   <projectCrs>
-    <spatialrefsys>
-      <authid>EPSG:25833</authid>
-    </spatialrefsys>
+    <spatialrefsys nativeFormat="Wkt">
+          <authid>EPSG:25833</authid>
+          <srid>25833</srid>
+          <description>ETRS89 / UTM zone 33N</description>
+          <proj4>+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
   </projectCrs>
   <layer-tree-group name="" expanded="1" checked="Qt::Checked">
-    <layer-tree-layer id="hospitalpoints_0_1772449332691" name="hospitalpoints" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
+    <layer-tree-layer id="hospitalpoints_0_1772450426581" name="hospitalpoints" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
   </layer-tree-group>
   <projectlayers>
     <maplayer name="hospitalpoints" type="vector" hasScaleBasedVisibilityFlag="0">
-      <id>hospitalpoints_0_1772449332691</id>
+      <id>hospitalpoints_0_1772450426581</id>
       <datasource>/data/Hospitals2.gpkg|layername=hospitalpoints</datasource>
       <provider encoding="UTF-8">ogr</provider>
       <layername>hospitalpoints</layername>
       <shortname>hospitalpoints</shortname>
       <title>hospitalpoints</title>
       <crs>
-        <spatialrefsys>
+        <spatialrefsys nativeFormat="Wkt">
           <authid>EPSG:25833</authid>
+          <srid>25833</srid>
+          <description>ETRS89 / UTM zone 33N</description>
+          <proj4>+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <geographicflag>false</geographicflag>
         </spatialrefsys>
       </crs>
       <renderer-v2 type="singleSymbol" enableorderby="0" forceraster="0">
@@ -29,5 +37,13 @@
   <properties>
     <WMSServiceTitle type="QString">Hospitals2</WMSServiceTitle>
     <WMSRootName type="QString">hospitals2</WMSRootName>
+    <WMSCrsList type="QStringList">
+      <value>EPSG:25833</value>
+      <value>EPSG:4326</value>
+      <value>EPSG:4258</value>
+      <value>EPSG:3857</value>
+      <value>CRS:84</value>
+    </WMSCrsList>
+    <WMSExtent type="QRectF">-50553.7180408619 6468514.74667747 1076852.81783763 7863795.19700849</WMSExtent>
   </properties>
 </qgis>

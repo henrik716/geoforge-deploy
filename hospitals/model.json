@@ -2,7 +2,7 @@
   "id": "wmrf5re",
   "name": "Hospitals2",
   "namespace": "",
-  "description": "Sykehus",
+  "description": "Sykehusa",
   "version": "1.0.0",
   "layers": [
     {
@@ -507,7 +507,7 @@
   "sharedTypes": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-02T11:00:41.579Z",
-  "updatedAt": "2026-03-02T11:01:06.303Z",
+  "updatedAt": "2026-03-02T11:20:23.121Z",
   "metadata": {
     "contactName": "Henrik S",
     "contactEmail": "schhen@kartverket.no",
