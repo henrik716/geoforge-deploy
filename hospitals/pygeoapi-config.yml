@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals2
-# Generated: 2026-03-02T08:15:57.556Z
+# Generated: 2026-03-02T08:42:56.237Z
 # Source: geopackage
 
 server:
@@ -24,7 +24,7 @@ logging:
 metadata:
   identification:
     title: Hospitals2
-    description: Mine sykehusa
+    description: Sykehusdatasett
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
