@@ -1,4 +1,4 @@
-name: Validate Hospitals2 (Railway)
+name: Validate Hospitals (Railway)
 
 # Railway deploys automatically from GitHub — no deploy job needed.
 # This workflow only validates the configuration on push.

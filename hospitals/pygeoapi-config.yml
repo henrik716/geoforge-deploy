@@ -1,5 +1,5 @@
-# pygeoapi configuration for Hospitals2
-# Generated: 2026-03-03T23:16:45.570Z
+# pygeoapi configuration for Hospitals
+# Generated: 2026-03-03T23:20:41.555Z
 # Source: geopackage
 
 server:
@@ -23,22 +23,29 @@ logging:
 
 metadata:
   identification:
-    title: Hospitals2
-    description: Dette datasettet, "Hospitals2", inneholder geografiske punkter som representerer sykehusanlegg. Hovedformålet er å visualisere og lokalisere sykehus, samt identifisere de som har akuttmottak. Hvert sykehuspunkt er beriket med nøkkelattributter som sykehusets navn, anleggstype og informasjon om tilgjengeligheten av akuttmottak. Det inkluderer også et polygonlag for geografisk avgrensning, og gir en oversikt over sykehusinfrastruktur for geografiske analyser.
+    title: Hospitals
+    description: Dette datasettet inneholder punktgeometrier som representerer ulike sykehusanlegg. Formålet er å tilgjengeliggjøre lokasjonsinformasjon for sykehus, noe som er viktig for navigasjon, tilgangsanalyse og planlegging av helseinfrastruktur. Hvert sykehus er beskrevet med attributter som inkluderer sykehusets navn, type anlegg, og om det har et akuttmottak.
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
-      - sykehus
-      - helse
-      - helseinstitusjoner
-      - helsevesen
-      - lokasjon
-      - fasiliteter
-      - offentlige tjenester
-      - tjenesteområder
+      - Sykehus
+      - Helse
+      - Helseinstitusjoner
+      - Medisin
+      - Punkter
+      - Areal
+      - Lokasjon
+      - Fasiliteter
   license:
     name: CC-BY-4.0
     url: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Henrik Schüller
+    email: schhen@kartverket.no
+  provider:
+    name: Henrik Schüller
+    organization: Kartverket
+    email: schhen@kartverket.no
 
 resources:
   hospitalpoints:
@@ -50,12 +57,12 @@ resources:
       - hospitalpoints
     extents:
       spatial:
-        bbox: [5.661964532092913, 58.01289785641059, 38.86782381574494, 77.1541859902625]
+        bbox: [5.661964614014777, 58.01289713711848, 38.86783938382364, 77.15419161001824]
         crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
     providers:
       - type: feature
         name: SQLiteGPKG
-        data: /data/Hospitals2.gpkg
+        data: /data/Hospitals.gpkg
         table: hospitalpoints
         id_field: fid
         geom_field: geom
@@ -70,12 +77,12 @@ resources:
       - areas
     extents:
       spatial:
-        bbox: [5.661964532092913, 58.01289785641059, 38.86782381574494, 77.1541859902625]
+        bbox: [5.661964614014777, 58.01289713711848, 38.86783938382364, 77.15419161001824]
         crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
     providers:
       - type: feature
         name: SQLiteGPKG
-        data: /data/Hospitals2.gpkg
+        data: /data/Hospitals.gpkg
         table: areas
         id_field: fid
         geom_field: geom
