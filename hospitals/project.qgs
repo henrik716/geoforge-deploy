@@ -10,12 +10,12 @@
         </spatialrefsys>
   </projectCrs>
   <layer-tree-group name="" expanded="1" checked="Qt::Checked">
-    <layer-tree-layer id="areas_0_1772647724437" name="areas" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
-    <layer-tree-layer id="hospitalpoints_1_1772647724437" name="hospitalpoints" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
+    <layer-tree-layer id="areas_0_1772648007647" name="areas" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
+    <layer-tree-layer id="hospitalpoints_1_1772648007647" name="hospitalpoints" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
   </layer-tree-group>
   <projectlayers>
     <maplayer name="areas" type="vector" hasScaleBasedVisibilityFlag="0">
-        <id>areas_0_1772647724437</id>
+        <id>areas_0_1772648007647</id>
         <datasource>/data/Hospitals.gpkg|layername=areas</datasource>
         <provider encoding="UTF-8">ogr</provider>
         <layername>areas</layername>
@@ -47,7 +47,7 @@
         </renderer-v2>
       </maplayer>
     <maplayer name="hospitalpoints" type="vector" hasScaleBasedVisibilityFlag="0">
-        <id>hospitalpoints_1_1772647724437</id>
+        <id>hospitalpoints_1_1772648007647</id>
         <datasource>/data/Hospitals.gpkg|layername=hospitalpoints</datasource>
         <provider encoding="UTF-8">ogr</provider>
         <layername>hospitalpoints</layername>
