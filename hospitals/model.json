@@ -1,17 +1,17 @@
 {
-  "id": "v3tiasz",
+  "id": "3bws762",
   "name": "Hospitals",
   "namespace": "",
-  "description": "Dette datasettet inneholder punktgeometrier som representerer ulike sykehusanlegg. Formålet er å tilgjengeliggjøre lokasjonsinformasjon for sykehus, noe som er viktig for navigasjon, tilgangsanalyse og planlegging av helseinfrastruktur. Hvert sykehus er beskrevet med attributter som inkluderer sykehusets navn, type anlegg, og om det har et akuttmottak.",
+  "description": "Dette datasettet tilbyr en geografisk representasjon av sykehusfasiliteter, primært som punktobjekter. Hovedformålet er å fasilitere romlig analyse, planlegging og informasjonsdeling knyttet til helseinstitusjoner. Hvert punktobjekt er beriket med nøkkelinformasjon som sykehusets navn, den spesifikke typen sykehus og om det har et akuttmottak. Dette gir en detaljert oversikt for en rekke geografiske anvendelser.",
   "version": "1.0.0",
   "layers": [
     {
-      "id": "occfp2y",
+      "id": "3nh4p9k",
       "name": "hospitalpoints",
       "description": "",
       "properties": [
         {
-          "id": "2fxe3y9",
+          "id": "kkyr6n8",
           "name": "id",
           "title": "Id",
           "type": "integer",
@@ -25,7 +25,7 @@
           "subProperties": []
         },
         {
-          "id": "h0ng86i",
+          "id": "wat59b6",
           "name": "dataset",
           "title": "Dataset",
           "type": "string",
@@ -39,7 +39,7 @@
           "subProperties": []
         },
         {
-          "id": "as1gokr",
+          "id": "096tdbn",
           "name": "featureType",
           "title": "FeatureType",
           "type": "string",
@@ -53,7 +53,7 @@
           "subProperties": []
         },
         {
-          "id": "4zq4y4n",
+          "id": "4xpqs0i",
           "name": "name",
           "title": "Name",
           "type": "string",
@@ -67,7 +67,7 @@
           "subProperties": []
         },
         {
-          "id": "01yc6bx",
+          "id": "jc37z3c",
           "name": "type",
           "title": "Type",
           "type": "string",
@@ -81,7 +81,7 @@
           "subProperties": []
         },
         {
-          "id": "36ivyjn",
+          "id": "beew5hw",
           "name": "emergencyDepartment",
           "title": "EmergencyDepartment",
           "type": "string",
@@ -95,7 +95,7 @@
           "subProperties": []
         },
         {
-          "id": "lvxb8h4",
+          "id": "phhzkqr",
           "name": "doctors",
           "title": "Doctors",
           "type": "integer",
@@ -109,7 +109,7 @@
           "subProperties": []
         },
         {
-          "id": "x6006ms",
+          "id": "qycc8xs",
           "name": "nurses",
           "title": "Nurses",
           "type": "integer",
@@ -123,7 +123,7 @@
           "subProperties": []
         },
         {
-          "id": "trjdlf5",
+          "id": "qkidpt3",
           "name": "operationRooms",
           "title": "OperationRooms",
           "type": "integer",
@@ -137,7 +137,7 @@
           "subProperties": []
         },
         {
-          "id": "6z88o4z",
+          "id": "irngpo6",
           "name": "beds",
           "title": "Beds",
           "type": "integer",
@@ -151,7 +151,7 @@
           "subProperties": []
         },
         {
-          "id": "edk1bf1",
+          "id": "1c06psu",
           "name": "employees",
           "title": "Employees",
           "type": "integer",
@@ -165,7 +165,7 @@
           "subProperties": []
         },
         {
-          "id": "q3j9fxt",
+          "id": "0cq9wos",
           "name": "address",
           "title": "Address",
           "type": "string",
@@ -179,7 +179,7 @@
           "subProperties": []
         },
         {
-          "id": "m8cmyf8",
+          "id": "ehhseac",
           "name": "telephoneNumber",
           "title": "TelephoneNumber",
           "type": "integer",
@@ -193,7 +193,7 @@
           "subProperties": []
         },
         {
-          "id": "ujcnyjq",
+          "id": "ginlu2n",
           "name": "email",
           "title": "Email",
           "type": "string",
@@ -207,7 +207,7 @@
           "subProperties": []
         },
         {
-          "id": "lisutmg",
+          "id": "1mqsnqr",
           "name": "website",
           "title": "Website",
           "type": "string",
@@ -221,7 +221,7 @@
           "subProperties": []
         },
         {
-          "id": "utknbdp",
+          "id": "2yuka79",
           "name": "latitude",
           "title": "Latitude",
           "type": "number",
@@ -235,7 +235,7 @@
           "subProperties": []
         },
         {
-          "id": "j6x5hfo",
+          "id": "34423lj",
           "name": "longitude",
           "title": "Longitude",
           "type": "number",
@@ -249,7 +249,7 @@
           "subProperties": []
         },
         {
-          "id": "s4mccsr",
+          "id": "rk4sa6f",
           "name": "mgrs",
           "title": "Mgrs",
           "type": "string",
@@ -263,7 +263,7 @@
           "subProperties": []
         },
         {
-          "id": "v91g2un",
+          "id": "0pigxar",
           "name": "classification",
           "title": "Classification",
           "type": "string",
@@ -277,7 +277,7 @@
           "subProperties": []
         },
         {
-          "id": "kp47414",
+          "id": "p948eb3",
           "name": "origin",
           "title": "Origin",
           "type": "string",
@@ -291,7 +291,7 @@
           "subProperties": []
         },
         {
-          "id": "usx13lz",
+          "id": "g0tspvr",
           "name": "dataWithdrawalDate",
           "title": "DataWithdrawalDate",
           "type": "date",
@@ -305,7 +305,7 @@
           "subProperties": []
         },
         {
-          "id": "yak2ysf",
+          "id": "afnx8gw",
           "name": "dataCaptureDate",
           "title": "DataCaptureDate",
           "type": "date",
@@ -319,7 +319,7 @@
           "subProperties": []
         },
         {
-          "id": "4potmu5",
+          "id": "z49zb1u",
           "name": "updateDate",
           "title": "UpdateDate",
           "type": "date",
@@ -333,7 +333,7 @@
           "subProperties": []
         },
         {
-          "id": "tlcgyw5",
+          "id": "1ovkaui",
           "name": "datasettType",
           "title": "DatasettType",
           "type": "string",
@@ -347,7 +347,7 @@
           "subProperties": []
         },
         {
-          "id": "8tmil9s",
+          "id": "dht6kxb",
           "name": "gradering",
           "title": "Gradering",
           "type": "string",
@@ -361,7 +361,7 @@
           "subProperties": []
         },
         {
-          "id": "8rb7j5z",
+          "id": "8tcgouz",
           "name": "opphav",
           "title": "Opphav",
           "type": "string",
@@ -375,7 +375,7 @@
           "subProperties": []
         },
         {
-          "id": "jikiyi2",
+          "id": "ka9s80j",
           "name": "dgifFeatureAlpha",
           "title": "DgifFeatureAlpha",
           "type": "string",
@@ -389,7 +389,7 @@
           "subProperties": []
         },
         {
-          "id": "6qffcfd",
+          "id": "xpu0x7j",
           "name": "dgifFeature531",
           "title": "DgifFeature531",
           "type": "string",
@@ -403,7 +403,7 @@
           "subProperties": []
         },
         {
-          "id": "u055pp4",
+          "id": "phmzh08",
           "name": "dgifAttributeAlpha",
           "title": "DgifAttributeAlpha",
           "type": "string",
@@ -417,7 +417,7 @@
           "subProperties": []
         },
         {
-          "id": "ukfteav",
+          "id": "ku72iqu",
           "name": "dgifAttribute531",
           "title": "DgifAttribute531",
           "type": "string",
@@ -431,7 +431,7 @@
           "subProperties": []
         },
         {
-          "id": "cjffcn1",
+          "id": "p7s9at9",
           "name": "dgifValueAlpha",
           "title": "DgifValueAlpha",
           "type": "string",
@@ -445,7 +445,7 @@
           "subProperties": []
         },
         {
-          "id": "gsr7lhg",
+          "id": "ls9oaae",
           "name": "dgifValue531",
           "title": "DgifValue531",
           "type": "number",
@@ -459,7 +459,7 @@
           "subProperties": []
         },
         {
-          "id": "lhnjqbc",
+          "id": "b74w6za",
           "name": "dgifCCode",
           "title": "DgifCCode",
           "type": "string",
@@ -473,7 +473,7 @@
           "subProperties": []
         },
         {
-          "id": "o7s713q",
+          "id": "yqeyxss",
           "name": "uuid",
           "title": "Uuid",
           "type": "string",
@@ -493,8 +493,8 @@
         "type": "simple",
         "simpleColor": "#6366F1",
         "categorizedColors": {},
-        "pointSize": 24,
-        "pointIcon": "circle",
+        "pointSize": 25,
+        "pointIcon": "triangle",
         "lineWidth": 2,
         "lineDash": "solid",
         "fillOpacity": 0.5,
@@ -504,12 +504,12 @@
       }
     },
     {
-      "id": "d5qnue2",
+      "id": "sw2z8e6",
       "name": "areas",
       "description": "",
       "properties": [
         {
-          "id": "414lrd0",
+          "id": "bkac23i",
           "name": "id",
           "title": "Id",
           "type": "integer",
@@ -533,30 +533,30 @@
         "pointIcon": "circle",
         "lineWidth": 2,
         "lineDash": "solid",
-        "fillOpacity": 0.98,
+        "fillOpacity": 0.99,
         "hatchStyle": "b_diagonal",
-        "hatchThickness": 3,
-        "hatchSpacing": 8
+        "hatchThickness": 4,
+        "hatchSpacing": 16
       }
     }
   ],
   "sharedTypes": [],
   "crs": "EPSG:25833",
-  "createdAt": "2026-03-03T23:19:44.069Z",
-  "updatedAt": "2026-03-03T23:20:19.098Z",
+  "createdAt": "2026-03-04T07:44:20.538Z",
+  "updatedAt": "2026-03-04T07:46:15.914Z",
   "metadata": {
     "contactName": "Henrik Schüller",
     "contactEmail": "schhen@kartverket.no",
     "contactOrganization": "Kartverket",
     "keywords": [
-      "Sykehus",
-      "Helse",
-      "Helseinstitusjoner",
-      "Medisin",
-      "Punkter",
-      "Areal",
-      "Lokasjon",
-      "Fasiliteter"
+      "sykehus",
+      "helsevesen",
+      "helseinstitusjoner",
+      "medisin",
+      "lokasjon",
+      "punkter",
+      "områder",
+      "tilgjengelighet"
     ],
     "theme": "hh",
     "license": "CC-BY-4.0",
