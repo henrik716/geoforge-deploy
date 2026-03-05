@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals
-# Generated: 2026-03-04T18:15:46.612Z
+# Generated: 2026-03-05T12:11:41.759Z
 # Source: geopackage
 
 server:
@@ -24,27 +24,28 @@ logging:
 metadata:
   identification:
     title: Hospitals
-    description: Dette datasettet inneholder geografisk informasjon om sykehusfasiliteter, representert som punktgeometrier. Hovedformålet er å tilby en detaljert oversikt over lokaliseringen av helseinstitusjoner, tiltenkt bruk i samfunnsplanlegging, beredskap og logistikk innen helsesektoren. Hvert sykehuspunkt er utstyrt med sentrale attributter som sykehusnavn, type sykehus (f.eks. generelt eller spesialisert) og status for akuttmottak. Datasettet utgjør en verdifull ressurs for analyse av helseinfrastruktur og tilgjengelighet i et gitt område.
+    description: Dette datasettet inneholder geografisk informasjon i form av punktgeometrier som representerer sykehus. Hovedformålet er å gi en oversikt over helseinstitusjoner og deres romlige distribusjon, for eksempel for helseplanlegging eller navigasjon. For hvert sykehus er nøkkelattributter inkludert, som sykehusets navn (`name`), type (`type`) og viktig informasjon om hvorvidt det har et akuttmottak (`emergencyDepartment`). Dette gir brukere mulighet til raskt å identifisere og lokalisere relevante helsetjenester.
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
       - sykehus
       - helse
-      - helsevesen
-      - medisinsk
+      - helsetjenester
+      - medisin
+      - institusjoner
+      - lokasjoner
       - fasiliteter
-      - sykehuslokalisering
-      - helseinfrastruktur
+      - helsevesen
   license:
     name: CC-BY-4.0
     url: https://creativecommons.org/licenses/by/4.0/
   contact:
-    name: Hennrik Schüller
-    email: post@kartverket.no
+    name: Henrik Schuller
+    email: schhen@kartverket.no
   provider:
-    name: Hennrik Schüller
+    name: Henrik Schuller
     organization: Kartverket
-    email: post@kartverket.no
+    email: schhen@kartverket.no
 
 resources:
   hospitalpoints:
