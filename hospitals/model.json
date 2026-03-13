@@ -1,490 +1,456 @@
 {
-  "id": "znij3zv",
+  "id": "mg547pj",
   "name": "Hospitals",
   "namespace": "",
-  "description": "Dette datasettet presenterer geografisk informasjon om sykehus, primært representert som punktgeometrier. Hovedformålet er å gi en oversikt over og lokalisere helseinstitusjoner for planlegging, ressursallokering og tilgang til medisinske tjenester. Hvert sykehuspunkt inkluderer viktige attributter som sykehusets navn, type (f.eks. universitetssykehus, lokalsykehus) og indikasjon på tilgjengelighet av akuttmottak. Datasettet er et sentralt verktøy for krisehåndtering, samfunnsplanlegging og generell orientering om helsetilbud.",
+  "description": "Dette datasettet inneholder geografiske punktrepresentasjoner av sykehus og tilhørende arealobjekter. Hvert sykehuspunkt gir detaljer om institusjonens navn, type og om det tilbyr akuttmottak. Arealobjektene kan representere sykehusområder eller tilhørende geografiske regioner. Formålet med datasettet er å fasilitere lokalisering og analyse av helseinstitusjoner basert på deres funksjonalitet og geografiske utbredelse.",
   "version": "1.0.0",
   "layers": [
     {
-      "id": "qia1arm",
+      "id": "v39mttj",
       "name": "hospitalpoints",
       "description": "",
       "properties": [
         {
-          "id": "ji429l8",
+          "id": "iuclgu5",
           "name": "id",
           "title": "Id",
-          "type": "integer",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "integer"
+          }
         },
         {
-          "id": "01y29b8",
+          "id": "gis5rbv",
           "name": "dataset",
           "title": "Dataset",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "0k6xtbw",
+          "id": "y45u8ph",
           "name": "featuretype",
           "title": "FeatureType",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "zb4mng6",
+          "id": "bmkot5p",
           "name": "name",
           "title": "Name",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "ljk5j21",
+          "id": "0hcwur7",
           "name": "type",
           "title": "Type",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "v6d84ys",
+          "id": "br9jdl8",
           "name": "emergencydepartment",
           "title": "EmergencyDepartment",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "xjcyxv2",
+          "id": "2uxtmdz",
           "name": "doctors",
           "title": "Doctors",
-          "type": "integer",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "integer"
+          }
         },
         {
-          "id": "w5wn3zl",
+          "id": "a5wac2e",
           "name": "nurses",
           "title": "Nurses",
-          "type": "integer",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "integer"
+          }
         },
         {
-          "id": "luo3mh6",
+          "id": "szgapq7",
           "name": "operationrooms",
           "title": "OperationRooms",
-          "type": "integer",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "integer"
+          }
         },
         {
-          "id": "dro89u0",
+          "id": "wm1rd7x",
           "name": "beds",
           "title": "Beds",
-          "type": "integer",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "integer"
+          }
         },
         {
-          "id": "4rk824i",
+          "id": "1mhia2v",
           "name": "employees",
           "title": "Employees",
-          "type": "integer",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "integer"
+          }
         },
         {
-          "id": "7jb12wi",
+          "id": "nmz2lpd",
           "name": "address",
           "title": "Address",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "scoiwey",
+          "id": "lks2g0d",
           "name": "telephonenumber",
           "title": "TelephoneNumber",
-          "type": "integer",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "integer"
+          }
         },
         {
-          "id": "lv7bvd4",
+          "id": "7j2w3l0",
           "name": "email",
           "title": "Email",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "9cpia4q",
+          "id": "xuopayw",
           "name": "website",
           "title": "Website",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "a47dqs3",
+          "id": "xhdzh7f",
           "name": "latitude",
           "title": "Latitude",
-          "type": "number",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "number"
+          }
         },
         {
-          "id": "26ajmt9",
+          "id": "2ngpwf0",
           "name": "longitude",
           "title": "Longitude",
-          "type": "number",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "number"
+          }
         },
         {
-          "id": "66izzvr",
+          "id": "zcsr1xy",
           "name": "mgrs",
           "title": "Mgrs",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "aesdyjs",
+          "id": "6oe6qf3",
           "name": "classification",
           "title": "Classification",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "eiok24e",
+          "id": "iotp5ej",
           "name": "origin",
           "title": "Origin",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "5vtxfic",
+          "id": "hl2x5st",
           "name": "datawithdrawaldate",
           "title": "DataWithdrawalDate",
-          "type": "date",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "date"
+          }
         },
         {
-          "id": "umwg5cn",
+          "id": "jm8clwz",
           "name": "datacapturedate",
           "title": "DataCaptureDate",
-          "type": "date",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "date"
+          }
         },
         {
-          "id": "abm47wz",
+          "id": "7iph9z0",
           "name": "updatedate",
           "title": "UpdateDate",
-          "type": "date",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "date"
+          }
         },
         {
-          "id": "yihtwof",
+          "id": "l69stxf",
           "name": "datasetttype",
           "title": "DatasettType",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "kjluqfq",
+          "id": "scki51z",
           "name": "gradering",
           "title": "Gradering",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "9slmn1p",
+          "id": "dvu10bs",
           "name": "opphav",
           "title": "Opphav",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "07b3pv9",
+          "id": "55ff5fp",
           "name": "dgiffeaturealpha",
           "title": "DgifFeatureAlpha",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "99c8cud",
+          "id": "fhbhze2",
           "name": "dgiffeature531",
           "title": "DgifFeature531",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "tpdhmk6",
+          "id": "49vfi1h",
           "name": "dgifattributealpha",
           "title": "DgifAttributeAlpha",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "zyjhr9d",
+          "id": "1lfprgt",
           "name": "dgifattribute531",
           "title": "DgifAttribute531",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "t5m8bt8",
+          "id": "np3rffj",
           "name": "dgifvaluealpha",
           "title": "DgifValueAlpha",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "mdd8c9j",
+          "id": "vi6km2a",
           "name": "dgifvalue531",
           "title": "DgifValue531",
-          "type": "number",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "number"
+          }
         },
         {
-          "id": "yz5xoct",
+          "id": "udpn8fo",
           "name": "dgifccode",
           "title": "DgifCCode",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         },
         {
-          "id": "nvra9pt",
+          "id": "itvfdor",
           "name": "uuid",
           "title": "Uuid",
-          "type": "string",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
         }
       ],
       "geometryType": "Point",
@@ -493,8 +459,8 @@
         "type": "simple",
         "simpleColor": "#6366F1",
         "categorizedColors": {},
-        "pointSize": 25,
-        "pointIcon": "triangle",
+        "pointSize": 29,
+        "pointIcon": "square",
         "lineWidth": 2,
         "lineDash": "solid",
         "fillOpacity": 0.5,
@@ -504,23 +470,22 @@
       }
     },
     {
-      "id": "0fbz4do",
+      "id": "1zqeu4n",
       "name": "areas",
       "description": "",
       "properties": [
         {
-          "id": "9fwm42k",
+          "id": "0nn7fer",
           "name": "id",
           "title": "Id",
-          "type": "integer",
-          "required": false,
           "description": "",
+          "multiplicity": "0..1",
           "defaultValue": "",
-          "codelistMode": "inline",
-          "codelistUrl": "",
-          "codelistValues": [],
           "constraints": {},
-          "subProperties": []
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "integer"
+          }
         }
       ],
       "geometryType": "MultiPolygon",
@@ -534,7 +499,7 @@
         "lineWidth": 2,
         "lineDash": "solid",
         "fillOpacity": 1,
-        "hatchStyle": "b_diagonal",
+        "hatchStyle": "diagonal_x",
         "hatchThickness": 1,
         "hatchSpacing": 6
       }
@@ -543,21 +508,21 @@
   "sharedTypes": [],
   "sharedEnums": [],
   "crs": "EPSG:25833",
-  "createdAt": "2026-03-13T11:11:01.284Z",
-  "updatedAt": "2026-03-13T11:11:41.918Z",
+  "createdAt": "2026-03-13T18:36:56.982Z",
+  "updatedAt": "2026-03-13T18:37:39.110Z",
   "metadata": {
     "contactName": "Henrik Schüller",
-    "contactEmail": "post@kartverket.no",
+    "contactEmail": "schhen@kartverket.no",
     "contactOrganization": "Kartverket",
     "keywords": [
-      "sykehus",
-      "helsetjenester",
-      "helsevesen",
-      "medisin",
-      "klinikker",
-      "lokasjoner",
-      "helseregioner",
-      "fasiliteter"
+      "Sykehus",
+      "Helsevesen",
+      "Helsetjenester",
+      "Medisinske fasiliteter",
+      "Lokasjoner",
+      "Infrastruktur",
+      "Akuttjenester",
+      "Helseinstitusjoner"
     ],
     "theme": "hh",
     "license": "CC-BY-4.0",
@@ -574,7 +539,7 @@
     "temporalExtentTo": ""
   },
   "renderingOrder": [
-    "qia1arm",
-    "0fbz4do"
+    "v39mttj",
+    "1zqeu4n"
   ]
 }
