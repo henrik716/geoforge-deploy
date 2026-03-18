@@ -1,18 +1,16 @@
-FROM qgis/qgis-server:ltr
+FROM kartoza/qgis-server:latest
 
-COPY project.qgs /data/project.qgs
-COPY data/ /data/
+COPY project.qgs /io/project.qgs
+COPY data /data
 
-# FIX: SQLite/GeoPackage needs directory write permissions to create temporary 
-# lock/journal files (-wal, -shm) even during read-only operations. 
-# Without this, QGIS Server silently drops the layers.
-RUN chmod -R 777 /data
+ENV QGIS_PROJECT_FILE=/io/project.qgs
 
-ENV QGIS_PROJECT_FILE=/data/project.qgs
-# QGIS Server 3.x serves all OGC services (WMS, WFS, WCS, WMTS) at /ows/ by default.
-# FIX: QGIS_SERVER_SERVICE_URL is set at runtime via .env / Railway / Fly variables
-# so GetCapabilities advertises the correct public HTTPS URL.
-# Default is blank — QGIS Server falls back to the request Host header (fine for local use).
-# Example: https://<your-app>.up.railway.app/ows/
-ENV QGIS_SERVER_SERVICE_URL=
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+  CMD curl -f http://localhost:80/wms \
+      --data-urlencode SERVICE=WMS \
+      --data-urlencode VERSION=1.1.1 \
+      --data-urlencode REQUEST=GetCapabilities || exit 1
+
 EXPOSE 80
