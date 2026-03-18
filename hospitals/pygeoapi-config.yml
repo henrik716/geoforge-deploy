@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals
-# Generated: 2026-03-18T14:06:19.470Z
+# Generated: 2026-03-18T14:12:25.771Z
 # Source: geopackage
 
 server:
@@ -24,22 +24,21 @@ logging:
 metadata:
   identification:
     title: Hospitals
-    description: Test
+    description: Spatial data
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
-      - s
-      - f
-      - da
+      - geospatial
+      - data
   license:
     name: CC-BY-4.0
     url: https://creativecommons.org/licenses/by/4.0/
   contact:
-    name: Henrik Schuller
+    name: henrik
     email: schhen@kartverket.no
   provider:
-    name: Henrik Schuller
-    organization: Kartverket
+    name: henrik
+    organization: kssd
     email: schhen@kartverket.no
 
 resources:

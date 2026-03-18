@@ -1,17 +1,17 @@
 {
-  "id": "04qkxb3",
+  "id": "ofookxq",
   "name": "Hospitals",
   "namespace": "",
-  "description": "Test",
+  "description": "",
   "version": "1.0.0",
   "layers": [
     {
-      "id": "ciy98w5",
+      "id": "13pbg21",
       "name": "hospitalpoints",
       "description": "",
       "properties": [
         {
-          "id": "onwwtbx",
+          "id": "mn5ozr3",
           "name": "id",
           "title": "Id",
           "description": "",
@@ -24,7 +24,7 @@
           }
         },
         {
-          "id": "m40ctl8",
+          "id": "385p5ov",
           "name": "dataset",
           "title": "Dataset",
           "description": "",
@@ -37,7 +37,7 @@
           }
         },
         {
-          "id": "uk52q8l",
+          "id": "l5bu8ay",
           "name": "featuretype",
           "title": "FeatureType",
           "description": "",
@@ -50,7 +50,7 @@
           }
         },
         {
-          "id": "g1u94ao",
+          "id": "q49l7lk",
           "name": "name",
           "title": "Name",
           "description": "",
@@ -63,7 +63,7 @@
           }
         },
         {
-          "id": "c7zdl8f",
+          "id": "6vxyudb",
           "name": "type",
           "title": "Type",
           "description": "",
@@ -76,7 +76,7 @@
           }
         },
         {
-          "id": "zziaaut",
+          "id": "p2u7xtn",
           "name": "emergencydepartment",
           "title": "EmergencyDepartment",
           "description": "",
@@ -89,7 +89,7 @@
           }
         },
         {
-          "id": "nyzlae8",
+          "id": "bvazv4i",
           "name": "doctors",
           "title": "Doctors",
           "description": "",
@@ -102,7 +102,7 @@
           }
         },
         {
-          "id": "xajyeai",
+          "id": "yc9h545",
           "name": "nurses",
           "title": "Nurses",
           "description": "",
@@ -115,7 +115,7 @@
           }
         },
         {
-          "id": "n2ychux",
+          "id": "2f3937h",
           "name": "operationrooms",
           "title": "OperationRooms",
           "description": "",
@@ -128,7 +128,7 @@
           }
         },
         {
-          "id": "030uk0t",
+          "id": "b5jrca6",
           "name": "beds",
           "title": "Beds",
           "description": "",
@@ -141,7 +141,7 @@
           }
         },
         {
-          "id": "m0flgzz",
+          "id": "8ownsab",
           "name": "employees",
           "title": "Employees",
           "description": "",
@@ -154,7 +154,7 @@
           }
         },
         {
-          "id": "sdt8h0r",
+          "id": "386qsxc",
           "name": "address",
           "title": "Address",
           "description": "",
@@ -167,7 +167,7 @@
           }
         },
         {
-          "id": "bkt26tk",
+          "id": "q7tpe3k",
           "name": "telephonenumber",
           "title": "TelephoneNumber",
           "description": "",
@@ -180,7 +180,7 @@
           }
         },
         {
-          "id": "m630b6l",
+          "id": "0livrrb",
           "name": "email",
           "title": "Email",
           "description": "",
@@ -193,7 +193,7 @@
           }
         },
         {
-          "id": "ex81hw7",
+          "id": "3j3xynm",
           "name": "website",
           "title": "Website",
           "description": "",
@@ -206,7 +206,7 @@
           }
         },
         {
-          "id": "h5vxth2",
+          "id": "6b35yzw",
           "name": "latitude",
           "title": "Latitude",
           "description": "",
@@ -219,7 +219,7 @@
           }
         },
         {
-          "id": "npbo7iw",
+          "id": "s4dgrwj",
           "name": "longitude",
           "title": "Longitude",
           "description": "",
@@ -232,7 +232,7 @@
           }
         },
         {
-          "id": "sqztuwu",
+          "id": "jwj37y2",
           "name": "mgrs",
           "title": "Mgrs",
           "description": "",
@@ -245,7 +245,7 @@
           }
         },
         {
-          "id": "ikiuz48",
+          "id": "zqo74il",
           "name": "classification",
           "title": "Classification",
           "description": "",
@@ -258,7 +258,7 @@
           }
         },
         {
-          "id": "1ia8omq",
+          "id": "3uad7kj",
           "name": "origin",
           "title": "Origin",
           "description": "",
@@ -271,7 +271,7 @@
           }
         },
         {
-          "id": "aw4z11h",
+          "id": "wxiz5jg",
           "name": "datawithdrawaldate",
           "title": "DataWithdrawalDate",
           "description": "",
@@ -284,7 +284,7 @@
           }
         },
         {
-          "id": "4w1qlye",
+          "id": "swh9arb",
           "name": "datacapturedate",
           "title": "DataCaptureDate",
           "description": "",
@@ -297,7 +297,7 @@
           }
         },
         {
-          "id": "c9n52a7",
+          "id": "yl6kj6h",
           "name": "updatedate",
           "title": "UpdateDate",
           "description": "",
@@ -310,7 +310,7 @@
           }
         },
         {
-          "id": "9sp5dyy",
+          "id": "lq45mnn",
           "name": "datasetttype",
           "title": "DatasettType",
           "description": "",
@@ -323,7 +323,7 @@
           }
         },
         {
-          "id": "qg9xb0f",
+          "id": "v2yf073",
           "name": "gradering",
           "title": "Gradering",
           "description": "",
@@ -336,7 +336,7 @@
           }
         },
         {
-          "id": "mros59w",
+          "id": "v9atlr9",
           "name": "opphav",
           "title": "Opphav",
           "description": "",
@@ -349,7 +349,7 @@
           }
         },
         {
-          "id": "idz1nq2",
+          "id": "23w6jp0",
           "name": "dgiffeaturealpha",
           "title": "DgifFeatureAlpha",
           "description": "",
@@ -362,7 +362,7 @@
           }
         },
         {
-          "id": "hsmghnr",
+          "id": "rnh3lrr",
           "name": "dgiffeature531",
           "title": "DgifFeature531",
           "description": "",
@@ -375,7 +375,7 @@
           }
         },
         {
-          "id": "j3mrf75",
+          "id": "dup9fry",
           "name": "dgifattributealpha",
           "title": "DgifAttributeAlpha",
           "description": "",
@@ -388,7 +388,7 @@
           }
         },
         {
-          "id": "wpvirf3",
+          "id": "p3cqrmm",
           "name": "dgifattribute531",
           "title": "DgifAttribute531",
           "description": "",
@@ -401,7 +401,7 @@
           }
         },
         {
-          "id": "o54tekw",
+          "id": "g761n7r",
           "name": "dgifvaluealpha",
           "title": "DgifValueAlpha",
           "description": "",
@@ -414,7 +414,7 @@
           }
         },
         {
-          "id": "w7ygkhj",
+          "id": "hl6cdlm",
           "name": "dgifvalue531",
           "title": "DgifValue531",
           "description": "",
@@ -427,7 +427,7 @@
           }
         },
         {
-          "id": "3j1ros4",
+          "id": "wm64qwq",
           "name": "dgifccode",
           "title": "DgifCCode",
           "description": "",
@@ -440,7 +440,7 @@
           }
         },
         {
-          "id": "33xvtal",
+          "id": "0ci8eeh",
           "name": "uuid",
           "title": "Uuid",
           "description": "",
@@ -459,8 +459,8 @@
         "type": "simple",
         "simpleColor": "#6366F1",
         "categorizedColors": {},
-        "pointSize": 17,
-        "pointIcon": "triangle",
+        "pointSize": 8,
+        "pointIcon": "circle",
         "lineWidth": 2,
         "lineDash": "solid",
         "fillOpacity": 0.5,
@@ -470,12 +470,12 @@
       }
     },
     {
-      "id": "rnx7w0r",
+      "id": "6w88p29",
       "name": "areas",
       "description": "",
       "properties": [
         {
-          "id": "rhxn456",
+          "id": "hnger9z",
           "name": "id",
           "title": "Id",
           "description": "",
@@ -498,8 +498,8 @@
         "pointIcon": "circle",
         "lineWidth": 2,
         "lineDash": "solid",
-        "fillOpacity": 0.75,
-        "hatchStyle": "b_diagonal",
+        "fillOpacity": 0.5,
+        "hatchStyle": "solid",
         "hatchThickness": 1,
         "hatchSpacing": 6
       }
@@ -508,18 +508,14 @@
   "sharedTypes": [],
   "sharedEnums": [],
   "crs": "EPSG:25833",
-  "createdAt": "2026-03-18T14:01:49.744Z",
-  "updatedAt": "2026-03-18T14:04:49.918Z",
+  "createdAt": "2026-03-18T14:12:06.018Z",
+  "updatedAt": "2026-03-18T14:12:15.819Z",
   "metadata": {
-    "contactName": "Henrik Schuller",
+    "contactName": "henrik",
     "contactEmail": "schhen@kartverket.no",
-    "contactOrganization": "Kartverket",
-    "keywords": [
-      "s",
-      "f",
-      "da"
-    ],
-    "theme": "hb",
+    "contactOrganization": "kssd",
+    "keywords": [],
+    "theme": "",
     "license": "CC-BY-4.0",
     "accessRights": "public",
     "purpose": "",
@@ -534,7 +530,7 @@
     "temporalExtentTo": ""
   },
   "renderingOrder": [
-    "ciy98w5",
-    "rnx7w0r"
+    "13pbg21",
+    "6w88p29"
   ]
 }
