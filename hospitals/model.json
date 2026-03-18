@@ -2,7 +2,7 @@
   "id": "11wmuux",
   "name": "Hospitals",
   "namespace": "",
-  "description": "",
+  "description": "fghjklø",
   "version": "1.0.0",
   "layers": [
     {
@@ -509,13 +509,13 @@
   "sharedEnums": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-18T13:36:53.539Z",
-  "updatedAt": "2026-03-18T13:36:53.624Z",
+  "updatedAt": "2026-03-18T13:40:49.124Z",
   "metadata": {
-    "contactName": "",
-    "contactEmail": "",
-    "contactOrganization": "",
+    "contactName": "henrik s",
+    "contactEmail": "schhen@kartverket",
+    "contactOrganization": "kkkk",
     "keywords": [],
-    "theme": "",
+    "theme": "hb",
     "license": "CC-BY-4.0",
     "accessRights": "public",
     "purpose": "",
