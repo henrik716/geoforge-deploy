@@ -10,12 +10,12 @@
         </spatialrefsys>
   </projectCrs>
   <layer-tree-group name="" expanded="1" checked="Qt::Checked">
-    <layer-tree-layer id="hospitalpoints_0_1774286773478" name="hospitalpoints" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
-    <layer-tree-layer id="areas_1_1774286773478" name="areas" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
+    <layer-tree-layer id="hospitalpoints_0_1774289354444" name="hospitalpoints" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
+    <layer-tree-layer id="areas_1_1774289354444" name="areas" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
   </layer-tree-group>
   <projectlayers>
     <maplayer name="hospitalpoints" type="vector" hasScaleBasedVisibilityFlag="0">
-        <id>hospitalpoints_0_1774286773478</id>
+        <id>hospitalpoints_0_1774289354444</id>
         <datasource>/data/Hospitals.gpkg|layername=hospitalpoints</datasource>
         <provider encoding="UTF-8">ogr</provider>
         <layername>hospitalpoints</layername>
@@ -34,9 +34,9 @@
           <symbols>
             <symbol type="marker" name="0">
           <layer class="SimpleMarker">
-            <prop k="name" v="circle"/>
+            <prop k="name" v="square"/>
             <prop k="color" v="99,102,241,255"/>
-            <prop k="size" v="23"/>
+            <prop k="size" v="29"/>
             <prop k="size_unit" v="Point"/>
             <prop k="outline_color" v="99,102,241,255"/>
             <prop k="outline_width" v="0"/>
@@ -46,7 +46,7 @@
         </renderer-v2>
       </maplayer>
     <maplayer name="areas" type="vector" hasScaleBasedVisibilityFlag="0">
-        <id>areas_1_1774286773478</id>
+        <id>areas_1_1774289354444</id>
         <datasource>/data/Hospitals.gpkg|layername=areas</datasource>
         <provider encoding="UTF-8">ogr</provider>
         <layername>areas</layername>
@@ -63,16 +63,42 @@
         </crs>
         <renderer-v2 type="singleSymbol" enableorderby="0" forceraster="0">
           <symbols>
-            <symbol alpha="0.5" type="fill" name="0">
-            <layer class="SimpleFill">
-              <prop k="color" v="99,102,241,255"/>
-              <prop k="style" v="solid"/>
-              <prop k="outline_color" v="99,102,241,255"/>
-              <prop k="outline_width" v="5"/>
-              <prop k="outline_width_unit" v="Point"/>
-              <prop k="outline_style" v="solid"/>
-              <prop k="joinstyle" v="round"/>
-            </layer>
+            <symbol alpha="1" type="fill" name="0">
+            
+          <layer class="LinePatternFill">
+            <prop k="angle" v="45"/>
+            <prop k="distance" v="6"/>
+            <prop k="distance_unit" v="Point"/>
+            <symbol type="line" name="@0@0">
+              <layer class="SimpleLine">
+                <prop k="line_color" v="99,102,241,255"/>
+                <prop k="line_width" v="1"/>
+                <prop k="line_width_unit" v="Point"/>
+                <prop k="line_style" v="solid"/>
+              </layer>
+            </symbol>
+          </layer>
+          <layer class="LinePatternFill">
+            <prop k="angle" v="-45"/>
+            <prop k="distance" v="6"/>
+            <prop k="distance_unit" v="Point"/>
+            <symbol type="line" name="@0@0">
+              <layer class="SimpleLine">
+                <prop k="line_color" v="99,102,241,255"/>
+                <prop k="line_width" v="1"/>
+                <prop k="line_width_unit" v="Point"/>
+                <prop k="line_style" v="solid"/>
+              </layer>
+            </symbol>
+          </layer>
+            
+          <layer class="SimpleLine">
+            <prop k="line_color" v="99,102,241,255"/>
+            <prop k="line_width" v="2"/>
+            <prop k="line_width_unit" v="Point"/>
+            <prop k="line_style" v="solid"/>
+            <prop k="joinstyle" v="round"/>
+          </layer>
           </symbol>
           </symbols>
         </renderer-v2>

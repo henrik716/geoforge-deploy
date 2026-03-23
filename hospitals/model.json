@@ -1,17 +1,17 @@
 {
-  "id": "ba0yiut",
+  "id": "mg547pj",
   "name": "Hospitals",
   "namespace": "",
-  "description": "Dette datasettet inneholder geografisk informasjon om sykehus, presentert som punktdata for enkeltlokasjoner og flatedata for større sykehusområder. Hovedformålet er å visualisere og analysere sykehusenes geografiske fordeling og funksjonalitet. Punktlaget inkluderer nøkkelattributter som sykehusets navn, type (f.eks. lokalsykehus, regionsykehus) og indikasjon på om det har et akuttmottak. Flatedataene gir kontekst for sykehusenes fysiske utbredelse.ll",
+  "description": "Dette datasettet inneholder geografiske punktrepresentasjoner av sykehus og tilhørende arealobjekter. Hvert sykehuspunkt gir detaljer om institusjonens navn, type og om det tilbyr akuttmottak. Arealobjektene kan representere sykehusområder eller tilhørende geografiske regioner. Formålet med datasettet er å fasilitere lokalisering og analyse av helseinstitusjoner basert på deres funksjonalitet og geografiske utbredelse.",
   "version": "1.0.0",
   "layers": [
     {
-      "id": "4r72c1q",
+      "id": "v39mttj",
       "name": "hospitalpoints",
-      "description": "",
+      "description": "Dette datasettet inneholder geografiske punktrepresentasjoner av sykehus og tilhørende arealobjekter. Hvert sykehuspunkt gir detaljer om institusjonens navn, type og om det tilbyr akuttmottak. Arealobjektene kan representere sykehusområder eller tilhørende geografiske regioner. Formålet med datasettet er å fasilitere lokalisering og analyse av helseinstitusjoner basert på deres funksjonalitet og geografiske utbredelse.",
       "properties": [
         {
-          "id": "6a17tx1",
+          "id": "iuclgu5",
           "name": "id",
           "title": "Id",
           "description": "",
@@ -24,20 +24,26 @@
           }
         },
         {
-          "id": "kktkd0a",
+          "id": "gis5rbv",
           "name": "dataset",
           "title": "Dataset",
           "description": "",
           "multiplicity": "0..1",
           "defaultValue": "",
-          "constraints": {},
+          "constraints": {
+            "enumeration": [
+              "Test",
+              "Enda",
+              "Flere"
+            ]
+          },
           "fieldType": {
             "kind": "primitive",
             "baseType": "string"
           }
         },
         {
-          "id": "jk92gco",
+          "id": "y45u8ph",
           "name": "featuretype",
           "title": "FeatureType",
           "description": "",
@@ -50,7 +56,7 @@
           }
         },
         {
-          "id": "qq6m2gw",
+          "id": "bmkot5p",
           "name": "name",
           "title": "Name",
           "description": "",
@@ -63,7 +69,7 @@
           }
         },
         {
-          "id": "oxaeagn",
+          "id": "0hcwur7",
           "name": "type",
           "title": "Type",
           "description": "",
@@ -76,7 +82,7 @@
           }
         },
         {
-          "id": "ljedhnj",
+          "id": "br9jdl8",
           "name": "emergencydepartment",
           "title": "EmergencyDepartment",
           "description": "",
@@ -89,7 +95,7 @@
           }
         },
         {
-          "id": "lcmxrxp",
+          "id": "2uxtmdz",
           "name": "doctors",
           "title": "Doctors",
           "description": "",
@@ -102,7 +108,7 @@
           }
         },
         {
-          "id": "jpecgna",
+          "id": "a5wac2e",
           "name": "nurses",
           "title": "Nurses",
           "description": "",
@@ -115,7 +121,7 @@
           }
         },
         {
-          "id": "z7yi07n",
+          "id": "szgapq7",
           "name": "operationrooms",
           "title": "OperationRooms",
           "description": "",
@@ -128,7 +134,7 @@
           }
         },
         {
-          "id": "ainc3pq",
+          "id": "wm1rd7x",
           "name": "beds",
           "title": "Beds",
           "description": "",
@@ -141,7 +147,7 @@
           }
         },
         {
-          "id": "4nnfe07",
+          "id": "1mhia2v",
           "name": "employees",
           "title": "Employees",
           "description": "",
@@ -154,7 +160,7 @@
           }
         },
         {
-          "id": "idqfwtm",
+          "id": "nmz2lpd",
           "name": "address",
           "title": "Address",
           "description": "",
@@ -167,7 +173,7 @@
           }
         },
         {
-          "id": "kfokcsc",
+          "id": "lks2g0d",
           "name": "telephonenumber",
           "title": "TelephoneNumber",
           "description": "",
@@ -180,7 +186,7 @@
           }
         },
         {
-          "id": "hhzg02u",
+          "id": "7j2w3l0",
           "name": "email",
           "title": "Email",
           "description": "",
@@ -193,7 +199,7 @@
           }
         },
         {
-          "id": "01u2hwi",
+          "id": "xuopayw",
           "name": "website",
           "title": "Website",
           "description": "",
@@ -206,7 +212,7 @@
           }
         },
         {
-          "id": "6smruo4",
+          "id": "xhdzh7f",
           "name": "latitude",
           "title": "Latitude",
           "description": "",
@@ -219,7 +225,7 @@
           }
         },
         {
-          "id": "1gj2c6c",
+          "id": "2ngpwf0",
           "name": "longitude",
           "title": "Longitude",
           "description": "",
@@ -232,7 +238,7 @@
           }
         },
         {
-          "id": "fo1kcg8",
+          "id": "zcsr1xy",
           "name": "mgrs",
           "title": "Mgrs",
           "description": "",
@@ -245,7 +251,7 @@
           }
         },
         {
-          "id": "4hx4wvz",
+          "id": "6oe6qf3",
           "name": "classification",
           "title": "Classification",
           "description": "",
@@ -258,7 +264,7 @@
           }
         },
         {
-          "id": "5nfn80k",
+          "id": "iotp5ej",
           "name": "origin",
           "title": "Origin",
           "description": "",
@@ -271,7 +277,7 @@
           }
         },
         {
-          "id": "x62sz6d",
+          "id": "hl2x5st",
           "name": "datawithdrawaldate",
           "title": "DataWithdrawalDate",
           "description": "",
@@ -284,7 +290,7 @@
           }
         },
         {
-          "id": "xk2nzza",
+          "id": "jm8clwz",
           "name": "datacapturedate",
           "title": "DataCaptureDate",
           "description": "",
@@ -297,7 +303,7 @@
           }
         },
         {
-          "id": "kzeuit6",
+          "id": "7iph9z0",
           "name": "updatedate",
           "title": "UpdateDate",
           "description": "",
@@ -310,7 +316,7 @@
           }
         },
         {
-          "id": "xflwx27",
+          "id": "l69stxf",
           "name": "datasetttype",
           "title": "DatasettType",
           "description": "",
@@ -323,7 +329,7 @@
           }
         },
         {
-          "id": "sdlt73k",
+          "id": "scki51z",
           "name": "gradering",
           "title": "Gradering",
           "description": "",
@@ -336,7 +342,7 @@
           }
         },
         {
-          "id": "3wia84a",
+          "id": "dvu10bs",
           "name": "opphav",
           "title": "Opphav",
           "description": "",
@@ -349,7 +355,7 @@
           }
         },
         {
-          "id": "2ui3dkd",
+          "id": "55ff5fp",
           "name": "dgiffeaturealpha",
           "title": "DgifFeatureAlpha",
           "description": "",
@@ -362,7 +368,7 @@
           }
         },
         {
-          "id": "14pgwrq",
+          "id": "fhbhze2",
           "name": "dgiffeature531",
           "title": "DgifFeature531",
           "description": "",
@@ -375,7 +381,7 @@
           }
         },
         {
-          "id": "23phmq0",
+          "id": "49vfi1h",
           "name": "dgifattributealpha",
           "title": "DgifAttributeAlpha",
           "description": "",
@@ -388,7 +394,7 @@
           }
         },
         {
-          "id": "igmhk5f",
+          "id": "1lfprgt",
           "name": "dgifattribute531",
           "title": "DgifAttribute531",
           "description": "",
@@ -401,7 +407,7 @@
           }
         },
         {
-          "id": "xmdiegz",
+          "id": "np3rffj",
           "name": "dgifvaluealpha",
           "title": "DgifValueAlpha",
           "description": "",
@@ -414,7 +420,7 @@
           }
         },
         {
-          "id": "5yaras6",
+          "id": "vi6km2a",
           "name": "dgifvalue531",
           "title": "DgifValue531",
           "description": "",
@@ -427,7 +433,7 @@
           }
         },
         {
-          "id": "20v5vr1",
+          "id": "udpn8fo",
           "name": "dgifccode",
           "title": "DgifCCode",
           "description": "",
@@ -440,7 +446,7 @@
           }
         },
         {
-          "id": "msos31c",
+          "id": "itvfdor",
           "name": "uuid",
           "title": "Uuid",
           "description": "",
@@ -451,6 +457,33 @@
             "kind": "primitive",
             "baseType": "string"
           }
+        },
+        {
+          "id": "dcx2v2x",
+          "name": "kodeliste",
+          "title": "kodeliste",
+          "description": "",
+          "multiplicity": "0..1",
+          "defaultValue": "",
+          "constraints": {},
+          "fieldType": {
+            "kind": "codelist",
+            "mode": "inline",
+            "values": [
+              {
+                "id": "02ng9xs",
+                "code": "1",
+                "label": "a",
+                "description": ""
+              },
+              {
+                "id": "k7s7ues",
+                "code": "2",
+                "label": "b",
+                "description": ""
+              }
+            ]
+          }
         }
       ],
       "geometryType": "Point",
@@ -459,8 +492,8 @@
         "type": "simple",
         "simpleColor": "#6366F1",
         "categorizedColors": {},
-        "pointSize": 23,
-        "pointIcon": "circle",
+        "pointSize": 29,
+        "pointIcon": "square",
         "lineWidth": 2,
         "lineDash": "solid",
         "fillOpacity": 0.5,
@@ -470,12 +503,12 @@
       }
     },
     {
-      "id": "cgfanv2",
+      "id": "1zqeu4n",
       "name": "areas",
       "description": "",
       "properties": [
         {
-          "id": "5ypwdpz",
+          "id": "0nn7fer",
           "name": "id",
           "title": "Id",
           "description": "",
@@ -496,10 +529,10 @@
         "categorizedColors": {},
         "pointSize": 8,
         "pointIcon": "circle",
-        "lineWidth": 5,
+        "lineWidth": 2,
         "lineDash": "solid",
-        "fillOpacity": 0.5,
-        "hatchStyle": "solid",
+        "fillOpacity": 1,
+        "hatchStyle": "diagonal_x",
         "hatchThickness": 1,
         "hatchSpacing": 6
       }
@@ -508,21 +541,21 @@
   "sharedTypes": [],
   "sharedEnums": [],
   "crs": "EPSG:25833",
-  "createdAt": "2026-03-23T13:10:32.872Z",
-  "updatedAt": "2026-03-23T17:21:09.359Z",
+  "createdAt": "2026-03-13T18:36:56.982Z",
+  "updatedAt": "2026-03-23T18:08:44.166Z",
   "metadata": {
-    "contactName": "Henrik Schuller",
-    "contactEmail": "post@kartverket.no",
+    "contactName": "Henrik Schüller",
+    "contactEmail": "schhen@kartverket.no",
     "contactOrganization": "Kartverket",
     "keywords": [
-      "sykehus",
-      "helse",
-      "helsevesen",
-      "medisin",
-      "lokalisering",
-      "infrastruktur",
-      "fasiliteter",
-      "hjklø"
+      "Sykehus",
+      "Helsevesen",
+      "Helsetjenester",
+      "Medisinske fasiliteter",
+      "Lokasjoner",
+      "Infrastruktur",
+      "Akuttjenester",
+      "Helseinstitusjoner"
     ],
     "theme": "hh",
     "license": "CC-BY-4.0",
@@ -539,64 +572,7 @@
     "temporalExtentTo": ""
   },
   "renderingOrder": [
-    "4r72c1q",
-    "cgfanv2"
-  ],
-  "sourceConnection": {
-    "type": "geopackage",
-    "config": {
-      "filename": "Hospitals.gpkg"
-    },
-    "layerMappings": {
-      "4r72c1q": {
-        "sourceTable": "hospitalpoints",
-        "fieldMappings": {
-          "6a17tx1": "id",
-          "kktkd0a": "dataset",
-          "jk92gco": "featuretype",
-          "qq6m2gw": "name",
-          "oxaeagn": "type",
-          "ljedhnj": "emergencydepartment",
-          "lcmxrxp": "doctors",
-          "jpecgna": "nurses",
-          "z7yi07n": "operationrooms",
-          "ainc3pq": "beds",
-          "4nnfe07": "employees",
-          "idqfwtm": "address",
-          "kfokcsc": "telephonenumber",
-          "hhzg02u": "email",
-          "01u2hwi": "website",
-          "6smruo4": "latitude",
-          "1gj2c6c": "longitude",
-          "fo1kcg8": "mgrs",
-          "4hx4wvz": "classification",
-          "5nfn80k": "origin",
-          "x62sz6d": "datawithdrawaldate",
-          "xk2nzza": "datacapturedate",
-          "kzeuit6": "updatedate",
-          "xflwx27": "datasetttype",
-          "sdlt73k": "gradering",
-          "3wia84a": "opphav",
-          "2ui3dkd": "dgiffeaturealpha",
-          "14pgwrq": "dgiffeature531",
-          "23phmq0": "dgifattributealpha",
-          "igmhk5f": "dgifattribute531",
-          "xmdiegz": "dgifvaluealpha",
-          "5yaras6": "dgifvalue531",
-          "20v5vr1": "dgifccode",
-          "msos31c": "uuid"
-        },
-        "timestampColumn": "",
-        "primaryKeyColumn": "fid"
-      },
-      "cgfanv2": {
-        "sourceTable": "areas",
-        "fieldMappings": {
-          "5ypwdpz": "id"
-        },
-        "timestampColumn": "",
-        "primaryKeyColumn": "fid"
-      }
-    }
-  }
+    "v39mttj",
+    "1zqeu4n"
+  ]
 }
