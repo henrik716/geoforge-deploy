@@ -9,18 +9,18 @@
   
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
   
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&display=swap" rel="stylesheet">
   
   <style>
     :root {
       --brand: ${brand};
       --brand-dark: ${brandDark};
-      --radius: 1rem; /* Slightly rounder for a modern feel */
+      --radius: 0.75rem; /* Match app border radius */
       --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
       --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
       --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     }
-    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: #0f172a; background: #f8fafc; -webkit-font-smoothing: antialiased; }
+    body { font-family: 'DM Sans', system-ui, -apple-system, sans-serif; color: #0f172a; background: #f8fafc; -webkit-font-smoothing: antialiased; }
     
     /* Sleek Navbar */
     .navbar { 
@@ -50,9 +50,9 @@
       border-radius: 9999px;
       transition: all 0.2s ease;
     }
-    .nav-link:hover, .nav-link.active { 
-      color: var(--brand) !important; 
-      background: #f1f5f9;
+    .nav-link:hover, .nav-link.active {
+      color: var(--brand) !important;
+      background: #eef2ff;
     }
     
     /* Cards */

@@ -542,7 +542,7 @@
   "sharedEnums": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-13T18:36:56.982Z",
-  "updatedAt": "2026-03-23T18:08:44.166Z",
+  "updatedAt": "2026-03-23T18:09:24.026Z",
   "metadata": {
     "contactName": "Henrik Schüller",
     "contactEmail": "schhen@kartverket.no",
@@ -574,5 +574,63 @@
   "renderingOrder": [
     "v39mttj",
     "1zqeu4n"
-  ]
+  ],
+  "sourceConnection": {
+    "type": "geopackage",
+    "config": {
+      "filename": "Hospitals.gpkg"
+    },
+    "layerMappings": {
+      "v39mttj": {
+        "sourceTable": "hospitalpoints",
+        "fieldMappings": {
+          "iuclgu5": "id",
+          "gis5rbv": "dataset",
+          "y45u8ph": "featuretype",
+          "bmkot5p": "name",
+          "0hcwur7": "type",
+          "br9jdl8": "emergencydepartment",
+          "2uxtmdz": "doctors",
+          "a5wac2e": "nurses",
+          "szgapq7": "operationrooms",
+          "wm1rd7x": "beds",
+          "1mhia2v": "employees",
+          "nmz2lpd": "address",
+          "lks2g0d": "telephonenumber",
+          "7j2w3l0": "email",
+          "xuopayw": "website",
+          "xhdzh7f": "latitude",
+          "2ngpwf0": "longitude",
+          "zcsr1xy": "mgrs",
+          "6oe6qf3": "classification",
+          "iotp5ej": "origin",
+          "hl2x5st": "datawithdrawaldate",
+          "jm8clwz": "datacapturedate",
+          "7iph9z0": "updatedate",
+          "l69stxf": "datasetttype",
+          "scki51z": "gradering",
+          "dvu10bs": "opphav",
+          "55ff5fp": "dgiffeaturealpha",
+          "fhbhze2": "dgiffeature531",
+          "49vfi1h": "dgifattributealpha",
+          "1lfprgt": "dgifattribute531",
+          "np3rffj": "dgifvaluealpha",
+          "vi6km2a": "dgifvalue531",
+          "udpn8fo": "dgifccode",
+          "itvfdor": "uuid",
+          "dcx2v2x": "kodeliste"
+        },
+        "timestampColumn": "",
+        "primaryKeyColumn": "fid"
+      },
+      "1zqeu4n": {
+        "sourceTable": "areas",
+        "fieldMappings": {
+          "0nn7fer": "id"
+        },
+        "timestampColumn": "",
+        "primaryKeyColumn": "fid"
+      }
+    }
+  }
 }
