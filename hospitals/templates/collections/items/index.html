@@ -3,7 +3,7 @@
 {% block crumbs %}
   {{ super() }} / 
   <a href="{{ config.server.url }}/collections">Collections</a> / 
-  <a href="{{ config.server.url }}/collections/{{ data.id }}">{{ data.title | default(data.id) }}</a> / 
+  <a href="{{ data.dataset_path | default(config.server.url + '/collections') }}">{{ data.title | default('Collection') }}</a> / 
   <span>Items</span>
 {% endblock %}
 {% block body %}
@@ -15,6 +15,8 @@
   .feature-table td { padding:0.7rem 1rem; font-size:0.875rem; color:#334155; border-color:#f1f5f9; vertical-align:middle; }
   .feature-table tbody tr { transition:background 0.12s; }
   .feature-table tbody tr:hover { background:#f8fafc; }
+  .id-link { font-weight:700; font-family:monospace; font-size:0.95rem; color:#4f46e5; display:inline-flex; align-items:center; gap:0.4rem; text-decoration:underline; text-decoration-color:#c7d2fe; text-underline-offset:4px; text-decoration-thickness:2px; transition:all 0.2s; }
+  .id-link:hover { color:#3730a3; text-decoration-color:#4f46e5; }
   .chip { display:inline-block; font-size:0.72rem; padding:0.15rem 0.6rem; border-radius:999px; background:#e0e7ff; color:#4338ca; font-weight:600; }
   .items-meta-bar { display:flex; gap:1.5rem; flex-wrap:wrap; align-items:center; margin-bottom:1.5rem; padding:0.85rem 1.1rem; background:#fff; border:1px solid #e2e8f0; border-radius: var(--radius); box-shadow:var(--shadow-sm); }
   .items-meta-bar .meta-item { display:flex; flex-direction:column; }
@@ -22,13 +24,13 @@
   .items-meta-bar .meta-value { font-size:0.9rem; font-weight:600; color:#0f172a; }
 </style>
 
-<div class="items-header">{{ data.title | default(data.id) }}</div>
+<div class="items-header">{{ data.title | default('Collection') }}</div>
 <div class="items-desc">{{ data.description }}</div>
 
 <div class="items-meta-bar mb-3">
   <div class="meta-item">
     <span class="meta-label">Collection</span>
-    <span class="meta-value">{{ data.id }}</span>
+    <span class="meta-value">{{ data.title | default('Collection') }}</span>
   </div>
   {% if data.numberMatched is defined %}
   <div class="meta-item">
@@ -42,7 +44,21 @@
     <span class="meta-value">{{ data.numberReturned }}</span>
   </div>
   {% endif %}
-  <div class="ms-auto">
+  <div class="meta-item" style="flex:1; max-width:220px; margin-left:1rem;">
+    <span class="meta-label">Search</span>
+    <input type="text" id="items-search" class="form-control form-control-sm" placeholder="Text filter... (Enter)" style="font-size:0.85rem; padding:0.15rem 0.6rem; border-color:#cbd5e1; border-radius:0.375rem; color:#334155;">
+  </div>
+  <div class="meta-item">
+    <span class="meta-label">Limit</span>
+    <select id="items-limit" class="form-select form-select-sm" style="font-size:0.85rem; padding:0.15rem 1.5rem 0.15rem 0.5rem; border-color:#cbd5e1; border-radius:0.375rem; color:#334155; font-weight:600; cursor:pointer;">
+      <option value="{{ config.server.limits.default_items }}">{{ config.server.limits.default_items }} (Default)</option>
+      <option value="10">10</option>
+      <option value="50">50</option>
+      <option value="100">100</option>
+    </select>
+  </div>
+  <div class="ms-auto d-flex gap-2">
+    <button id="items-clear-filters" class="btn btn-sm" style="background:#f1f5f9;color:#475569;font-size:0.8rem;border:1px solid #cbd5e1;display:none;">Clear Filters</button>
     <a href="?f=json" class="btn btn-sm" style="background:#eef2ff;color:#6366f1;font-size:0.8rem;border:1px solid #c7d2fe;">JSON</a>
   </div>
 </div>
@@ -55,8 +71,20 @@
 
 <div class="card" style="overflow:hidden;">
   <div class="card-header d-flex align-items-center justify-content-between">
-    <span>Features</span>
-    {% if data.features %}<span class="chip">{{ data.features | length }} shown</span>{% endif %}
+    <div class="d-flex align-items-center gap-3">
+      <span>Features</span>
+      {% if data.features %}<span class="chip">{{ data.features | length }} shown</span>{% endif %}
+    </div>
+    
+    <div class="d-flex gap-2">
+      {% for link in data.links %}
+        {% if link.rel == 'prev' %}
+          <a href="{{ link.href }}" class="btn btn-sm" style="background:#fff;color:#6366f1;border:1px solid #c7d2fe;font-size:0.75rem;padding:0.25rem 0.6rem;">&larr; Prev</a>
+        {% elif link.rel == 'next' %}
+          <a href="{{ link.href }}" class="btn btn-sm" style="background:#fff;color:#6366f1;border:1px solid #c7d2fe;font-size:0.75rem;padding:0.25rem 0.6rem;">Next &rarr;</a>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
   <div class="card-body p-0">
     <div class="table-responsive">
@@ -74,7 +102,7 @@
         <tbody>
           {% for feature in data.features %}
           <tr>
-            <td><a href="{{ config.server.url }}/collections/{{ data.id }}/items/{{ feature.id }}">{{ feature.id }}</a></td>
+            <td><a class="id-link" href="{{ data.items_path | default(config.server.url + '/collections/items') }}/{{ feature.id }}">{{ feature.id }} <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.7;"><polyline points="9 18 15 12 9 6"/></svg></a></td>
             {% for key, value in feature.properties.items() %}
               <td>{{ value }}</td>
             {% endfor %}
@@ -107,18 +135,76 @@
           });
         },
         onEachFeature: function(feature, layer) {
-          var html = '<div style="font-family:Inter,sans-serif;font-size:0.82rem;max-width:220px">';
-          html += '<b style="font-size:0.9rem">ID: ' + feature.id + '</b><hr style="margin:4px 0">';
+          var detailsUrl = '{{ data.items_path | default(config.server.url + "/collections/items") }}/' + feature.id;
+          var html = '<div style="min-width:240px; font-family:Inter,sans-serif;">';
+          
+          // Header
+          html += '<div style="padding:10px 0; border-bottom:1px solid #f1f5f9; display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">';
+          html += '<span style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.05em; color:#94a3b8; font-weight:700;">Feature</span>';
+          html += '<span style="font-family:monospace; font-size:0.85rem; font-weight:700; color:#6366f1;">#' + feature.id + '</span>';
+          html += '</div>';
+
+          // Properties Scroll Area
+          html += '<div style="max-height:180px; overflow-y:auto; padding-right:4px;">';
           if (feature.properties) {
             for (var p in feature.properties) {
-              html += '<div><span style="color:#94a3b8">' + p + '</span>: ' + feature.properties[p] + '</div>';
+              if (p === 'extent') continue; 
+              html += '<div style="margin-bottom:6px; padding-bottom:6px; border-bottom:1px solid #f8fafc;">';
+              html += '<div style="font-size:0.65rem; color:#94a3b8; text-transform:uppercase; font-weight:600; margin-bottom:1px;">' + p + '</div>';
+              html += '<div style="font-size:0.82rem; color:#334155; font-weight:500; word-break:break-all;">' + feature.properties[p] + '</div>';
+              html += '</div>';
             }
           }
+          html += '</div>';
+
+          // Action Button
+          html += '<a href="' + detailsUrl + '" style="display:block; text-align:center; background:#6366f1; color:#fff; text-decoration:none; padding:8px; border-radius:6px; font-size:0.8rem; font-weight:700; margin-top:12px; transition:background 0.2s;" onmouseover="this.style.background='#4f46e5'" onmouseout="this.style.background='#6366f1'">';
+          html += 'View full details &rarr;';
+          html += '</a>';
+          
           html += '</div>';
           layer.bindPopup(html);
         }
       }).addTo(map);
       try { map.fitBounds(layer.getBounds(), { padding: [24, 24] }); } catch(e) {}
+    }
+
+    var params = (new URL(document.location)).searchParams;
+    
+    var select = document.getElementById('items-limit');
+    if (select) {
+      if (params.has('limit')) select.value = params.get('limit');
+      select.addEventListener('change', function(ev) {
+        var url = new URL(document.location);
+        url.searchParams.set('limit', ev.target.value);
+        document.location = url.toString();
+      });
+    }
+    
+    var search = document.getElementById('items-search');
+    if (search) {
+      if (params.has('q')) search.value = params.get('q');
+      search.addEventListener('keydown', function(ev) {
+        if (ev.key === 'Enter') {
+          ev.preventDefault();
+          var url = new URL(document.location);
+          if (ev.target.value.trim()) url.searchParams.set('q', ev.target.value.trim());
+          else url.searchParams.delete('q');
+          document.location = url.toString();
+        }
+      });
+    }
+
+    var clearBtn = document.getElementById('items-clear-filters');
+    if (clearBtn) {
+      if (params.has('limit') || params.has('q')) {
+        clearBtn.style.display = 'inline-block';
+      }
+      clearBtn.addEventListener('click', function() {
+        var url = new URL(document.location);
+        url.search = '';
+        document.location = url.toString();
+      });
     }
   });
 </script>
