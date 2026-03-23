@@ -509,7 +509,7 @@
   "sharedEnums": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-23T13:10:32.872Z",
-  "updatedAt": "2026-03-23T14:00:28.963Z",
+  "updatedAt": "2026-03-23T14:03:14.678Z",
   "metadata": {
     "contactName": "Henrik Schuller",
     "contactEmail": "post@kartverket.no",
@@ -524,7 +524,7 @@
       "fasiliteter"
     ],
     "theme": "hh",
-    "license": "CC0-1.0",
+    "license": "CC-BY-4.0",
     "accessRights": "public",
     "purpose": "",
     "accrualPeriodicity": "unknown",
