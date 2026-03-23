@@ -496,7 +496,7 @@
         "categorizedColors": {},
         "pointSize": 8,
         "pointIcon": "circle",
-        "lineWidth": 2,
+        "lineWidth": 5,
         "lineDash": "solid",
         "fillOpacity": 0.5,
         "hatchStyle": "solid",
@@ -509,7 +509,7 @@
   "sharedEnums": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-23T13:10:32.872Z",
-  "updatedAt": "2026-03-23T13:22:52.614Z",
+  "updatedAt": "2026-03-23T13:25:54.763Z",
   "metadata": {
     "contactName": "Henrik Schuller",
     "contactEmail": "post@kartverket.no",
