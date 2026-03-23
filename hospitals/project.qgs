@@ -10,12 +10,12 @@
         </spatialrefsys>
   </projectCrs>
   <layer-tree-group name="" expanded="1" checked="Qt::Checked">
-    <layer-tree-layer id="hospitalpoints_0_1774274948972" name="hospitalpoints" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
-    <layer-tree-layer id="areas_1_1774274948972" name="areas" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
+    <layer-tree-layer id="hospitalpoints_0_1774275647527" name="hospitalpoints" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
+    <layer-tree-layer id="areas_1_1774275647527" name="areas" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
   </layer-tree-group>
   <projectlayers>
     <maplayer name="hospitalpoints" type="vector" hasScaleBasedVisibilityFlag="0">
-        <id>hospitalpoints_0_1774274948972</id>
+        <id>hospitalpoints_0_1774275647527</id>
         <datasource>/data/Hospitals.gpkg|layername=hospitalpoints</datasource>
         <provider encoding="UTF-8">ogr</provider>
         <layername>hospitalpoints</layername>
@@ -36,7 +36,7 @@
           <layer class="SimpleMarker">
             <prop k="name" v="circle"/>
             <prop k="color" v="99,102,241,255"/>
-            <prop k="size" v="23"/>
+            <prop k="size" v="12"/>
             <prop k="size_unit" v="Point"/>
             <prop k="outline_color" v="99,102,241,255"/>
             <prop k="outline_width" v="0"/>
@@ -46,7 +46,7 @@
         </renderer-v2>
       </maplayer>
     <maplayer name="areas" type="vector" hasScaleBasedVisibilityFlag="0">
-        <id>areas_1_1774274948972</id>
+        <id>areas_1_1774275647527</id>
         <datasource>/data/Hospitals.gpkg|layername=areas</datasource>
         <provider encoding="UTF-8">ogr</provider>
         <layername>areas</layername>
@@ -68,7 +68,7 @@
               <prop k="color" v="99,102,241,255"/>
               <prop k="style" v="solid"/>
               <prop k="outline_color" v="99,102,241,255"/>
-              <prop k="outline_width" v="5"/>
+              <prop k="outline_width" v="2"/>
               <prop k="outline_width_unit" v="Point"/>
               <prop k="outline_style" v="solid"/>
               <prop k="joinstyle" v="round"/>
