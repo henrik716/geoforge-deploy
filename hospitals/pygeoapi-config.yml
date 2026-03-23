@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals
-# Generated: 2026-03-23T14:04:37.902Z
+# Generated: 2026-03-23T14:09:08.933Z
 # Source: geopackage
 
 server:
@@ -37,6 +37,7 @@ metadata:
       - lokalisering
       - infrastruktur
       - fasiliteter
+      - hjklø
   license:
     name: CC-BY-4.0
     url: https://creativecommons.org/licenses/by/4.0/
@@ -45,7 +46,7 @@ metadata:
     email: post@kartverket.no
   provider:
     name: Henrik Schuller
-    organization: Kartverkets
+    organization: Kartverket
     email: post@kartverket.no
 
 resources:
