@@ -3,8 +3,8 @@ FROM geopython/pygeoapi:latest
 # Copy configuration
 COPY pygeoapi-config.yml /pygeoapi/local.config.yml
 COPY data/ /data/
-# Install custom HTML theme directly into the pygeoapi package templates directory.
-COPY templates/base.html /pygeoapi/pygeoapi/templates/base.html
+# Install custom HTML theme into the path referenced by server.templates.path in the config.
+COPY templates/base.html /pygeoapi/local-templates/base.html
 
 # FIX: Default env vars so the container starts correctly when no .env is present.
 # PORT is overridden automatically by Railway. PYGEOAPI_SERVER_URL must be set
