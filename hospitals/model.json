@@ -509,7 +509,7 @@
   "sharedEnums": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-23T13:10:32.872Z",
-  "updatedAt": "2026-03-23T16:32:18.555Z",
+  "updatedAt": "2026-03-23T16:33:04.544Z",
   "metadata": {
     "contactName": "Henrik Schuller",
     "contactEmail": "post@kartverket.no",
@@ -541,5 +541,62 @@
   "renderingOrder": [
     "4r72c1q",
     "cgfanv2"
-  ]
+  ],
+  "sourceConnection": {
+    "type": "geopackage",
+    "config": {
+      "filename": "Hospitals.gpkg"
+    },
+    "layerMappings": {
+      "4r72c1q": {
+        "sourceTable": "hospitalpoints",
+        "fieldMappings": {
+          "6a17tx1": "id",
+          "kktkd0a": "dataset",
+          "jk92gco": "featuretype",
+          "qq6m2gw": "name",
+          "oxaeagn": "type",
+          "ljedhnj": "emergencydepartment",
+          "lcmxrxp": "doctors",
+          "jpecgna": "nurses",
+          "z7yi07n": "operationrooms",
+          "ainc3pq": "beds",
+          "4nnfe07": "employees",
+          "idqfwtm": "address",
+          "kfokcsc": "telephonenumber",
+          "hhzg02u": "email",
+          "01u2hwi": "website",
+          "6smruo4": "latitude",
+          "1gj2c6c": "longitude",
+          "fo1kcg8": "mgrs",
+          "4hx4wvz": "classification",
+          "5nfn80k": "origin",
+          "x62sz6d": "datawithdrawaldate",
+          "xk2nzza": "datacapturedate",
+          "kzeuit6": "updatedate",
+          "xflwx27": "datasetttype",
+          "sdlt73k": "gradering",
+          "3wia84a": "opphav",
+          "2ui3dkd": "dgiffeaturealpha",
+          "14pgwrq": "dgiffeature531",
+          "23phmq0": "dgifattributealpha",
+          "igmhk5f": "dgifattribute531",
+          "xmdiegz": "dgifvaluealpha",
+          "5yaras6": "dgifvalue531",
+          "20v5vr1": "dgifccode",
+          "msos31c": "uuid"
+        },
+        "timestampColumn": "",
+        "primaryKeyColumn": "fid"
+      },
+      "cgfanv2": {
+        "sourceTable": "areas",
+        "fieldMappings": {
+          "5ypwdpz": "id"
+        },
+        "timestampColumn": "",
+        "primaryKeyColumn": "fid"
+      }
+    }
+  }
 }
