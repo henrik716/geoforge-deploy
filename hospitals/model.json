@@ -2,7 +2,7 @@
   "id": "jx0vb2p",
   "name": "Hospitals",
   "namespace": "",
-  "description": "Testsadasd",
+  "description": "Testsadasdasdsad",
   "version": "1.0.0",
   "layers": [
     {
@@ -509,7 +509,7 @@
   "sharedEnums": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-23T14:20:01.416Z",
-  "updatedAt": "2026-03-23T14:30:31.783Z",
+  "updatedAt": "2026-03-23T14:34:13.104Z",
   "metadata": {
     "contactName": "Henrik S",
     "contactEmail": "post@kartverket.no",

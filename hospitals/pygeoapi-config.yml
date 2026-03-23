@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals
-# Generated: 2026-03-23T14:30:42.226Z
+# Generated: 2026-03-23T14:34:22.643Z
 # Source: geopackage
 
 server:
@@ -26,7 +26,7 @@ logging:
 metadata:
   identification:
     title: Hospitals
-    description: Testsadasd
+    description: Testsadasdasdsad
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
