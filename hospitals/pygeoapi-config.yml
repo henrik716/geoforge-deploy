@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals
-# Generated: 2026-03-23T09:37:54.385Z
+# Generated: 2026-03-23T13:12:45.945Z
 # Source: geopackage
 
 server:
@@ -17,6 +17,8 @@ server:
   limits:
     default_items: 10
     max_items: 10000
+  templates:
+    path: /pygeoapi/local-templates
 
 logging:
   level: INFO
@@ -24,25 +26,25 @@ logging:
 metadata:
   identification:
     title: Hospitals
-    description: Dette datasettet inneholder punktgeometrier som representerer sykehus. Hvert punkt gir detaljer om sykehusets navn, type og om det tilbyr akuttmottak. Hovedformålet er å visualisere sykehusenes geografiske plassering og informere om tilgjengelighet til akuttmedisinske tjenester. Datasettet er nyttig for beredskapsplanlegging, ruteplanlegging til helseinstitusjoner og generell oversikt over helsetjenestetilbudet i et geografisk område. Nøkkelattributtene inkluderer sykehusets navn, type og status for akuttmottak.
+    description: Dette datasettet inneholder geografisk informasjon om sykehus, presentert som punktdata for enkeltlokasjoner og flatedata for større sykehusområder. Hovedformålet er å visualisere og analysere sykehusenes geografiske fordeling og funksjonalitet. Punktlaget inkluderer nøkkelattributter som sykehusets navn, type (f.eks. lokalsykehus, regionsykehus) og indikasjon på om det har et akuttmottak. Flatedataene gir kontekst for sykehusenes fysiske utbredelse.
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
       - sykehus
       - helse
-      - helsetjenester
-      - medisinsk
-      - lokasjoner
-      - offentlige tjenester
+      - helsevesen
+      - medisin
+      - lokalisering
       - infrastruktur
+      - fasiliteter
   license:
     name: CC-BY-4.0
     url: https://creativecommons.org/licenses/by/4.0/
   contact:
-    name: Henrik S
+    name: Henrik Schuller
     email: post@kartverket.no
   provider:
-    name: Henrik S
+    name: Henrik Schuller
     organization: Kartverket
     email: post@kartverket.no
 

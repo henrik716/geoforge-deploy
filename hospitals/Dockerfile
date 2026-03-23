@@ -2,6 +2,7 @@ FROM geopython/pygeoapi:latest
 
 # Copy configuration
 COPY pygeoapi-config.yml /pygeoapi/local.config.yml
+COPY templates/ /pygeoapi/local-templates/
 COPY data/ /data/
 
 # FIX: Default env vars so the container starts correctly when no .env is present.
