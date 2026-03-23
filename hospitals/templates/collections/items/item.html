@@ -85,7 +85,7 @@
       maxZoom: 19
     }).addTo(map);
     
-    var itemData = {{ data | tojson | safe }};
+    var itemData = {{ data | to_json | safe }};
     if (itemData && itemData.geometry) {
       var brandColor = '#6366f1';
       var layer = L.geoJSON(itemData, {

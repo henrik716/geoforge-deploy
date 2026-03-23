@@ -96,7 +96,7 @@
     {% for col in data.collections %}
       {% if col.extent and col.extent.spatial and col.extent.spatial.bbox %}
         (function() {
-          var bbox = {{ col.extent.spatial.bbox[0] | tojson }};
+          var bbox = {{ col.extent.spatial.bbox[0] | to_json }};
           var sw = [bbox[1], bbox[0]], ne = [bbox[3], bbox[2]];
           L.rectangle([sw, ne], { color: '#6366f1', weight: 2, fillOpacity: 0.07 })
             .addTo(map)
