@@ -132,7 +132,7 @@
       
       <div class="meta-grid">
         <div class="meta-lbl">Provider</div>
-        <div class="meta-val">{{ config.metadata.provider.name | default('System') }}</div>
+        <div class="meta-val">{{ config.metadata.provider.organization | default('System') }}</div>
         
         <div class="meta-lbl">License</div>
         <div class="meta-val">
@@ -171,6 +171,13 @@
         <div class="contact-row">
           <span class="contact-lbl">E-mail</span>
           <a class="contact-val" href="mailto:{{ config.metadata.contact.email }}">{{ config.metadata.contact.email }}</a>
+        </div>
+        {% endif %}
+        
+        {% if config.metadata.provider.name %}
+        <div class="contact-row">
+          <span class="contact-lbl">Contact person</span>
+          <span class="contact-val">{{ config.metadata.provider.name }}</span>
         </div>
         {% endif %}
       </div>

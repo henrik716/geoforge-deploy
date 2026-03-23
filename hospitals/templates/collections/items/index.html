@@ -3,7 +3,7 @@
 {% block crumbs %}
   {{ super() }} / 
   <a href="{{ config.server.url }}/collections">Collections</a> / 
-  <a href="{{ config.server.url }}/collections/{{ data['collection'] }}">{{ data['title'] | default(data['collection']) }}</a> / 
+  <a href="{{ config.server.url }}/collections/{{ data.id }}">{{ data.title | default(data.id) }}</a> / 
   <span>Items</span>
 {% endblock %}
 {% block body %}
@@ -22,13 +22,13 @@
   .items-meta-bar .meta-value { font-size:0.9rem; font-weight:600; color:#0f172a; }
 </style>
 
-<div class="items-header">{{ data['title'] | default(data['collection']) }}</div>
-<div class="items-desc">{{ data['description'] }}</div>
+<div class="items-header">{{ data.title | default(data.id) }}</div>
+<div class="items-desc">{{ data.description }}</div>
 
 <div class="items-meta-bar mb-3">
   <div class="meta-item">
     <span class="meta-label">Collection</span>
-    <span class="meta-value">{{ data['collection'] }}</span>
+    <span class="meta-value">{{ data.id }}</span>
   </div>
   {% if data.numberMatched is defined %}
   <div class="meta-item">
@@ -74,7 +74,7 @@
         <tbody>
           {% for feature in data.features %}
           <tr>
-            <td><a href="{{ config.server.url }}/collections/{{ data['collection'] }}/items/{{ feature.id }}">{{ feature.id }}</a></td>
+            <td><a href="{{ config.server.url }}/collections/{{ data.id }}/items/{{ feature.id }}">{{ feature.id }}</a></td>
             {% for key, value in feature.properties.items() %}
               <td>{{ value }}</td>
             {% endfor %}
