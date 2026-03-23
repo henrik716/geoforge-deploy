@@ -120,10 +120,10 @@
       font-size: 0.875rem; 
       font-weight: 500;
       margin-bottom: 1rem;
+      color: #94a3b8;
     }
-    .breadcrumb-item a { color: #64748b; text-decoration: none; transition: color 0.15s; }
-    .breadcrumb-item a:hover { color: var(--brand); }
-    .breadcrumb-item.active { color: #0f172a; }
+    .breadcrumb a { color: #64748b; text-decoration: none; transition: color 0.15s; }
+    .breadcrumb a:hover { color: var(--brand); }
     
     a { color: var(--brand); transition: color 0.15s ease; text-decoration: none; }
     a:hover { color: var(--brand-dark); text-decoration: underline; }
@@ -188,13 +188,11 @@
   </nav>
 
   <div class="container mt-4">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        {% block crumbs %}
-        <li class="breadcrumb-item"><a href="{{ config.server.url }}">Home</a></li>
-        {% endblock %}
-      </ol>
-    </nav>
+    <div class="breadcrumb">
+      {% block crumbs %}
+      <a href="{{ config.server.url }}">Home</a>
+      {% endblock %}
+    </div>
   </div>
 
   <main class="container">

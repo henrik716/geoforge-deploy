@@ -1,10 +1,10 @@
 {% extends "_base.html" %}
 {% block title %}{{ super() }} — Items{% endblock %}
 {% block crumbs %}
-  {{ super() }}
-  <li class="breadcrumb-item"><a href="{{ config.server.url }}/collections">Collections</a></li>
-  <li class="breadcrumb-item"><a href="{{ config.server.url }}/collections/{{ data['collection'] }}">{{ data['title'] | default(data['collection']) }}</a></li>
-  <li class="breadcrumb-item active">Items</li>
+  {{ super() }} / 
+  <a href="{{ config.server.url }}/collections">Collections</a> / 
+  <a href="{{ config.server.url }}/collections/{{ data['collection'] }}">{{ data['title'] | default(data['collection']) }}</a> / 
+  <span>Items</span>
 {% endblock %}
 {% block body %}
 <style>
