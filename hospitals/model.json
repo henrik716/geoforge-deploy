@@ -1,17 +1,17 @@
 {
-  "id": "ofookxq",
+  "id": "ug50co4",
   "name": "Hospitals",
   "namespace": "",
-  "description": "",
+  "description": "Dette datasettet inneholder punktgeometrier som representerer sykehus. Hvert punkt gir detaljer om sykehusets navn, type og om det tilbyr akuttmottak. Hovedformålet er å visualisere sykehusenes geografiske plassering og informere om tilgjengelighet til akuttmedisinske tjenester. Datasettet er nyttig for beredskapsplanlegging, ruteplanlegging til helseinstitusjoner og generell oversikt over helsetjenestetilbudet i et geografisk område. Nøkkelattributtene inkluderer sykehusets navn, type og status for akuttmottak.",
   "version": "1.0.0",
   "layers": [
     {
-      "id": "13pbg21",
+      "id": "igghnoy",
       "name": "hospitalpoints",
       "description": "",
       "properties": [
         {
-          "id": "mn5ozr3",
+          "id": "z1h15kt",
           "name": "id",
           "title": "Id",
           "description": "",
@@ -24,7 +24,7 @@
           }
         },
         {
-          "id": "385p5ov",
+          "id": "07o4shv",
           "name": "dataset",
           "title": "Dataset",
           "description": "",
@@ -37,7 +37,7 @@
           }
         },
         {
-          "id": "l5bu8ay",
+          "id": "1mvt2gn",
           "name": "featuretype",
           "title": "FeatureType",
           "description": "",
@@ -50,7 +50,7 @@
           }
         },
         {
-          "id": "q49l7lk",
+          "id": "vb1xv12",
           "name": "name",
           "title": "Name",
           "description": "",
@@ -63,7 +63,7 @@
           }
         },
         {
-          "id": "6vxyudb",
+          "id": "qn4fuip",
           "name": "type",
           "title": "Type",
           "description": "",
@@ -76,7 +76,7 @@
           }
         },
         {
-          "id": "p2u7xtn",
+          "id": "c0z1lzt",
           "name": "emergencydepartment",
           "title": "EmergencyDepartment",
           "description": "",
@@ -89,7 +89,7 @@
           }
         },
         {
-          "id": "bvazv4i",
+          "id": "7y8zleo",
           "name": "doctors",
           "title": "Doctors",
           "description": "",
@@ -102,7 +102,7 @@
           }
         },
         {
-          "id": "yc9h545",
+          "id": "l30pm64",
           "name": "nurses",
           "title": "Nurses",
           "description": "",
@@ -115,7 +115,7 @@
           }
         },
         {
-          "id": "2f3937h",
+          "id": "upv0m5b",
           "name": "operationrooms",
           "title": "OperationRooms",
           "description": "",
@@ -128,7 +128,7 @@
           }
         },
         {
-          "id": "b5jrca6",
+          "id": "74mve0d",
           "name": "beds",
           "title": "Beds",
           "description": "",
@@ -141,7 +141,7 @@
           }
         },
         {
-          "id": "8ownsab",
+          "id": "aufni0t",
           "name": "employees",
           "title": "Employees",
           "description": "",
@@ -154,7 +154,7 @@
           }
         },
         {
-          "id": "386qsxc",
+          "id": "iljqb3q",
           "name": "address",
           "title": "Address",
           "description": "",
@@ -167,7 +167,7 @@
           }
         },
         {
-          "id": "q7tpe3k",
+          "id": "374s486",
           "name": "telephonenumber",
           "title": "TelephoneNumber",
           "description": "",
@@ -180,7 +180,7 @@
           }
         },
         {
-          "id": "0livrrb",
+          "id": "3fk63ul",
           "name": "email",
           "title": "Email",
           "description": "",
@@ -193,7 +193,7 @@
           }
         },
         {
-          "id": "3j3xynm",
+          "id": "89yqokz",
           "name": "website",
           "title": "Website",
           "description": "",
@@ -206,7 +206,7 @@
           }
         },
         {
-          "id": "6b35yzw",
+          "id": "cg8x200",
           "name": "latitude",
           "title": "Latitude",
           "description": "",
@@ -219,7 +219,7 @@
           }
         },
         {
-          "id": "s4dgrwj",
+          "id": "dqsu7ma",
           "name": "longitude",
           "title": "Longitude",
           "description": "",
@@ -232,7 +232,7 @@
           }
         },
         {
-          "id": "jwj37y2",
+          "id": "5uiugbx",
           "name": "mgrs",
           "title": "Mgrs",
           "description": "",
@@ -245,7 +245,7 @@
           }
         },
         {
-          "id": "zqo74il",
+          "id": "voeve6m",
           "name": "classification",
           "title": "Classification",
           "description": "",
@@ -258,7 +258,7 @@
           }
         },
         {
-          "id": "3uad7kj",
+          "id": "2luk9fv",
           "name": "origin",
           "title": "Origin",
           "description": "",
@@ -271,7 +271,7 @@
           }
         },
         {
-          "id": "wxiz5jg",
+          "id": "j4bc6n6",
           "name": "datawithdrawaldate",
           "title": "DataWithdrawalDate",
           "description": "",
@@ -284,7 +284,7 @@
           }
         },
         {
-          "id": "swh9arb",
+          "id": "1szqgyi",
           "name": "datacapturedate",
           "title": "DataCaptureDate",
           "description": "",
@@ -297,7 +297,7 @@
           }
         },
         {
-          "id": "yl6kj6h",
+          "id": "7r8d03b",
           "name": "updatedate",
           "title": "UpdateDate",
           "description": "",
@@ -310,7 +310,7 @@
           }
         },
         {
-          "id": "lq45mnn",
+          "id": "gyozidz",
           "name": "datasetttype",
           "title": "DatasettType",
           "description": "",
@@ -323,7 +323,7 @@
           }
         },
         {
-          "id": "v2yf073",
+          "id": "jgvxmyu",
           "name": "gradering",
           "title": "Gradering",
           "description": "",
@@ -336,7 +336,7 @@
           }
         },
         {
-          "id": "v9atlr9",
+          "id": "8pjoncb",
           "name": "opphav",
           "title": "Opphav",
           "description": "",
@@ -349,7 +349,7 @@
           }
         },
         {
-          "id": "23w6jp0",
+          "id": "ygr9i1w",
           "name": "dgiffeaturealpha",
           "title": "DgifFeatureAlpha",
           "description": "",
@@ -362,7 +362,7 @@
           }
         },
         {
-          "id": "rnh3lrr",
+          "id": "cvt58pb",
           "name": "dgiffeature531",
           "title": "DgifFeature531",
           "description": "",
@@ -375,7 +375,7 @@
           }
         },
         {
-          "id": "dup9fry",
+          "id": "d37erip",
           "name": "dgifattributealpha",
           "title": "DgifAttributeAlpha",
           "description": "",
@@ -388,7 +388,7 @@
           }
         },
         {
-          "id": "p3cqrmm",
+          "id": "xyoxtye",
           "name": "dgifattribute531",
           "title": "DgifAttribute531",
           "description": "",
@@ -401,7 +401,7 @@
           }
         },
         {
-          "id": "g761n7r",
+          "id": "hmttd5b",
           "name": "dgifvaluealpha",
           "title": "DgifValueAlpha",
           "description": "",
@@ -414,7 +414,7 @@
           }
         },
         {
-          "id": "hl6cdlm",
+          "id": "31eily5",
           "name": "dgifvalue531",
           "title": "DgifValue531",
           "description": "",
@@ -427,7 +427,7 @@
           }
         },
         {
-          "id": "wm64qwq",
+          "id": "gh3bczd",
           "name": "dgifccode",
           "title": "DgifCCode",
           "description": "",
@@ -440,7 +440,7 @@
           }
         },
         {
-          "id": "0ci8eeh",
+          "id": "z2nvzov",
           "name": "uuid",
           "title": "Uuid",
           "description": "",
@@ -459,8 +459,8 @@
         "type": "simple",
         "simpleColor": "#6366F1",
         "categorizedColors": {},
-        "pointSize": 8,
-        "pointIcon": "circle",
+        "pointSize": 26,
+        "pointIcon": "triangle",
         "lineWidth": 2,
         "lineDash": "solid",
         "fillOpacity": 0.5,
@@ -470,12 +470,12 @@
       }
     },
     {
-      "id": "6w88p29",
+      "id": "ftu65pi",
       "name": "areas",
       "description": "",
       "properties": [
         {
-          "id": "hnger9z",
+          "id": "0277inv",
           "name": "id",
           "title": "Id",
           "description": "",
@@ -498,24 +498,32 @@
         "pointIcon": "circle",
         "lineWidth": 2,
         "lineDash": "solid",
-        "fillOpacity": 0.5,
-        "hatchStyle": "solid",
+        "fillOpacity": 0.78,
+        "hatchStyle": "b_diagonal",
         "hatchThickness": 1,
-        "hatchSpacing": 6
+        "hatchSpacing": 10
       }
     }
   ],
   "sharedTypes": [],
   "sharedEnums": [],
   "crs": "EPSG:25833",
-  "createdAt": "2026-03-18T14:12:06.018Z",
-  "updatedAt": "2026-03-18T14:12:15.819Z",
+  "createdAt": "2026-03-23T09:35:45.417Z",
+  "updatedAt": "2026-03-23T09:37:16.048Z",
   "metadata": {
-    "contactName": "henrik",
-    "contactEmail": "schhen@kartverket.no",
-    "contactOrganization": "kssd",
-    "keywords": [],
-    "theme": "",
+    "contactName": "Henrik S",
+    "contactEmail": "post@kartverket.no",
+    "contactOrganization": "Kartverket",
+    "keywords": [
+      "sykehus",
+      "helse",
+      "helsetjenester",
+      "medisinsk",
+      "lokasjoner",
+      "offentlige tjenester",
+      "infrastruktur"
+    ],
+    "theme": "hh",
     "license": "CC-BY-4.0",
     "accessRights": "public",
     "purpose": "",
@@ -530,7 +538,7 @@
     "temporalExtentTo": ""
   },
   "renderingOrder": [
-    "13pbg21",
-    "6w88p29"
+    "igghnoy",
+    "ftu65pi"
   ]
 }
