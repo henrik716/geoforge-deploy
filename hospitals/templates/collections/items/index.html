@@ -153,7 +153,7 @@
           html += '</div>';
 
           // Action Button
-          html += '<a href="' + detailsUrl + '" style="display:block; text-align:center; background:#6366f1; color:#fff; text-decoration:none; padding:8px; border-radius:6px; font-size:0.8rem; font-weight:700; margin-top:12px; transition:background 0.2s;" onmouseover="this.style.background='#4f46e5'" onmouseout="this.style.background='#6366f1'">';
+          html += '<a href="' + detailsUrl + '" style="display:block; text-align:center; background:#6366f1; color:#fff; text-decoration:none; padding:8px; border-radius:6px; font-size:0.8rem; font-weight:700; margin-top:12px;">';
           html += 'View full details &rarr;';
           html += '</a>';
           
@@ -168,10 +168,13 @@
     
     var select = document.getElementById('items-limit');
     if (select) {
-      if (params.has('limit')) select.value = params.get('limit');
+      if (params.has('limit')) {
+        select.value = params.get('limit');
+      }
       select.addEventListener('change', function(ev) {
         var url = new URL(document.location);
         url.searchParams.set('limit', ev.target.value);
+        url.searchParams.delete('offset'); // reset to page 1
         document.location = url.toString();
       });
     }
