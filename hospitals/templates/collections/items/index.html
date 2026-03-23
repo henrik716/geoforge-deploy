@@ -97,7 +97,7 @@
     }).addTo(map);
     var featuresData = {{ data | tojson | safe }};
     if (featuresData && featuresData.features && featuresData.features.length > 0) {
-      var brandColor = getComputedStyle(document.documentElement).getPropertyValue('--brand').trim() || '#4f46e5';
+      var brandColor = '#6366f1';
       var layer = L.geoJSON(featuresData, {
         style: function() { return { color: brandColor, weight: 2, fillOpacity: 0.18 }; },
         pointToLayer: function(feature, latlng) {

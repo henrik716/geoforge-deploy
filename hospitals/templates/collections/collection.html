@@ -132,7 +132,7 @@
     {% if data.extent and data.extent.spatial and data.extent.spatial.bbox %}
       var bbox = {{ data.extent.spatial.bbox[0] | tojson }};
       var sw = [bbox[1], bbox[0]], ne = [bbox[3], bbox[2]];
-      var brandColor = getComputedStyle(document.documentElement).getPropertyValue('--brand').trim() || '#4f46e5';
+      var brandColor = '#6366f1';
       L.rectangle([sw, ne], { color: brandColor, weight: 2, fillOpacity: 0.15 }).addTo(map);
       map.fitBounds([sw, ne], { padding: [8, 8] });
     {% endif %}
