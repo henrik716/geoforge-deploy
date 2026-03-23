@@ -2,8 +2,12 @@ FROM geopython/pygeoapi:latest
 
 # Copy configuration
 COPY pygeoapi-config.yml /pygeoapi/local.config.yml
-COPY templates/ /pygeoapi/local-templates/
 COPY data/ /data/
+# Install custom HTML theme directly into the pygeoapi package templates directory.
+# This is more reliable than the server.templates.path config option, which depends
+# on the path being resolvable at runtime (not always the case on Railway/Fly).
+COPY templates/base.html /tmp/gf-base.html
+RUN python3 -c "import pygeoapi, os, shutil; d = os.path.join(os.path.dirname(pygeoapi.__file__), 'templates'); shutil.copy('/tmp/gf-base.html', os.path.join(d, 'base.html'))"
 
 # FIX: Default env vars so the container starts correctly when no .env is present.
 # PORT is overridden automatically by Railway. PYGEOAPI_SERVER_URL must be set
