@@ -72,22 +72,25 @@
       border-color: #cbd5e1;
     }
     .card-header {
-      background: transparent;
-      border-bottom: 1px solid #f1f5f9;
+      background: #eef2ff;
+      border-bottom: 1px solid #c7d2fe;
       font-weight: 700;
       padding: 1.25rem 1.5rem;
       font-size: 1.1rem;
-      color: var(--brand);
+      color: #6366f1;
     }
     .card-body { padding: 1.5rem; }
     
     /* Map Container Polish */
     #map { 
       height: 500px; /* Essential for Leaflet to render */
-      border-radius: var(--radius); 
-      box-shadow: var(--shadow-md); 
-      border: 1px solid #e2e8f0; 
-      z-index: 1; /* Ensures map layers don't overlap your navbar */
+      border-radius: 0.75rem; 
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08); 
+      border: 1px solid #c7d2fe; 
+      z-index: 1; 
+    }
+    .leaflet-tile-pane {
+      filter: sepia(100%) hue-rotate(200deg) saturate(200%) brightness(105%) opacity(0.85) contrast(90%);
     }
     
     /* Tables */
