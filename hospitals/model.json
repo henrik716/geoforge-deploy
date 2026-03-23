@@ -2,7 +2,7 @@
   "id": "ba0yiut",
   "name": "Hospitals",
   "namespace": "",
-  "description": "Dette datasettet inneholder geografisk informasjon om sykehus, presentert som punktdata for enkeltlokasjoner og flatedata for større sykehusområder. Hovedformålet er å visualisere og analysere sykehusenes geografiske fordeling og funksjonalitet. Punktlaget inkluderer nøkkelattributter som sykehusets navn, type (f.eks. lokalsykehus, regionsykehus) og indikasjon på om det har et akuttmottak. Flatedataene gir kontekst for sykehusenes fysiske utbredelse.",
+  "description": "Dette datasettet inneholder geografisk informasjon om sykehus, presentert som punktdata for enkeltlokasjoner og flatedata for større sykehusområder. Hovedformålet er å visualisere og analysere sykehusenes geografiske fordeling og funksjonalitet. Punktlaget inkluderer nøkkelattributter som sykehusets navn, type (f.eks. lokalsykehus, regionsykehus) og indikasjon på om det har et akuttmottak. Flatedataene gir kontekst for sykehusenes fysiske utbredelse.ll",
   "version": "1.0.0",
   "layers": [
     {
@@ -509,7 +509,7 @@
   "sharedEnums": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-23T13:10:32.872Z",
-  "updatedAt": "2026-03-23T17:07:54.228Z",
+  "updatedAt": "2026-03-23T17:20:11.679Z",
   "metadata": {
     "contactName": "Henrik Schuller",
     "contactEmail": "post@kartverket.no",
