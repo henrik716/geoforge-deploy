@@ -402,7 +402,6 @@
           return f.key + " = " + (isNumericType ? f.val : "'" + f.val + "'");
         }).concat(cqlFilters);
         url.searchParams.set('filter', allConditions.join(' AND '));
-        url.searchParams.set('filter-lang', 'cql2-text');
       } else {
         simpleFilters.forEach(function(f) {
           url.searchParams.set(f.key, f.val);
