@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals
-# Generated: 2026-03-24T07:18:13.102Z
+# Generated: 2026-03-24T07:23:01.764Z
 # Source: geopackage
 
 server:
@@ -75,7 +75,7 @@ resources:
             - cql-text
 
     schema:
-      title: hospitalpoints
+      title: "hospitalpoints"
       type: object
       properties:
         "id":
@@ -215,7 +215,7 @@ resources:
             - cql-text
 
     schema:
-      title: areas
+      title: "areas"
       type: object
       properties:
         "id":
