@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals
-# Generated: 2026-03-24T06:47:31.379Z
+# Generated: 2026-03-24T07:10:46.480Z
 # Source: geopackage
 
 server:
@@ -69,6 +69,126 @@ resources:
         id_field: fid
         geom_field: geom
         storage_crs: http://www.opengis.net/def/crs/EPSG/0/25833
+        extensions:
+          filters:
+            - cql2-text
+            - cql-text
+
+    schema:
+      title: hospitalpoints
+      type: object
+      properties:
+        id:
+          title: Id
+          type: integer
+        dataset:
+          title: Dataset
+          type: string
+        featuretype:
+          title: FeatureType
+          type: string
+        name:
+          title: Name
+          type: string
+        type:
+          title: Type
+          type: string
+        emergencydepartment:
+          title: EmergencyDepartment
+          type: string
+        doctors:
+          title: Doctors
+          type: integer
+        nurses:
+          title: Nurses
+          type: integer
+        operationrooms:
+          title: OperationRooms
+          type: integer
+        beds:
+          title: Beds
+          type: integer
+        employees:
+          title: Employees
+          type: integer
+        address:
+          title: Address
+          type: string
+        telephonenumber:
+          title: TelephoneNumber
+          type: integer
+        email:
+          title: Email
+          type: string
+        website:
+          title: Website
+          type: string
+        latitude:
+          title: Latitude
+          type: number
+        longitude:
+          title: Longitude
+          type: number
+        mgrs:
+          title: Mgrs
+          type: string
+        classification:
+          title: Classification
+          type: string
+        origin:
+          title: Origin
+          type: string
+        datawithdrawaldate:
+          title: DataWithdrawalDate
+          type: string
+          format: date
+        datacapturedate:
+          title: DataCaptureDate
+          type: string
+          format: date
+        updatedate:
+          title: UpdateDate
+          type: string
+          format: date
+        datasetttype:
+          title: DatasettType
+          type: string
+        gradering:
+          title: Gradering
+          type: string
+        opphav:
+          title: Opphav
+          type: string
+        dgiffeaturealpha:
+          title: DgifFeatureAlpha
+          type: string
+        dgiffeature531:
+          title: DgifFeature531
+          type: string
+        dgifattributealpha:
+          title: DgifAttributeAlpha
+          type: string
+        dgifattribute531:
+          title: DgifAttribute531
+          type: string
+        dgifvaluealpha:
+          title: DgifValueAlpha
+          type: string
+        dgifvalue531:
+          title: DgifValue531
+          type: number
+        dgifccode:
+          title: DgifCCode
+          type: string
+        uuid:
+          title: Uuid
+          type: string
+        kodeliste:
+          title: kodeliste
+          type: string
+          enum:
+            - 1
+            - 2
 
   areas:
     type: collection
@@ -89,4 +209,16 @@ resources:
         id_field: fid
         geom_field: geom
         storage_crs: http://www.opengis.net/def/crs/EPSG/0/25833
+        extensions:
+          filters:
+            - cql2-text
+            - cql-text
+
+    schema:
+      title: areas
+      type: object
+      properties:
+        id:
+          title: Id
+          type: integer
 
