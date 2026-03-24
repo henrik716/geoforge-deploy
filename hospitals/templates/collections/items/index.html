@@ -368,7 +368,6 @@
       // Clear existing
       Object.keys(window.GF.queryables).forEach(function(key) { url.searchParams.delete(key); });
       url.searchParams.delete('filter');
-      url.searchParams.delete('filter-lang');
       url.searchParams.delete('bbox');
       url.searchParams.delete('offset');
 
@@ -403,7 +402,7 @@
           return f.key + " = " + (isNumericType ? f.val : "'" + f.val + "'");
         }).concat(cqlFilters);
         url.searchParams.set('filter', allConditions.join(' AND '));
-        url.searchParams.set('filter-lang', 'cql-text'); 
+        url.searchParams.set('filter-lang', 'cql2-text');
       } else {
         simpleFilters.forEach(function(f) {
           url.searchParams.set(f.key, f.val);
@@ -420,7 +419,6 @@
       var url = new URL(document.location);
       Object.keys(window.GF.queryables).forEach(function(key) { url.searchParams.delete(key); });
       url.searchParams.delete('filter');
-      url.searchParams.delete('filter-lang');
       url.searchParams.delete('bbox');
       url.searchParams.delete('offset');
       document.location = url.toString();
@@ -444,7 +442,6 @@
       var url = new URL(document.location);
       url.searchParams.delete(key);
       url.searchParams.delete('filter'); 
-      url.searchParams.delete('filter-lang');
       url.searchParams.delete('bbox'); 
       url.searchParams.delete('offset');
       document.location = url.toString();
