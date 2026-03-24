@@ -316,7 +316,7 @@
           var filterVal = params.get('filter');
           if (filterVal) {
             // Simple regex for 'prop op val'
-            var re = /([a-zA-Z0-9_]+)\s*(=|>|<|>=|<=|!=)\s*(['"]?)(.*?)\3/g;
+            var re = /([a-zA-Z0-9_]+)\s*(=|>|<|>=|<=|<>)\s*(['"]?)(.*?)\3/g;
             var match;
             while ((match = re.exec(filterVal)) !== null) {
               var attr = match[1];
@@ -347,7 +347,7 @@
         return '<option value="' + key + '"' + (data.attr === key ? ' selected' : '') + '>' + (q.title || key) + '</option>';
       }).join('');
 
-      var ops = ['=', '!=', '>', '<', '>=', '<='];
+      var ops = ['=', '<>', '>', '<', '>=', '<='];
       var opOptions = ops.map(function(o) {
         return '<option value="' + o + '"' + (data.op === o ? ' selected' : '') + '>' + o + '</option>';
       }).join('');
@@ -368,6 +368,7 @@
       // Clear existing
       Object.keys(window.GF.queryables).forEach(function(key) { url.searchParams.delete(key); });
       url.searchParams.delete('filter');
+      url.searchParams.delete('filter-lang');
       url.searchParams.delete('bbox');
       url.searchParams.delete('offset');
 
@@ -384,9 +385,10 @@
         if (op === '=') {
           simpleFilters.push({ key: attr, val: val });
         } else {
-          // Wrap strings in single quotes
-          var isNumeric = !isNaN(parseFloat(val)) && isFinite(val);
-          var formattedVal = isNumeric ? val : "'" + val + "'";
+          // FIX 2: Check exact type from queryables to prevent pygeofilter 400 Bad Request crashes
+          var qType = window.GF.queryables[attr]?.type;
+          var isNumericType = (qType === 'number' || qType === 'integer');
+          var formattedVal = isNumericType ? val : "'" + val + "'";
           cqlFilters.push(attr + " " + op + " " + formattedVal);
         }
       });
@@ -396,10 +398,12 @@
       if (cqlFilters.length > 0) {
         // Build CQL2 filter string
         var allConditions = simpleFilters.map(function(f) { 
-          var isNumeric = !isNaN(parseFloat(f.val)) && isFinite(f.val);
-          return f.key + " = " + (isNumeric ? f.val : "'" + f.val + "'");
+          var qType = window.GF.queryables[f.key]?.type;
+          var isNumericType = (qType === 'number' || qType === 'integer');
+          return f.key + " = " + (isNumericType ? f.val : "'" + f.val + "'");
         }).concat(cqlFilters);
         url.searchParams.set('filter', allConditions.join(' AND '));
+        url.searchParams.set('filter-lang', 'cql2-text'); 
       } else {
         simpleFilters.forEach(function(f) {
           url.searchParams.set(f.key, f.val);
@@ -416,6 +420,7 @@
       var url = new URL(document.location);
       Object.keys(window.GF.queryables).forEach(function(key) { url.searchParams.delete(key); });
       url.searchParams.delete('filter');
+      url.searchParams.delete('filter-lang');
       url.searchParams.delete('bbox');
       url.searchParams.delete('offset');
       document.location = url.toString();
@@ -438,8 +443,9 @@
     window.GF.removeFilter = function(key) {
       var url = new URL(document.location);
       url.searchParams.delete(key);
-      url.searchParams.delete('filter'); // Also clear the generic filter if a specific key is removed
-      url.searchParams.delete('bbox'); // Also clear bbox if a specific key is removed (might be related)
+      url.searchParams.delete('filter'); 
+      url.searchParams.delete('filter-lang');
+      url.searchParams.delete('bbox'); 
       url.searchParams.delete('offset');
       document.location = url.toString();
     };
