@@ -76,7 +76,7 @@
     </select>
   </div>
   <div class="ms-auto d-flex gap-2">
-    <button id="btn-filter-toggle" class="btn-filter-toggle" onclick="toggleFilterPanel()">
+    <button id="btn-filter-toggle" class="btn-filter-toggle" onclick="GF.toggleFilterPanel()">
       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
       Filter
     </button>
@@ -89,8 +89,8 @@
 <div id="filter-panel">
   <div id="filter-body"><div class="filter-loading">Loading queryable properties…</div></div>
   <div class="filter-actions" id="filter-actions" style="display:none">
-    <button class="btn-filter-apply" onclick="applyFilters()">Apply filters</button>
-    <button class="btn-filter-clear" onclick="clearFilters()">Clear all</button>
+    <button class="btn-filter-apply" onclick="GF.applyFilters()">Apply filters</button>
+    <button class="btn-filter-clear" onclick="GF.clearFilters()">Clear all</button>
     <span id="filter-count" style="font-size:0.78rem;color:#94a3b8;"></span>
   </div>
 </div>
@@ -213,58 +213,59 @@
         url.searchParams.set('limit', ev.target.value);
         url.searchParams.delete('offset'); // reset to page 1
         document.location = url.toString();
-      });
-    }
-
     // --- Queryables filter panel ---
-    var QUERYABLES_SKIP = new Set(['geometry', 'id']);
-    var RESERVED_PARAMS = new Set(['f', 'limit', 'offset', 'bbox', 'datetime', 'lang']);
+    // Use plain object maps instead of Set to avoid any Jinja2/browser issues
+    var QUERYABLES_SKIP = { geometry: true, id: true };
+    var RESERVED_PARAMS = { f: true, limit: true, offset: true, bbox: true, datetime: true, lang: true };
     var collectionId = '{{ data.id }}';
     var queryablesUrl = '{{ config.server.url }}/collections/' + collectionId + '/queryables?f=json';
-    var queryables = {}; // {propName: {title, type}}
+    var queryables = {}; // exposed on window.GF so onclick handlers can reach it
 
-    function toggleFilterPanel() {
+    // Expose all filter functions globally so inline onclick="..." can call them
+    window.GF = window.GF || {};
+    window.GF.queryables = queryables;
+
+    window.GF.toggleFilterPanel = function() {
       var panel = document.getElementById('filter-panel');
       var btn = document.getElementById('btn-filter-toggle');
       var isOpen = panel.classList.toggle('open');
       btn.classList.toggle('active', isOpen);
-      if (isOpen && Object.keys(queryables).length === 0) {
-        loadQueryables();
+      if (isOpen && Object.keys(window.GF.queryables).length === 0) {
+        window.GF.loadQueryables();
       }
-    }
+    };
 
-    function loadQueryables() {
+    window.GF.loadQueryables = function() {
       fetch(queryablesUrl)
         .then(function(r) { return r.json(); })
         .catch(function() { return null; })
-        .then(function(data) {
+        .then(function(resp) {
           var body = document.getElementById('filter-body');
           var actions = document.getElementById('filter-actions');
-          if (!data || !data.properties) {
+          if (!resp || !resp.properties) {
             body.innerHTML = '<div class="filter-loading">No queryable properties available for this collection.</div>';
             return;
           }
-          queryables = {};
-          var props = data.properties;
-          // Filter out geometry/id and build map
+          window.GF.queryables = {};
+          var props = resp.properties;
           Object.keys(props).forEach(function(key) {
-            if (QUERYABLES_SKIP.has(key)) return;
-            queryables[key] = props[key];
+            if (QUERYABLES_SKIP[key]) return;
+            window.GF.queryables[key] = props[key];
           });
-          if (Object.keys(queryables).length === 0) {
+          if (Object.keys(window.GF.queryables).length === 0) {
             body.innerHTML = '<div class="filter-loading">No filterable properties found.</div>';
             return;
           }
-          renderFilterForm();
+          window.GF.renderFilterForm();
           actions.style.display = 'flex';
         });
-    }
+    };
 
-    function renderFilterForm() {
+    window.GF.renderFilterForm = function() {
       var body = document.getElementById('filter-body');
       var html = '<div class="filter-grid">';
-      Object.keys(queryables).forEach(function(key) {
-        var q = queryables[key];
+      Object.keys(window.GF.queryables).forEach(function(key) {
+        var q = window.GF.queryables[key];
         var label = q.title || key;
         var type = q.type || 'string';
         var current = params.get(key) || '';
@@ -289,42 +290,39 @@
         }
         html += '<div class="filter-field"><label for="qf-' + key + '">' + label + '</label>' + inputHtml + '</div>';
       });
-      // bbox field
       var bboxVal = params.get('bbox') || '';
       html += '<div class="filter-field" style="grid-column:1/-1"><label for="qf-bbox">Bounding box <span style="font-weight:400;text-transform:none;letter-spacing:0;">(xmin,ymin,xmax,ymax)</span></label>';
       html += '<input type="text" id="qf-bbox" placeholder="e.g. 10.0,59.0,11.0,60.0" value="' + bboxVal + '"></div>';
       html += '</div>';
       body.innerHTML = html;
-      updateFilterCount();
-    }
+      window.GF.updateFilterCount();
+    };
 
-    function applyFilters() {
+    window.GF.applyFilters = function() {
       var url = new URL(document.location);
-      // Clear existing property filters
-      Object.keys(queryables).forEach(function(key) { url.searchParams.delete(key); });
+      Object.keys(window.GF.queryables).forEach(function(key) { url.searchParams.delete(key); });
       url.searchParams.delete('bbox');
-      url.searchParams.delete('offset'); // back to page 1
-      // Apply new values
-      Object.keys(queryables).forEach(function(key) {
+      url.searchParams.delete('offset');
+      Object.keys(window.GF.queryables).forEach(function(key) {
         var el = document.getElementById('qf-' + key);
         if (el && el.value.trim()) url.searchParams.set(key, el.value.trim());
       });
       var bboxEl = document.getElementById('qf-bbox');
       if (bboxEl && bboxEl.value.trim()) url.searchParams.set('bbox', bboxEl.value.trim());
       document.location = url.toString();
-    }
+    };
 
-    function clearFilters() {
+    window.GF.clearFilters = function() {
       var url = new URL(document.location);
-      Object.keys(queryables).forEach(function(key) { url.searchParams.delete(key); });
+      Object.keys(window.GF.queryables).forEach(function(key) { url.searchParams.delete(key); });
       url.searchParams.delete('bbox');
       url.searchParams.delete('offset');
       document.location = url.toString();
-    }
+    };
 
-    function updateFilterCount() {
+    window.GF.updateFilterCount = function() {
       var count = 0;
-      Object.keys(queryables).forEach(function(key) {
+      Object.keys(window.GF.queryables).forEach(function(key) {
         var el = document.getElementById('qf-' + key);
         if (el && el.value.trim()) count++;
       });
@@ -332,41 +330,38 @@
       if (bboxEl && bboxEl.value.trim()) count++;
       var span = document.getElementById('filter-count');
       if (span) span.textContent = count > 0 ? count + ' filter' + (count > 1 ? 's' : '') + ' set' : '';
-    }
+    };
 
-    // Render active filter chips from URL params
-    (function renderActiveChips() {
-      var container = document.getElementById('active-filters');
-      if (!container) return;
-      var chips = [];
-      params.forEach(function(value, key) {
-        if (RESERVED_PARAMS.has(key)) return;
-        chips.push({ key: key, value: value });
-      });
-      if (params.has('bbox')) chips.push({ key: 'bbox', value: params.get('bbox') });
-      // dedupe
-      var seen = new Set();
-      chips = chips.filter(function(c) {
-        var id = c.key + '=' + c.value;
-        if (seen.has(id)) return false;
-        seen.add(id);
-        return true;
-      });
-      if (chips.length === 0) return;
-      container.innerHTML = chips.map(function(c) {
-        return '<span class="active-chip"><span>' + c.key + ': ' + c.value + '</span><button onclick="removeFilter('' + c.key + '')" title="Remove filter">&times;</button></span>';
-      }).join('');
-      // Highlight filter button as active
-      var btn = document.getElementById('btn-filter-toggle');
-      if (btn) btn.classList.add('active');
-    })();
-
-    function removeFilter(key) {
+    window.GF.removeFilter = function(key) {
       var url = new URL(document.location);
       url.searchParams.delete(key);
       url.searchParams.delete('offset');
       document.location = url.toString();
-    }
+    };
+
+    // Render active filter chips from URL params
+    (function() {
+      var container = document.getElementById('active-filters');
+      if (!container) return;
+      var chips = [];
+      var seenKeys = {};
+      params.forEach(function(value, key) {
+        if (RESERVED_PARAMS[key]) return;
+        var uid = key + '=' + value;
+        if (!seenKeys[uid]) { seenKeys[uid] = true; chips.push({ key: key, value: value }); }
+      });
+      if (params.has('bbox')) {
+        var bv = params.get('bbox');
+        chips.push({ key: 'bbox', value: bv });
+      }
+      if (chips.length === 0) return;
+      container.innerHTML = chips.map(function(c) {
+        return '<span class="active-chip"><span>' + c.key + ': ' + c.value + '</span>'
+          + '<button onclick="GF.removeFilter('' + c.key + '')" title="Remove filter">&times;</button></span>';
+      }).join('');
+      var btn = document.getElementById('btn-filter-toggle');
+      if (btn) btn.classList.add('active');
+    })();
 
     // --- Navigation Context Tracking ---
     try {
