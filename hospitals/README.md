@@ -1,6 +1,6 @@
 # Hospitals — Deploy Kit
 
-Autogenerert fra GeoForge · Deployment target: **Railway**
+Autogenerert fra Waystones · Deployment target: **Railway**
 
 ## Tjenester
 
@@ -52,7 +52,7 @@ Railway deployer automatisk ved push til main. Ingen GitHub Actions nødvendig.
 
 | Fil | Beskrivelse |
 |-----|-------------|
-| `model.json` | Datamodell (GeoForge) |
+| `model.json` | Datamodell (Waystones) |
 | `Dockerfile` | pygeoapi container |
 | `pygeoapi-config.yml` | OGC API-konfigurasjon |
 | `Dockerfile.qgis` | QGIS Server container |
