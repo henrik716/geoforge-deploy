@@ -360,8 +360,9 @@
       if (chips.length === 0) return;
       container.innerHTML = chips.map(function(c) {
         return '<span class="active-chip"><span>' + c.key + ': ' + c.value + '</span>'
-          + '<button onclick="GF.removeFilter('' + c.key + '')" title="Remove filter">&times;</button></span>';
+          + '<button class="chip-remove" data-key="' + c.key + '" title="Remove filter">&times;</button></span>';
       }).join('');
+      container.addEventListener('click', function(e) { var t = e.target.closest ? e.target.closest('.chip-remove') : null; if (t && t.dataset && t.dataset.key) window.GF.removeFilter(t.dataset.key); });
       var btn = document.getElementById('btn-filter-toggle');
       if (btn) btn.classList.add('active');
     })();
