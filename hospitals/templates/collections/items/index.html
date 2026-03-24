@@ -18,10 +18,32 @@
   .id-link { font-weight:700; font-family:monospace; font-size:0.95rem; color:#4f46e5; display:inline-flex; align-items:center; gap:0.4rem; text-decoration:underline; text-decoration-color:#c7d2fe; text-underline-offset:4px; text-decoration-thickness:2px; transition:all 0.2s; }
   .id-link:hover { color:#3730a3; text-decoration-color:#4f46e5; }
   .chip { display:inline-block; font-size:0.72rem; padding:0.15rem 0.6rem; border-radius:999px; background:#e0e7ff; color:#4338ca; font-weight:600; }
-  .items-meta-bar { display:flex; gap:1.5rem; flex-wrap:wrap; align-items:center; margin-bottom:1.5rem; padding:0.85rem 1.1rem; background:#fff; border:1px solid #e2e8f0; border-radius: var(--radius); box-shadow:var(--shadow-sm); }
+  .items-meta-bar { display:flex; gap:1.5rem; flex-wrap:wrap; align-items:center; margin-bottom:0.75rem; padding:0.85rem 1.1rem; background:#fff; border:1px solid #e2e8f0; border-radius: var(--radius); box-shadow:var(--shadow-sm); }
   .items-meta-bar .meta-item { display:flex; flex-direction:column; }
   .items-meta-bar .meta-label { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.06em; color:#94a3b8; font-weight:700; }
   .items-meta-bar .meta-value { font-size:0.9rem; font-weight:600; color:#0f172a; }
+
+  /* Queryables filter panel */
+  #filter-panel { background:#fff; border:1px solid #e2e8f0; border-radius:var(--radius); box-shadow:var(--shadow-sm); padding:1.25rem 1.5rem; margin-bottom:1rem; display:none; }
+  #filter-panel.open { display:block; }
+  .filter-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:0.85rem 1.25rem; margin-bottom:1rem; }
+  .filter-field label { display:block; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.06em; color:#94a3b8; font-weight:700; margin-bottom:0.3rem; }
+  .filter-field input, .filter-field select { width:100%; font-size:0.85rem; padding:0.4rem 0.65rem; border:1px solid #cbd5e1; border-radius:0.4rem; color:#334155; background:#f8fafc; transition:border-color 0.15s; outline:none; }
+  .filter-field input:focus, .filter-field select:focus { border-color:#6366f1; background:#fff; }
+  .filter-actions { display:flex; gap:0.6rem; align-items:center; }
+  .btn-filter-apply { background:#6366f1; color:#fff; border:none; border-radius:0.45rem; font-size:0.82rem; font-weight:700; padding:0.45rem 1.1rem; cursor:pointer; transition:background 0.15s; }
+  .btn-filter-apply:hover { background:#4f46e5; }
+  .btn-filter-clear { background:none; border:1px solid #cbd5e1; border-radius:0.45rem; font-size:0.82rem; font-weight:600; padding:0.45rem 1.1rem; color:#64748b; cursor:pointer; transition:all 0.15s; }
+  .btn-filter-clear:hover { border-color:#94a3b8; color:#334155; }
+  .filter-loading { font-size:0.85rem; color:#94a3b8; font-style:italic; padding:0.5rem 0; }
+
+  /* Active filter chips */
+  #active-filters { display:flex; flex-wrap:wrap; gap:0.4rem; margin-bottom:1rem; }
+  .active-chip { display:inline-flex; align-items:center; gap:0.3rem; font-size:0.75rem; background:#eef2ff; color:#4338ca; border:1px solid #c7d2fe; border-radius:999px; padding:0.2rem 0.5rem 0.2rem 0.7rem; font-weight:600; }
+  .active-chip button { background:none; border:none; cursor:pointer; color:#4338ca; padding:0; line-height:1; font-size:0.9rem; display:flex; align-items:center; opacity:0.6; transition:opacity 0.15s; }
+  .active-chip button:hover { opacity:1; }
+  .btn-filter-toggle { display:inline-flex; align-items:center; gap:0.45rem; font-size:0.82rem; font-weight:700; padding:0.38rem 0.85rem; border-radius:0.45rem; cursor:pointer; background:#f1f5f9; border:1px solid #e2e8f0; color:#475569; transition:all 0.15s; white-space:nowrap; }
+  .btn-filter-toggle:hover, .btn-filter-toggle.active { background:#eef2ff; border-color:#c7d2fe; color:#6366f1; }
 </style>
 
 <div class="items-header">{{ data.title | default('Collection') }}</div>
@@ -54,7 +76,22 @@
     </select>
   </div>
   <div class="ms-auto d-flex gap-2">
+    <button id="btn-filter-toggle" class="btn-filter-toggle" onclick="toggleFilterPanel()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+      Filter
+    </button>
     <a href="?f=json" class="btn btn-sm" style="background:#eef2ff;color:#6366f1;font-size:0.8rem;border:1px solid #c7d2fe;">JSON</a>
+  </div>
+</div>
+
+<div id="active-filters"></div>
+
+<div id="filter-panel">
+  <div id="filter-body"><div class="filter-loading">Loading queryable properties…</div></div>
+  <div class="filter-actions" id="filter-actions" style="display:none">
+    <button class="btn-filter-apply" onclick="applyFilters()">Apply filters</button>
+    <button class="btn-filter-clear" onclick="clearFilters()">Clear all</button>
+    <span id="filter-count" style="font-size:0.78rem;color:#94a3b8;"></span>
   </div>
 </div>
 
@@ -177,6 +214,158 @@
         url.searchParams.delete('offset'); // reset to page 1
         document.location = url.toString();
       });
+    }
+
+    // --- Queryables filter panel ---
+    var QUERYABLES_SKIP = new Set(['geometry', 'id']);
+    var RESERVED_PARAMS = new Set(['f', 'limit', 'offset', 'bbox', 'datetime', 'lang']);
+    var collectionId = '{{ data.id }}';
+    var queryablesUrl = '{{ config.server.url }}/collections/' + collectionId + '/queryables?f=json';
+    var queryables = {}; // {propName: {title, type}}
+
+    function toggleFilterPanel() {
+      var panel = document.getElementById('filter-panel');
+      var btn = document.getElementById('btn-filter-toggle');
+      var isOpen = panel.classList.toggle('open');
+      btn.classList.toggle('active', isOpen);
+      if (isOpen && Object.keys(queryables).length === 0) {
+        loadQueryables();
+      }
+    }
+
+    function loadQueryables() {
+      fetch(queryablesUrl)
+        .then(function(r) { return r.json(); })
+        .catch(function() { return null; })
+        .then(function(data) {
+          var body = document.getElementById('filter-body');
+          var actions = document.getElementById('filter-actions');
+          if (!data || !data.properties) {
+            body.innerHTML = '<div class="filter-loading">No queryable properties available for this collection.</div>';
+            return;
+          }
+          queryables = {};
+          var props = data.properties;
+          // Filter out geometry/id and build map
+          Object.keys(props).forEach(function(key) {
+            if (QUERYABLES_SKIP.has(key)) return;
+            queryables[key] = props[key];
+          });
+          if (Object.keys(queryables).length === 0) {
+            body.innerHTML = '<div class="filter-loading">No filterable properties found.</div>';
+            return;
+          }
+          renderFilterForm();
+          actions.style.display = 'flex';
+        });
+    }
+
+    function renderFilterForm() {
+      var body = document.getElementById('filter-body');
+      var html = '<div class="filter-grid">';
+      Object.keys(queryables).forEach(function(key) {
+        var q = queryables[key];
+        var label = q.title || key;
+        var type = q.type || 'string';
+        var current = params.get(key) || '';
+        var inputHtml;
+        if (q['enum']) {
+          inputHtml = '<select id="qf-' + key + '">';
+          inputHtml += '<option value="">Any</option>';
+          q['enum'].forEach(function(v) {
+            inputHtml += '<option value="' + v + '"' + (current == v ? ' selected' : '') + '>' + v + '</option>';
+          });
+          inputHtml += '</select>';
+        } else if (type === 'number' || type === 'integer') {
+          inputHtml = '<input type="number" id="qf-' + key + '" placeholder="Any" value="' + current + '">';
+        } else if (type === 'boolean') {
+          inputHtml = '<select id="qf-' + key + '">';
+          inputHtml += '<option value="">Any</option>';
+          inputHtml += '<option value="true"' + (current === 'true' ? ' selected' : '') + '>True</option>';
+          inputHtml += '<option value="false"' + (current === 'false' ? ' selected' : '') + '>False</option>';
+          inputHtml += '</select>';
+        } else {
+          inputHtml = '<input type="text" id="qf-' + key + '" placeholder="Any" value="' + current + '">';
+        }
+        html += '<div class="filter-field"><label for="qf-' + key + '">' + label + '</label>' + inputHtml + '</div>';
+      });
+      // bbox field
+      var bboxVal = params.get('bbox') || '';
+      html += '<div class="filter-field" style="grid-column:1/-1"><label for="qf-bbox">Bounding box <span style="font-weight:400;text-transform:none;letter-spacing:0;">(xmin,ymin,xmax,ymax)</span></label>';
+      html += '<input type="text" id="qf-bbox" placeholder="e.g. 10.0,59.0,11.0,60.0" value="' + bboxVal + '"></div>';
+      html += '</div>';
+      body.innerHTML = html;
+      updateFilterCount();
+    }
+
+    function applyFilters() {
+      var url = new URL(document.location);
+      // Clear existing property filters
+      Object.keys(queryables).forEach(function(key) { url.searchParams.delete(key); });
+      url.searchParams.delete('bbox');
+      url.searchParams.delete('offset'); // back to page 1
+      // Apply new values
+      Object.keys(queryables).forEach(function(key) {
+        var el = document.getElementById('qf-' + key);
+        if (el && el.value.trim()) url.searchParams.set(key, el.value.trim());
+      });
+      var bboxEl = document.getElementById('qf-bbox');
+      if (bboxEl && bboxEl.value.trim()) url.searchParams.set('bbox', bboxEl.value.trim());
+      document.location = url.toString();
+    }
+
+    function clearFilters() {
+      var url = new URL(document.location);
+      Object.keys(queryables).forEach(function(key) { url.searchParams.delete(key); });
+      url.searchParams.delete('bbox');
+      url.searchParams.delete('offset');
+      document.location = url.toString();
+    }
+
+    function updateFilterCount() {
+      var count = 0;
+      Object.keys(queryables).forEach(function(key) {
+        var el = document.getElementById('qf-' + key);
+        if (el && el.value.trim()) count++;
+      });
+      var bboxEl = document.getElementById('qf-bbox');
+      if (bboxEl && bboxEl.value.trim()) count++;
+      var span = document.getElementById('filter-count');
+      if (span) span.textContent = count > 0 ? count + ' filter' + (count > 1 ? 's' : '') + ' set' : '';
+    }
+
+    // Render active filter chips from URL params
+    (function renderActiveChips() {
+      var container = document.getElementById('active-filters');
+      if (!container) return;
+      var chips = [];
+      params.forEach(function(value, key) {
+        if (RESERVED_PARAMS.has(key)) return;
+        chips.push({ key: key, value: value });
+      });
+      if (params.has('bbox')) chips.push({ key: 'bbox', value: params.get('bbox') });
+      // dedupe
+      var seen = new Set();
+      chips = chips.filter(function(c) {
+        var id = c.key + '=' + c.value;
+        if (seen.has(id)) return false;
+        seen.add(id);
+        return true;
+      });
+      if (chips.length === 0) return;
+      container.innerHTML = chips.map(function(c) {
+        return '<span class="active-chip"><span>' + c.key + ': ' + c.value + '</span><button onclick="removeFilter('' + c.key + '')" title="Remove filter">&times;</button></span>';
+      }).join('');
+      // Highlight filter button as active
+      var btn = document.getElementById('btn-filter-toggle');
+      if (btn) btn.classList.add('active');
+    })();
+
+    function removeFilter(key) {
+      var url = new URL(document.location);
+      url.searchParams.delete(key);
+      url.searchParams.delete('offset');
+      document.location = url.toString();
     }
 
     // --- Navigation Context Tracking ---
