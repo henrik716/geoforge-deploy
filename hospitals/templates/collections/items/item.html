@@ -31,12 +31,14 @@
     <div class="item-card">
       <div class="item-header d-flex align-items-center justify-content-between flex-wrap gap-2">
         <h2 class="item-title">{{ ptitle }}</h2>
-        <div class="d-flex gap-2">
+        <div class="d-flex gap-2" id="item-nav-top">
+          <a href="#" class="nav-btn d-none" id="btn-prev-top">&larr; Prev</a>
+          <a href="#" class="nav-btn d-none" id="btn-next-top">Next &rarr;</a>
           {% if data['prev'] %}
-            <a href="./{{ data['prev'] }}" class="nav-btn">&larr; Prev</a>
+            <a href="./{{ data['prev'] }}" class="nav-btn">&larr; Prev (Data)</a>
           {% endif %}
           {% if data['next'] %}
-            <a href="./{{ data['next'] }}" class="nav-btn">Next &rarr;</a>
+            <a href="./{{ data['next'] }}" class="nav-btn">Next (Data) &rarr;</a>
           {% endif %}
         </div>
       </div>
@@ -95,22 +97,23 @@
       </div>
     </div>
 
-    {% if data['prev'] or data['next'] %}
-    <div class="sidebar-card" style="margin-top:1rem;">
+    <div class="sidebar-card" style="margin-top:1rem;" id="sidebar-nav">
       <div class="sidebar-card-title">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
         Navigation
       </div>
       <div class="d-flex flex-column gap-2 pt-1">
+        <a href="#" class="nav-btn w-100 justify-content-center d-none" id="btn-prev-side">&larr; Previous feature</a>
+        <a href="#" class="nav-btn w-100 justify-content-center d-none" id="btn-next-side">Next feature &rarr;</a>
         {% if data['prev'] %}
-          <a href="./{{ data['prev'] }}" class="nav-btn w-100 justify-content-center">&larr; Previous feature</a>
+          <a href="./{{ data['prev'] }}" class="nav-btn w-100 justify-content-center">&larr; Previous (Data)</a>
         {% endif %}
         {% if data['next'] %}
-          <a href="./{{ data['next'] }}" class="nav-btn w-100 justify-content-center">Next feature &rarr;</a>
+          <a href="./{{ data['next'] }}" class="nav-btn w-100 justify-content-center">Next (Data) &rarr;</a>
         {% endif %}
+        <a href="../items" class="nav-btn w-100 justify-content-center mt-1" style="border-style:dashed; opacity:0.8;">Back to list</a>
       </div>
     </div>
-    {% endif %}
   </div>
 </div>
 {% endblock %}
@@ -137,6 +140,38 @@
         }
       }).addTo(map);
       try { map.fitBounds(layer.getBounds(), { padding: [40, 40] }); } catch(e) {}
+    }
+
+    // --- Navigation Logic ---
+    try {
+      var currentId = "{{ data.id }}";
+      var context = JSON.parse(sessionStorage.getItem('gf_items_context') || 'null');
+      
+      if (context && context.ids) {
+        var ids = context.ids;
+        var idx = ids.indexOf(currentId);
+        
+        if (idx !== -1) {
+          if (idx > 0) {
+            setupBtn('btn-prev-top', ids[idx-1]);
+            setupBtn('btn-prev-side', ids[idx-1]);
+          }
+          if (idx < ids.length - 1) {
+            setupBtn('btn-next-top', ids[idx+1]);
+            setupBtn('btn-next-side', ids[idx+1]);
+          }
+        }
+      }
+    } catch (e) {
+      console.warn('Navigation setup failed', e);
+    }
+
+    function setupBtn(id, targetId) {
+      var el = document.getElementById(id);
+      if (el) {
+        el.href = './' + targetId;
+        el.classList.remove('d-none');
+      }
     }
   });
 </script>

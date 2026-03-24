@@ -178,6 +178,25 @@
         document.location = url.toString();
       });
     }
+
+    // --- Navigation Context Tracking ---
+    try {
+      var itemIds = [];
+      var idLinks = document.querySelectorAll('.id-link');
+      idLinks.forEach(function(link) {
+        var parts = link.href.split('/');
+        itemIds.push(parts[parts.length - 1]);
+      });
+      if (itemIds.length > 0) {
+        sessionStorage.setItem('gf_items_context', JSON.stringify({
+          ids: itemIds,
+          collection: '{{ data.id }}',
+          timestamp: Date.now()
+        }));
+      }
+    } catch (e) {
+      console.warn('Failed to save navigation context', e);
+    }
   });
 </script>
 {% endblock %}
