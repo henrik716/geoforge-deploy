@@ -213,6 +213,9 @@
         url.searchParams.set('limit', ev.target.value);
         url.searchParams.delete('offset'); // reset to page 1
         document.location = url.toString();
+      });
+    }
+
     // --- Queryables filter panel ---
     // Use plain object maps instead of Set to avoid any Jinja2/browser issues
     var QUERYABLES_SKIP = { geometry: true, id: true };
