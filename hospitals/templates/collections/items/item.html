@@ -1,6 +1,6 @@
 {% extends "_base.html" %}
 {% set ptitle = data['properties'][data['title_field']] or data['id'] | string %}
-{% block title %}{{ super() }} â€” {{ ptitle }}{% endblock %}
+{% block title %}{{ super() }} - {{ ptitle }}{% endblock %}
 {% block crumbs %}
   {{ super() }} /
   <a href="{{ data['collections_path'] }}">Collections</a>
