@@ -221,6 +221,13 @@
     var QUERYABLES_SKIP = { geometry: true, id: true };
     var RESERVED_PARAMS = { f: true, limit: true, offset: true, bbox: true, datetime: true, lang: true };
     var collectionId = '{{ data.id }}';
+    if (!collectionId || collectionId === 'None' || collectionId === '') {
+      var pathParts = window.location.pathname.split('/');
+      var collectionsIdx = pathParts.indexOf('collections');
+      if (collectionsIdx !== -1 && pathParts.length > collectionsIdx + 1) {
+        collectionId = pathParts[collectionsIdx + 1];
+      }
+    }
     var queryablesUrl = '{{ config.server.url }}/collections/' + collectionId + '/queryables?f=json';
     var queryables = {}; // exposed on window.GF so onclick handlers can reach it
 
@@ -239,10 +246,14 @@
     };
 
     window.GF.loadQueryables = function() {
+      console.log('GF Debug - data:', {{ data | to_json | safe }});
+      console.log('GF Debug - collectionId:', collectionId);
+      console.log('GF Debug - queryablesUrl:', queryablesUrl);
       fetch(queryablesUrl)
         .then(function(r) { return r.json(); })
-        .catch(function() { return null; })
+        .catch(function(err) { console.error('GF Debug - Fetch error:', err); return null; })
         .then(function(resp) {
+          console.log('GF Debug - resp:', resp);
           var body = document.getElementById('filter-body');
           var actions = document.getElementById('filter-actions');
           if (!resp || !resp.properties) {
