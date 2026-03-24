@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals
-# Generated: 2026-03-24T07:32:40.769Z
+# Generated: 2026-03-24T08:14:22.477Z
 # Source: geopackage
 
 server:
@@ -76,9 +76,13 @@ resources:
 
     schema:
       # Resolved properties for hospitalpoints (Local: 35, Total: 35)
+      # Generator Version: 1.0.2
       title: "hospitalpoints"
       type: object
       properties:
+        "geoforge_ping":
+          title: "GeoForge Connection Check"
+          type: string
         "id":
           title: "Id"
           type: number
@@ -217,9 +221,13 @@ resources:
 
     schema:
       # Resolved properties for areas (Local: 1, Total: 1)
+      # Generator Version: 1.0.2
       title: "areas"
       type: object
       properties:
+        "geoforge_ping":
+          title: "GeoForge Connection Check"
+          type: string
         "id":
           title: "Id"
           type: number
