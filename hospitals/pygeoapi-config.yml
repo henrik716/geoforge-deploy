@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals
-# Generated: 2026-03-24T07:23:01.764Z
+# Generated: 2026-03-24T07:32:40.769Z
 # Source: geopackage
 
 server:
@@ -75,12 +75,13 @@ resources:
             - cql-text
 
     schema:
+      # Resolved properties for hospitalpoints (Local: 35, Total: 35)
       title: "hospitalpoints"
       type: object
       properties:
         "id":
           title: "Id"
-          type: integer
+          type: number
         "dataset":
           title: "Dataset"
           type: string
@@ -98,25 +99,25 @@ resources:
           type: string
         "doctors":
           title: "Doctors"
-          type: integer
+          type: number
         "nurses":
           title: "Nurses"
-          type: integer
+          type: number
         "operationrooms":
           title: "OperationRooms"
-          type: integer
+          type: number
         "beds":
           title: "Beds"
-          type: integer
+          type: number
         "employees":
           title: "Employees"
-          type: integer
+          type: number
         "address":
           title: "Address"
           type: string
         "telephonenumber":
           title: "TelephoneNumber"
-          type: integer
+          type: number
         "email":
           title: "Email"
           type: string
@@ -215,10 +216,11 @@ resources:
             - cql-text
 
     schema:
+      # Resolved properties for areas (Local: 1, Total: 1)
       title: "areas"
       type: object
       properties:
         "id":
           title: "Id"
-          type: integer
+          type: number
 
