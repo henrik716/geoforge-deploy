@@ -1,6 +1,6 @@
-# pygeoapi configuration for Hospitals
-# Generated: 2026-03-25T08:29:19.274Z
-# Source: geopackage
+# pygeoapi configuration for fmedata
+# Generated: 2026-03-25T11:15:03.731Z
+# Source: postgis
 
 server:
   bind:
@@ -25,8 +25,8 @@ logging:
 
 metadata:
   identification:
-    title: Hospitals
-    description: Spatial data
+    title: fmedata
+    description: Dette datasettet inneholder en samling av geografiske soner, utformet for romlig differensiering og forvaltning av områder. Hver sone er beskrevet med et unikt sonenavn (zonename) og en tilhørende sonekategori (zonecategory). Formålet er å tilrettelegge for analyse, planlegging og styring av ulike geografiske områder basert på deres spesifikke klassifisering og funksjon.
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
@@ -36,33 +36,39 @@ metadata:
     name: CC-BY-4.0
     url: https://creativecommons.org/licenses/by/4.0/
   contact:
-    name: Henrik S
+    name: Henrik
     email: schhen@kartverket.no
   provider:
-    name: Henrik S
+    name: Henrik
     organization: Kartverket
     email: schhen@kartverket.no
 
 resources:
-  hospitalpoints:
+  zones:
     type: collection
-    title: hospitalpoints
+    title: zones
     description: Spatial collection
     keywords:
       - data
-      - hospitalpoints
+      - zones
     extents:
       spatial:
-        bbox: [5.661964614014777, 58.01289713711848, 38.86783938382364, 77.15419161001824]
+        bbox: [-180, -90, 180, 90]
         crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
     providers:
       - type: feature
-        name: SQLiteGPKG
-        data: /data/Hospitals.gpkg
-        table: hospitalpoints
-        id_field: fid
+        name: PostgreSQL
+        data:
+          host: ${POSTGRES_HOST}
+          port: ${POSTGRES_PORT}
+          dbname: ${POSTGRES_DB}
+          user: ${POSTGRES_USER}
+          password: ${POSTGRES_PASSWORD}
+          search_path:
+            - ${POSTGRES_SCHEMA}
+        id_field: id
+        table: zones
         geom_field: geom
-        storage_crs: http://www.opengis.net/def/crs/EPSG/0/25833
         extensions:
           filters:
             - cql2-text
@@ -70,155 +76,18 @@ resources:
             - cql-text
 
     schema:
-      # Resolved properties for hospitalpoints (Local: 34, Total: 34)
+      # Resolved properties for zones (Local: 2, Total: 2)
       # Generator Version: 1.0.2
-      title: "hospitalpoints"
+      title: "zones"
       type: object
       properties:
-        "geoforge_ping":
-          title: "GeoForge Connection Check"
+        "waystones_ping":
+          title: "Waystones Connection Check"
           type: string
-        "id":
-          title: "Id"
-          type: number
-        "dataset":
-          title: "Dataset"
+        "zonename":
+          title: "Zonename"
           type: string
-        "featuretype":
-          title: "FeatureType"
+        "zonecategory":
+          title: "Zonecategory"
           type: string
-        "name":
-          title: "Name"
-          type: string
-        "type":
-          title: "Type"
-          type: string
-        "emergencydepartment":
-          title: "EmergencyDepartment"
-          type: string
-        "doctors":
-          title: "Doctors"
-          type: number
-        "nurses":
-          title: "Nurses"
-          type: number
-        "operationrooms":
-          title: "OperationRooms"
-          type: number
-        "beds":
-          title: "Beds"
-          type: number
-        "employees":
-          title: "Employees"
-          type: number
-        "address":
-          title: "Address"
-          type: string
-        "telephonenumber":
-          title: "TelephoneNumber"
-          type: number
-        "email":
-          title: "Email"
-          type: string
-        "website":
-          title: "Website"
-          type: string
-        "latitude":
-          title: "Latitude"
-          type: number
-        "longitude":
-          title: "Longitude"
-          type: number
-        "mgrs":
-          title: "Mgrs"
-          type: string
-        "classification":
-          title: "Classification"
-          type: string
-        "origin":
-          title: "Origin"
-          type: string
-        "datawithdrawaldate":
-          title: "DataWithdrawalDate"
-          type: string
-          format: date
-        "datacapturedate":
-          title: "DataCaptureDate"
-          type: string
-          format: date
-        "updatedate":
-          title: "UpdateDate"
-          type: string
-          format: date
-        "datasetttype":
-          title: "DatasettType"
-          type: string
-        "gradering":
-          title: "Gradering"
-          type: string
-        "opphav":
-          title: "Opphav"
-          type: string
-        "dgiffeaturealpha":
-          title: "DgifFeatureAlpha"
-          type: string
-        "dgiffeature531":
-          title: "DgifFeature531"
-          type: string
-        "dgifattributealpha":
-          title: "DgifAttributeAlpha"
-          type: string
-        "dgifattribute531":
-          title: "DgifAttribute531"
-          type: string
-        "dgifvaluealpha":
-          title: "DgifValueAlpha"
-          type: string
-        "dgifvalue531":
-          title: "DgifValue531"
-          type: number
-        "dgifccode":
-          title: "DgifCCode"
-          type: string
-        "uuid":
-          title: "Uuid"
-          type: string
-
-  areas:
-    type: collection
-    title: areas
-    description: Spatial collection
-    keywords:
-      - data
-      - areas
-    extents:
-      spatial:
-        bbox: [5.661964614014777, 58.01289713711848, 38.86783938382364, 77.15419161001824]
-        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-    providers:
-      - type: feature
-        name: SQLiteGPKG
-        data: /data/Hospitals.gpkg
-        table: areas
-        id_field: fid
-        geom_field: geom
-        storage_crs: http://www.opengis.net/def/crs/EPSG/0/25833
-        extensions:
-          filters:
-            - cql2-text
-            - cql2-json
-            - cql-text
-
-    schema:
-      # Resolved properties for areas (Local: 1, Total: 1)
-      # Generator Version: 1.0.2
-      title: "areas"
-      type: object
-      properties:
-        "geoforge_ping":
-          title: "GeoForge Connection Check"
-          type: string
-        "id":
-          title: "Id"
-          type: number
 
