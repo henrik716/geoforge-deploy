@@ -1,0 +1,128 @@
+{
+  "id": "98v04wb",
+  "name": "fmedata",
+  "namespace": "",
+  "description": "Test",
+  "version": "1.0.0",
+  "layers": [
+    {
+      "id": "60vgsno",
+      "name": "roads",
+      "description": "",
+      "properties": [
+        {
+          "id": "eqiqtx6",
+          "name": "streetid",
+          "title": "Streetid",
+          "description": "",
+          "multiplicity": "0..1",
+          "defaultValue": "",
+          "constraints": {},
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "number"
+          }
+        },
+        {
+          "id": "122vteu",
+          "name": "streetname",
+          "title": "Streetname",
+          "description": "",
+          "multiplicity": "0..1",
+          "defaultValue": "",
+          "constraints": {},
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
+        },
+        {
+          "id": "1j62cuh",
+          "name": "from_hblock",
+          "title": "From hblock",
+          "description": "",
+          "multiplicity": "0..1",
+          "defaultValue": "",
+          "constraints": {},
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
+        },
+        {
+          "id": "7eo48js",
+          "name": "hblock",
+          "title": "Hblock",
+          "description": "",
+          "multiplicity": "0..1",
+          "defaultValue": "",
+          "constraints": {},
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
+        },
+        {
+          "id": "focldl3",
+          "name": "type",
+          "title": "Type",
+          "description": "",
+          "multiplicity": "0..1",
+          "defaultValue": "",
+          "constraints": {},
+          "fieldType": {
+            "kind": "primitive",
+            "baseType": "string"
+          }
+        }
+      ],
+      "geometryType": "Polygon",
+      "geometryColumnName": "geom",
+      "style": {
+        "type": "simple",
+        "simpleColor": "#6366F1",
+        "categorizedColors": {},
+        "pointSize": 8,
+        "pointIcon": "circle",
+        "lineWidth": 2,
+        "lineDash": "solid",
+        "fillOpacity": 0.5,
+        "hatchStyle": "solid",
+        "hatchThickness": 1,
+        "hatchSpacing": 6
+      }
+    }
+  ],
+  "sharedTypes": [],
+  "sharedEnums": [],
+  "crs": "EPSG:4326",
+  "createdAt": "2026-03-25T10:33:19.992Z",
+  "updatedAt": "2026-03-25T10:33:54.372Z",
+  "sourceConnection": {
+    "type": "postgis",
+    "connectionString": "postgresql://fmedata:fmedata@postgis.train.safe.com:5432/fmedata",
+    "schema": "public"
+  },
+  "renderingOrder": [
+    "60vgsno"
+  ],
+  "metadata": {
+    "contactName": "Henrik",
+    "contactEmail": "schhen@kartverket.no",
+    "contactOrganization": "Kartverket",
+    "keywords": [],
+    "theme": "",
+    "license": "CC-BY-4.0",
+    "accessRights": "public",
+    "purpose": "",
+    "accrualPeriodicity": "unknown",
+    "spatialExtent": {
+      "westBoundLongitude": "",
+      "eastBoundLongitude": "",
+      "southBoundLatitude": "",
+      "northBoundLatitude": ""
+    },
+    "temporalExtentFrom": "",
+    "temporalExtentTo": ""
+  }
+}
