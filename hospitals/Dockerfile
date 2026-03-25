@@ -2,7 +2,7 @@ FROM geopython/pygeoapi:latest
 
 # Copy configuration
 COPY pygeoapi-config.yml /pygeoapi/local.config.yml
-
+COPY data/ /data/
 # Copy custom templates to the path defined in pygeoapi-config.yml
 COPY templates/ /pygeoapi/local-templates/
 

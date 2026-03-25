@@ -1,7 +1,7 @@
 FROM qgis/qgis-server:ltr
 
 COPY project.qgs /data/project.qgs
-
+COPY data/ /data/
 RUN chmod -R 777 /data
 
 ENV QGIS_PROJECT_FILE=/data/project.qgs
