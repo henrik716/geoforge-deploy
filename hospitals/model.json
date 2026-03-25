@@ -509,11 +509,11 @@
   "sharedEnums": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-24T16:43:28.591Z",
-  "updatedAt": "2026-03-24T16:43:42.940Z",
+  "updatedAt": "2026-03-25T08:00:46.031Z",
   "metadata": {
     "contactName": "Henrik S",
     "contactEmail": "schhen@kartverket.no",
-    "contactOrganization": "post@kartverket.no",
+    "contactOrganization": "Kartverket",
     "keywords": [],
     "theme": "",
     "license": "CC-BY-4.0",
@@ -532,5 +532,62 @@
   "renderingOrder": [
     "eq6kngk",
     "kd0gpgj"
-  ]
+  ],
+  "sourceConnection": {
+    "type": "geopackage",
+    "config": {
+      "filename": "Hospitals.gpkg"
+    },
+    "layerMappings": {
+      "eq6kngk": {
+        "sourceTable": "hospitalpoints",
+        "fieldMappings": {
+          "2zbgmm3": "id",
+          "r5vii9s": "dataset",
+          "zj2f6qw": "featuretype",
+          "tegg9o0": "name",
+          "g01bjf8": "type",
+          "sjvefv3": "emergencydepartment",
+          "81fvb49": "doctors",
+          "oioq3ks": "nurses",
+          "hz5mrg8": "operationrooms",
+          "fijvxg6": "beds",
+          "i5sarr7": "employees",
+          "gxn7usi": "address",
+          "dkxvkvs": "telephonenumber",
+          "b18k4hj": "email",
+          "khm3iil": "website",
+          "7ul5no3": "latitude",
+          "d7eonsc": "longitude",
+          "7nk7t3w": "mgrs",
+          "zoxopem": "classification",
+          "bcc7zla": "origin",
+          "yxyr2r7": "datawithdrawaldate",
+          "a3ehiqs": "datacapturedate",
+          "k37k6qf": "updatedate",
+          "bh15qb6": "datasetttype",
+          "mnx080l": "gradering",
+          "pc9dp8w": "opphav",
+          "u16q1ry": "dgiffeaturealpha",
+          "qgwkejo": "dgiffeature531",
+          "bf4sumr": "dgifattributealpha",
+          "m03t8k7": "dgifattribute531",
+          "10t6rlo": "dgifvaluealpha",
+          "1vuzuqw": "dgifvalue531",
+          "pzxrx7g": "dgifccode",
+          "h3ey3ta": "uuid"
+        },
+        "timestampColumn": "",
+        "primaryKeyColumn": "fid"
+      },
+      "kd0gpgj": {
+        "sourceTable": "areas",
+        "fieldMappings": {
+          "c4fthk4": "id"
+        },
+        "timestampColumn": "",
+        "primaryKeyColumn": "fid"
+      }
+    }
+  }
 }

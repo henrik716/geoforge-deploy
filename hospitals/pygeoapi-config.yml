@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals
-# Generated: 2026-03-24T16:43:59.725Z
+# Generated: 2026-03-25T08:01:03.418Z
 # Source: geopackage
 
 server:
@@ -40,7 +40,7 @@ metadata:
     email: schhen@kartverket.no
   provider:
     name: Henrik S
-    organization: post@kartverket.no
+    organization: Kartverket
     email: schhen@kartverket.no
 
 resources:
