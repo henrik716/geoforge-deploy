@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals
-# Generated: 2026-03-25T11:31:09.578Z
+# Generated: 2026-03-26T12:46:16.742Z
 # Source: geopackage
 
 server:
@@ -26,26 +26,26 @@ logging:
 metadata:
   identification:
     title: Hospitals
-    description: Dette datasettet inneholder geografiske punktdata som representerer lokasjoner for sykehus. Formålet er å visualisere den romlige fordelingen av helseinstitusjoner, noe som er avgjørende for planlegging av helsetjenester, beredskapsanalyser og studier av tilgjengelighet. Hvert punkt inkluderer sentrale attributter som sykehusets navn, type institusjon, og viktig informasjon om hvorvidt sykehuset har en akuttmottak.
+    description: Dette datasettet inneholder geografiske punktrepresentasjoner av sykehus og tilhørende arealobjekter. Hvert sykehuspunkt gir detaljer om institusjonens navn, type og om det tilbyr akuttmottak. Arealobjektene kan representere sykehusområder eller tilhørende geografiske regioner. Formålet med datasettet er å fasilitere lokalisering og analyse av helseinstitusjoner basert på deres funksjonalitet og geografiske utbredelse.
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
-      - sykehus
-      - helse
-      - helsevesen
-      - medisin
-      - institusjoner
-      - punkter
-      - områder
-    abstract: Dette datasettet gir geografisk informasjon om sykehus, presentert som punktdata for individuelle lokasjoner og tilhørende geografiske områder. Hovedformålet er å støtte lokalisering, analyse og planlegging av helsetjenester på et nasjonalt eller regionalt nivå. For hvert sykehus inkluderer nøkkelattributter informasjon om sykehusets navn, type og hvorvidt det har et akuttmottak. Dette gir et verdifullt grunnlag for analyser av helsetjenestetilgjengelighet, beredskapsplanlegging og infrastrukturutvikling.
+      - Sykehus
+      - Helsevesen
+      - Helsetjenester
+      - Medisinske fasiliteter
+      - Lokasjoner
+      - Infrastruktur
+      - Akuttjenester
+      - Helseinstitusjoner
   license:
     name: CC-BY-4.0
     url: https://creativecommons.org/licenses/by/4.0/
   contact:
-    name: Henrik S
+    name: Henrik Schüller
     email: schhen@kartverket.no
   provider:
-    name: Henrik S
+    name: Henrik Schüller
     organization: Kartverket
     email: schhen@kartverket.no
 
@@ -53,7 +53,7 @@ resources:
   hospitalpoints:
     type: collection
     title: hospitalpoints
-    description: Spatial collection
+    description: Dette datasettet inneholder geografiske punktrepresentasjoner av sykehus og tilhørende arealobjekter. Hvert sykehuspunkt gir detaljer om institusjonens navn, type og om det tilbyr akuttmottak. Arealobjektene kan representere sykehusområder eller tilhørende geografiske regioner. Formålet med datasettet er å fasilitere lokalisering og analyse av helseinstitusjoner basert på deres funksjonalitet og geografiske utbredelse.
     keywords:
       - data
       - hospitalpoints
@@ -76,7 +76,7 @@ resources:
             - cql-text
 
     schema:
-      # Resolved properties for hospitalpoints (Local: 34, Total: 34)
+      # Resolved properties for hospitalpoints (Local: 35, Total: 35)
       # Generator Version: 1.0.2
       title: "hospitalpoints"
       type: object
@@ -189,6 +189,12 @@ resources:
         "uuid":
           title: "Uuid"
           type: string
+        "kodeliste":
+          title: "kodeliste"
+          type: string
+          enum:
+            - "1"
+            - "2"
 
   areas:
     type: collection

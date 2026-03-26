@@ -7,7 +7,7 @@ Autogenerert fra Waystones · Deployment target: **Railway**
 | Tjeneste | Beskrivelse | URL |
 |----------|-------------|-----|
 | pygeoapi | OGC API – Features | https://\<app\>.up.railway.app |
-| QGIS Server | WMS/WFS kartlag | https://<qgis-service>.up.railway.app/ows/?SERVICE=WMS&REQUEST=GetCapabilities |
+| QGIS Server | WMS kartlag | https://<qgis-service>.up.railway.app/ows/?SERVICE=WMS&REQUEST=GetCapabilities |
 
 ## Kom i gang med Railway
 
@@ -29,7 +29,7 @@ Sett disse under **Variables** i Railway dashboard:
 
 > **Merk:** Railway setter `PORT` automatisk — ikke overstyr denne.
 
-### QGIS Server (WMS/WFS)
+### QGIS Server (WMS)
 
 Railway deployer én tjeneste per repo som standard. For å kjøre QGIS Server i tillegg:
 
