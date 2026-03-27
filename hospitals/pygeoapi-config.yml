@@ -1,5 +1,5 @@
 # pygeoapi configuration for Sykehus
-# Generated: 2026-03-27T20:46:06.725Z
+# Generated: 2026-03-27T20:52:07.872Z
 # Source: geopackage
 
 server:
@@ -26,7 +26,7 @@ logging:
 metadata:
   identification:
     title: Sykehus
-    description: Dette datasettet inneholder geografiske punktdata som representerer lokasjoner for sykehus. Formålet er å visualisere den romlige fordelingen av helseinstitusjoner, noe som er avgjørende for planlegging av helsetjenester, beredskapsanalyser og studier av tilgjengelighet. Hvert punkt inkluderer sentrale attributter som sykehusets navn, type institusjon, og viktig informasjon om hvorvidt sykehuset har en akuttmottak.
+    description: Dette datasettet inneholder geografiske punktdata som representerer lokasjoner for sykehus. Formålet er å visualisere den romlige fordelingen av helseinstitusjoner, noe som er avgjørende for planlegging av helsetjenester, beredskapsanalyser og studier av tilgjengelighet. Hvert punkt inkluderer sentrale attributter som sykehusets navn, type institusjon, og viktig informasjon om hvorvidt sykehuset har en akuttmottak..
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
