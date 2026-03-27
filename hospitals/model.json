@@ -501,7 +501,7 @@
   "sharedEnums": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-24T16:43:28.591Z",
-  "updatedAt": "2026-03-27T20:51:56.073Z",
+  "updatedAt": "2026-03-27T20:58:56.611Z",
   "metadata": {
     "contactName": "Henrik Schuller",
     "contactEmail": "post@kartverket.no",
@@ -515,7 +515,7 @@
       "punkter",
       "områder"
     ],
-    "theme": "hh",
+    "theme": "us",
     "license": "CC-BY-4.0",
     "accessRights": "public",
     "purpose": "Dette datasettet gir geografisk informasjon om sykehus, presentert som punktdata for individuelle lokasjoner og tilhørende geografiske områder. Hovedformålet er å støtte lokalisering, analyse og planlegging av helsetjenester på et nasjonalt eller regionalt nivå. For hvert sykehus inkluderer nøkkelattributter informasjon om sykehusets navn, type og hvorvidt det har et akuttmottak. Dette gir et verdifullt grunnlag for analyser av helsetjenestetilgjengelighet, beredskapsplanlegging og infrastrukturutvikling.",
