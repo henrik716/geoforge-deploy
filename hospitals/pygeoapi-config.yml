@@ -1,5 +1,5 @@
 # pygeoapi configuration for Sykehus
-# Generated: 2026-03-27T12:30:55.533Z
+# Generated: 2026-03-27T19:15:40.954Z
 # Source: geopackage
 
 server:
@@ -43,11 +43,11 @@ metadata:
     url: https://creativecommons.org/licenses/by/4.0/
   contact:
     name: Henrik Schuller
-    email: psot@kartverket.no
+    email: post@kartverket.no
   provider:
     name: Henrik Schuller
     organization: Kartverket
-    email: psot@kartverket.no
+    email: post@kartverket.no
 
 resources:
   hospitalpoints:
@@ -194,7 +194,7 @@ resources:
   areas:
     type: collection
     title: Områder
-    description: Dette laget inneholder polygoner som representerer definerte geografiske områder. Formålet er å identifisere og avgrense ulike regioner eller studieområder, hvor hvert område er utstyrt med en unik identifikator (`id`).
+    description: Dette laget inneholder polygoner som representerer definerte geografiske områder.
     keywords:
       - arealer
       - områder

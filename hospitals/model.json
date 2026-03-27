@@ -469,7 +469,7 @@
     {
       "id": "kd0gpgj",
       "name": "areas",
-      "description": "Dette laget inneholder polygoner som representerer definerte geografiske områder. Formålet er å identifisere og avgrense ulike regioner eller studieområder, hvor hvert område er utstyrt med en unik identifikator (`id`).",
+      "description": "Dette laget inneholder polygoner som representerer definerte geografiske områder.",
       "properties": [],
       "geometryType": "MultiPolygon",
       "geometryColumnName": "geom",
@@ -501,10 +501,10 @@
   "sharedEnums": [],
   "crs": "EPSG:25833",
   "createdAt": "2026-03-24T16:43:28.591Z",
-  "updatedAt": "2026-03-27T12:30:41.838Z",
+  "updatedAt": "2026-03-27T18:34:52.751Z",
   "metadata": {
     "contactName": "Henrik Schuller",
-    "contactEmail": "psot@kartverket.no",
+    "contactEmail": "post@kartverket.no",
     "contactOrganization": "Kartverket",
     "keywords": [
       "sykehus",
