@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qgis projectname="Sykehus" version="3.34">
+<qgis projectname="Hospitals" version="3.34">
   <projectCrs>
     <spatialrefsys nativeFormat="Wkt">
           <authid>EPSG:25833</authid>
@@ -10,12 +10,12 @@
         </spatialrefsys>
   </projectCrs>
   <layer-tree-group name="" expanded="1" checked="Qt::Checked">
-    <layer-tree-layer id="hospitalpoints_0_1774593599624" name="hospitalpoints" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
-    <layer-tree-layer id="areas_1_1774593599624" name="areas" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
+    <layer-tree-layer id="hospitalpoints_0_1774612374982" name="hospitalpoints" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
+    <layer-tree-layer id="areas_1_1774612374982" name="areas" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
   </layer-tree-group>
   <projectlayers>
     <maplayer name="hospitalpoints" type="vector" hasScaleBasedVisibilityFlag="0">
-        <id>hospitalpoints_0_1774593599624</id>
+        <id>hospitalpoints_0_1774612374982</id>
         <datasource>/data/Hospitals.gpkg|layername=hospitalpoints</datasource>
         <provider encoding="UTF-8">ogr</provider>
         <layername>hospitalpoints</layername>
@@ -36,7 +36,7 @@
           <layer class="SimpleMarker">
             <prop k="name" v="triangle"/>
             <prop k="color" v="99,102,241,255"/>
-            <prop k="size" v="20"/>
+            <prop k="size" v="29"/>
             <prop k="size_unit" v="Point"/>
             <prop k="outline_color" v="99,102,241,255"/>
             <prop k="outline_width" v="0"/>
@@ -46,7 +46,7 @@
         </renderer-v2>
       </maplayer>
     <maplayer name="areas" type="vector" hasScaleBasedVisibilityFlag="0">
-        <id>areas_1_1774593599624</id>
+        <id>areas_1_1774612374982</id>
         <datasource>/data/Hospitals.gpkg|layername=areas</datasource>
         <provider encoding="UTF-8">ogr</provider>
         <layername>areas</layername>
@@ -63,7 +63,7 @@
         </crs>
         <renderer-v2 type="singleSymbol" enableorderby="0" forceraster="0">
           <symbols>
-            <symbol alpha="0.5" type="fill" name="0">
+            <symbol alpha="1" type="fill" name="0">
             
           <layer class="LinePatternFill">
             <prop k="angle" v="45"/>
@@ -92,8 +92,8 @@
       </maplayer>
   </projectlayers>
   <properties>
-    <WMSServiceTitle type="QString">Sykehus</WMSServiceTitle>
-    <WMSRootName type="QString">sykehus</WMSRootName>
+    <WMSServiceTitle type="QString">Hospitals</WMSServiceTitle>
+    <WMSRootName type="QString">hospitals</WMSRootName>
     <WMSCrsList type="QStringList">
       <value>EPSG:25833</value>
       <value>EPSG:4326</value>
@@ -101,5 +101,6 @@
       <value>EPSG:3857</value>
       <value>CRS:84</value>
     </WMSCrsList>
+    <WMSExtent type="QRectF">-50686.015625 6468340 1076942.75 8683034</WMSExtent>
   </properties>
 </qgis>
