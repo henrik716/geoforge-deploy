@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qgis projectname="Hospitals" version="3.34">
+<qgis projectname="Sykehus" version="3.34">
   <projectCrs>
     <spatialrefsys nativeFormat="Wkt">
           <authid>EPSG:25833</authid>
@@ -10,12 +10,12 @@
         </spatialrefsys>
   </projectCrs>
   <layer-tree-group name="" expanded="1" checked="Qt::Checked">
-    <layer-tree-layer id="hospitalpoints_0_1774613876680" name="hospitalpoints" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
-    <layer-tree-layer id="areas_1_1774613876680" name="areas" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
+    <layer-tree-layer id="hospitalpoints_0_1774614655547" name="hospitalpoints" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
+    <layer-tree-layer id="areas_1_1774614655547" name="areas" providerKey="ogr" checked="Qt::Checked" expanded="1"/>
   </layer-tree-group>
   <projectlayers>
     <maplayer name="hospitalpoints" type="vector" hasScaleBasedVisibilityFlag="0">
-        <id>hospitalpoints_0_1774613876680</id>
+        <id>hospitalpoints_0_1774614655547</id>
         <datasource>/data/Hospitals.gpkg|layername=hospitalpoints</datasource>
         <provider encoding="UTF-8">ogr</provider>
         <layername>hospitalpoints</layername>
@@ -46,7 +46,7 @@
         </renderer-v2>
       </maplayer>
     <maplayer name="areas" type="vector" hasScaleBasedVisibilityFlag="0">
-        <id>areas_1_1774613876680</id>
+        <id>areas_1_1774614655547</id>
         <datasource>/data/Hospitals.gpkg|layername=areas</datasource>
         <provider encoding="UTF-8">ogr</provider>
         <layername>areas</layername>
@@ -92,8 +92,8 @@
       </maplayer>
   </projectlayers>
   <properties>
-    <WMSServiceTitle type="QString">Hospitals</WMSServiceTitle>
-    <WMSRootName type="QString">hospitals</WMSRootName>
+    <WMSServiceTitle type="QString">Sykehus</WMSServiceTitle>
+    <WMSRootName type="QString">sykehus</WMSRootName>
     <WMSCrsList type="QStringList">
       <value>EPSG:25833</value>
       <value>EPSG:4326</value>

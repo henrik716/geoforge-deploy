@@ -1,4 +1,4 @@
-# Hospitals — Deploy Kit
+# Sykehus — Deploy Kit
 
 Autogenerert fra Waystones · Deployment target: **Railway**
 
