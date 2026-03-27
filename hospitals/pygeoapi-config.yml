@@ -1,5 +1,5 @@
-# pygeoapi configuration for Hospitals
-# Generated: 2026-03-26T12:46:16.742Z
+# pygeoapi configuration for Sykehus
+# Generated: 2026-03-27T06:39:59.614Z
 # Source: geopackage
 
 server:
@@ -25,41 +25,43 @@ logging:
 
 metadata:
   identification:
-    title: Hospitals
-    description: Dette datasettet inneholder geografiske punktrepresentasjoner av sykehus og tilhørende arealobjekter. Hvert sykehuspunkt gir detaljer om institusjonens navn, type og om det tilbyr akuttmottak. Arealobjektene kan representere sykehusområder eller tilhørende geografiske regioner. Formålet med datasettet er å fasilitere lokalisering og analyse av helseinstitusjoner basert på deres funksjonalitet og geografiske utbredelse.
+    title: Sykehus
+    description: Dette datasettet inneholder geografisk informasjon om sykehus, primært representert som punktobjekter. Hovedformålet er å tilgjengeliggjøre lokalisering og grunnleggende kjennetegn ved sykehus for bruk i helseplanlegging, beredskapsarbeid og offentlig informasjonsformidling. For hvert sykehuspunkt er sentrale attributter tilgjengelige, inkludert sykehusets navn, type (f.eks. spesialsykehus, lokalsykehus) og informasjon om tilstedeværelse av akuttmottak.
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
-      - Sykehus
-      - Helsevesen
-      - Helsetjenester
-      - Medisinske fasiliteter
-      - Lokasjoner
-      - Infrastruktur
-      - Akuttjenester
-      - Helseinstitusjoner
+      - sykehus
+      - helse
+      - helsevesen
+      - helseinstitusjoner
+      - medisin
+      - behandling
+      - fasiliteter
   license:
     name: CC-BY-4.0
     url: https://creativecommons.org/licenses/by/4.0/
   contact:
-    name: Henrik Schüller
-    email: schhen@kartverket.no
+    name: Henrik S
+    email: post@kartverket.no
   provider:
-    name: Henrik Schüller
+    name: Henrik S
     organization: Kartverket
-    email: schhen@kartverket.no
+    email: post@kartverket.no
 
 resources:
   hospitalpoints:
     type: collection
-    title: hospitalpoints
-    description: Dette datasettet inneholder geografiske punktrepresentasjoner av sykehus og tilhørende arealobjekter. Hvert sykehuspunkt gir detaljer om institusjonens navn, type og om det tilbyr akuttmottak. Arealobjektene kan representere sykehusområder eller tilhørende geografiske regioner. Formålet med datasettet er å fasilitere lokalisering og analyse av helseinstitusjoner basert på deres funksjonalitet og geografiske utbredelse.
+    title: Punkter
+    description: Denne punktgeometrien representerer sykehuslokasjoner, og gir en oversikt over viktig helseinfrastruktur. Laget inneholder attributter som sykehusnavn, type, tilstedeværelse av akuttmottak, samt antall leger og sykepleiere, noe som er nyttig for analyse og planlegging.
     keywords:
-      - data
-      - hospitalpoints
+      - sykehus
+      - helsefasiliteter
+      - medisin
+      - akuttmottak
+      - kapasitet
     extents:
       spatial:
-        bbox: [5.661964614014777, 58.01289713711848, 38.86783938382364, 77.15419161001824]
+        bbox: [-180, -90, 180, 90]
         crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
     providers:
       - type: feature
@@ -76,7 +78,7 @@ resources:
             - cql-text
 
     schema:
-      # Resolved properties for hospitalpoints (Local: 35, Total: 35)
+      # Resolved properties for hospitalpoints (Local: 34, Total: 34)
       # Generator Version: 1.0.2
       title: "hospitalpoints"
       type: object
@@ -189,23 +191,20 @@ resources:
         "uuid":
           title: "Uuid"
           type: string
-        "kodeliste":
-          title: "kodeliste"
-          type: string
-          enum:
-            - "1"
-            - "2"
 
   areas:
     type: collection
-    title: areas
-    description: Spatial collection
+    title: Områder
+    description: Dette laget inneholder polygoner som representerer generiske geografiske områder. Det er ment for generell geografisk referanse, gruppering eller analyse av data. Hvert område identifiseres unikt med en numerisk `id`.
     keywords:
-      - data
-      - areas
+      - områder
+      - geografiske områder
+      - polygoner
+      - flater
+      - kartdata
     extents:
       spatial:
-        bbox: [5.661964614014777, 58.01289713711848, 38.86783938382364, 77.15419161001824]
+        bbox: [-180, -90, 180, 90]
         crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
     providers:
       - type: feature

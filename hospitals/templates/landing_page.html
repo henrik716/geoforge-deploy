@@ -6,7 +6,6 @@
   .hero-text { flex:1; max-width:700px; }
   .hero-title { font-size:2.25rem; font-weight:800; letter-spacing:-0.03em; margin-bottom:1rem; color:#4338ca; }
   .hero-desc { font-size:1.05rem; color:#475569; line-height:1.6; margin-bottom:1.5rem; }
-  .hero-graphic { flex-shrink:0; width:160px; height:auto; opacity:0.8; }
   
   .cta-card { background:#f1f5f9; border:1px solid #cbd5e1; border-radius:var(--radius); padding:1.5rem; margin-bottom:2rem; transition:all 0.2s; text-decoration:none; display:flex; align-items:center; gap:1.25rem; color:inherit; }
   .cta-card:hover { background:#e2e8f0; border-color:#94a3b8; box-shadow:0 4px 12px rgba(0,0,0,0.06); text-decoration:none; color:inherit; transform:translateY(-2px); }
@@ -53,22 +52,6 @@
       <div class="hero-text">
         <div class="hero-title">{{ config.metadata.identification.title }}</div>
         <div class="hero-desc">{{ config.metadata.identification.description }}</div>
-      </div>
-      <div class="hero-graphic">
-        <!-- Abstract network/dataset graphic representing the collections -->
-        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 5L90 25V75L50 95L10 75V25L50 5Z" stroke="var(--brand)" stroke-width="4" stroke-opacity="0.2" fill="var(--brand)" fill-opacity="0.05"/>
-          <circle cx="50" cy="50" r="15" stroke="var(--brand)" stroke-width="4" fill="#fff"/>
-          <circle cx="50" cy="50" r="5" fill="var(--brand)"/>
-          <circle cx="25" cy="35" r="8" stroke="var(--brand)" stroke-width="3" fill="#fff"/>
-          <circle cx="75" cy="35" r="8" stroke="var(--brand)" stroke-width="3" fill="#fff"/>
-          <circle cx="25" cy="65" r="8" stroke="var(--brand)" stroke-width="3" fill="#fff"/>
-          <circle cx="75" cy="65" r="8" stroke="var(--brand)" stroke-width="3" fill="#fff"/>
-          <line x1="40" y1="45" x2="33" y2="40" stroke="var(--brand)" stroke-width="3"/>
-          <line x1="60" y1="45" x2="67" y2="40" stroke="var(--brand)" stroke-width="3"/>
-          <line x1="40" y1="55" x2="33" y2="60" stroke="var(--brand)" stroke-width="3"/>
-          <line x1="60" y1="55" x2="67" y2="60" stroke="var(--brand)" stroke-width="3"/>
-        </svg>
       </div>
     </div>
 
