@@ -1,36 +1,30 @@
 {
-  "id": "mg547pj",
+  "id": "xzo5t7y",
   "name": "Hospitals",
   "namespace": "",
-  "description": "Dette datasettet inneholder geografiske punktrepresentasjoner av sykehus og tilhørende arealobjekter. Hvert sykehuspunkt gir detaljer om institusjonens navn, type og om det tilbyr akuttmottak. Arealobjektene kan representere sykehusområder eller tilhørende geografiske regioner. Formålet med datasettet er å fasilitere lokalisering og analyse av helseinstitusjoner basert på deres funksjonalitet og geografiske utbredelse.",
+  "description": "Dette datasettet inneholder geografiske punktdata som representerer lokasjoner for sykehus. Formålet er å visualisere den romlige fordelingen av helseinstitusjoner, noe som er avgjørende for planlegging av helsetjenester, beredskapsanalyser og studier av tilgjengelighet. Hvert punkt inkluderer sentrale attributter som sykehusets navn, type institusjon, og viktig informasjon om hvorvidt sykehuset har en akuttmottak.",
   "version": "1.0.0",
   "layers": [
     {
-      "id": "v39mttj",
+      "id": "eq6kngk",
       "name": "hospitalpoints",
       "description": "Dette datasettet inneholder geografiske punktrepresentasjoner av sykehus og tilhørende arealobjekter. Hvert sykehuspunkt gir detaljer om institusjonens navn, type og om det tilbyr akuttmottak. Arealobjektene kan representere sykehusområder eller tilhørende geografiske regioner. Formålet med datasettet er å fasilitere lokalisering og analyse av helseinstitusjoner basert på deres funksjonalitet og geografiske utbredelse.",
       "properties": [
         {
-          "id": "gis5rbv",
+          "id": "r5vii9s",
           "name": "dataset",
           "title": "Dataset",
           "description": "",
           "multiplicity": "0..1",
           "defaultValue": "",
-          "constraints": {
-            "enumeration": [
-              "Test",
-              "Enda",
-              "Flere"
-            ]
-          },
+          "constraints": {},
           "fieldType": {
             "kind": "primitive",
             "baseType": "string"
           }
         },
         {
-          "id": "y45u8ph",
+          "id": "zj2f6qw",
           "name": "featuretype",
           "title": "FeatureType",
           "description": "",
@@ -43,7 +37,7 @@
           }
         },
         {
-          "id": "bmkot5p",
+          "id": "tegg9o0",
           "name": "name",
           "title": "Name",
           "description": "",
@@ -56,7 +50,7 @@
           }
         },
         {
-          "id": "0hcwur7",
+          "id": "g01bjf8",
           "name": "type",
           "title": "Type",
           "description": "",
@@ -69,7 +63,7 @@
           }
         },
         {
-          "id": "br9jdl8",
+          "id": "sjvefv3",
           "name": "emergencydepartment",
           "title": "EmergencyDepartment",
           "description": "",
@@ -82,7 +76,7 @@
           }
         },
         {
-          "id": "2uxtmdz",
+          "id": "81fvb49",
           "name": "doctors",
           "title": "Doctors",
           "description": "",
@@ -95,7 +89,7 @@
           }
         },
         {
-          "id": "a5wac2e",
+          "id": "oioq3ks",
           "name": "nurses",
           "title": "Nurses",
           "description": "",
@@ -108,7 +102,7 @@
           }
         },
         {
-          "id": "szgapq7",
+          "id": "hz5mrg8",
           "name": "operationrooms",
           "title": "OperationRooms",
           "description": "",
@@ -121,7 +115,7 @@
           }
         },
         {
-          "id": "wm1rd7x",
+          "id": "fijvxg6",
           "name": "beds",
           "title": "Beds",
           "description": "",
@@ -134,7 +128,7 @@
           }
         },
         {
-          "id": "1mhia2v",
+          "id": "i5sarr7",
           "name": "employees",
           "title": "Employees",
           "description": "",
@@ -147,7 +141,7 @@
           }
         },
         {
-          "id": "nmz2lpd",
+          "id": "gxn7usi",
           "name": "address",
           "title": "Address",
           "description": "",
@@ -160,7 +154,7 @@
           }
         },
         {
-          "id": "lks2g0d",
+          "id": "dkxvkvs",
           "name": "telephonenumber",
           "title": "TelephoneNumber",
           "description": "",
@@ -173,7 +167,7 @@
           }
         },
         {
-          "id": "7j2w3l0",
+          "id": "b18k4hj",
           "name": "email",
           "title": "Email",
           "description": "",
@@ -186,7 +180,7 @@
           }
         },
         {
-          "id": "xuopayw",
+          "id": "khm3iil",
           "name": "website",
           "title": "Website",
           "description": "",
@@ -199,7 +193,7 @@
           }
         },
         {
-          "id": "xhdzh7f",
+          "id": "7ul5no3",
           "name": "latitude",
           "title": "Latitude",
           "description": "",
@@ -212,7 +206,7 @@
           }
         },
         {
-          "id": "2ngpwf0",
+          "id": "d7eonsc",
           "name": "longitude",
           "title": "Longitude",
           "description": "",
@@ -225,7 +219,7 @@
           }
         },
         {
-          "id": "zcsr1xy",
+          "id": "7nk7t3w",
           "name": "mgrs",
           "title": "Mgrs",
           "description": "",
@@ -238,7 +232,7 @@
           }
         },
         {
-          "id": "6oe6qf3",
+          "id": "zoxopem",
           "name": "classification",
           "title": "Classification",
           "description": "",
@@ -251,7 +245,7 @@
           }
         },
         {
-          "id": "iotp5ej",
+          "id": "bcc7zla",
           "name": "origin",
           "title": "Origin",
           "description": "",
@@ -264,7 +258,7 @@
           }
         },
         {
-          "id": "hl2x5st",
+          "id": "yxyr2r7",
           "name": "datawithdrawaldate",
           "title": "DataWithdrawalDate",
           "description": "",
@@ -277,7 +271,7 @@
           }
         },
         {
-          "id": "jm8clwz",
+          "id": "a3ehiqs",
           "name": "datacapturedate",
           "title": "DataCaptureDate",
           "description": "",
@@ -290,7 +284,7 @@
           }
         },
         {
-          "id": "7iph9z0",
+          "id": "k37k6qf",
           "name": "updatedate",
           "title": "UpdateDate",
           "description": "",
@@ -303,7 +297,7 @@
           }
         },
         {
-          "id": "l69stxf",
+          "id": "bh15qb6",
           "name": "datasetttype",
           "title": "DatasettType",
           "description": "",
@@ -316,7 +310,7 @@
           }
         },
         {
-          "id": "scki51z",
+          "id": "mnx080l",
           "name": "gradering",
           "title": "Gradering",
           "description": "",
@@ -329,7 +323,7 @@
           }
         },
         {
-          "id": "dvu10bs",
+          "id": "pc9dp8w",
           "name": "opphav",
           "title": "Opphav",
           "description": "",
@@ -342,7 +336,7 @@
           }
         },
         {
-          "id": "55ff5fp",
+          "id": "u16q1ry",
           "name": "dgiffeaturealpha",
           "title": "DgifFeatureAlpha",
           "description": "",
@@ -355,7 +349,7 @@
           }
         },
         {
-          "id": "fhbhze2",
+          "id": "qgwkejo",
           "name": "dgiffeature531",
           "title": "DgifFeature531",
           "description": "",
@@ -368,7 +362,7 @@
           }
         },
         {
-          "id": "49vfi1h",
+          "id": "bf4sumr",
           "name": "dgifattributealpha",
           "title": "DgifAttributeAlpha",
           "description": "",
@@ -381,7 +375,7 @@
           }
         },
         {
-          "id": "1lfprgt",
+          "id": "m03t8k7",
           "name": "dgifattribute531",
           "title": "DgifAttribute531",
           "description": "",
@@ -394,7 +388,7 @@
           }
         },
         {
-          "id": "np3rffj",
+          "id": "10t6rlo",
           "name": "dgifvaluealpha",
           "title": "DgifValueAlpha",
           "description": "",
@@ -407,7 +401,7 @@
           }
         },
         {
-          "id": "vi6km2a",
+          "id": "1vuzuqw",
           "name": "dgifvalue531",
           "title": "DgifValue531",
           "description": "",
@@ -420,7 +414,7 @@
           }
         },
         {
-          "id": "udpn8fo",
+          "id": "pzxrx7g",
           "name": "dgifccode",
           "title": "DgifCCode",
           "description": "",
@@ -433,7 +427,7 @@
           }
         },
         {
-          "id": "itvfdor",
+          "id": "h3ey3ta",
           "name": "uuid",
           "title": "Uuid",
           "description": "",
@@ -444,33 +438,6 @@
             "kind": "primitive",
             "baseType": "string"
           }
-        },
-        {
-          "id": "dcx2v2x",
-          "name": "kodeliste",
-          "title": "kodeliste",
-          "description": "",
-          "multiplicity": "0..1",
-          "defaultValue": "",
-          "constraints": {},
-          "fieldType": {
-            "kind": "codelist",
-            "mode": "inline",
-            "values": [
-              {
-                "id": "02ng9xs",
-                "code": "1",
-                "label": "a",
-                "description": ""
-              },
-              {
-                "id": "k7s7ues",
-                "code": "2",
-                "label": "b",
-                "description": ""
-              }
-            ]
-          }
         }
       ],
       "geometryType": "Point",
@@ -479,7 +446,7 @@
         "type": "simple",
         "simpleColor": "#6366F1",
         "categorizedColors": {},
-        "pointSize": 29,
+        "pointSize": 16,
         "pointIcon": "triangle",
         "lineWidth": 2,
         "lineDash": "solid",
@@ -488,15 +455,19 @@
         "hatchThickness": 1,
         "hatchSpacing": 6
       },
-      "title": "",
       "keywords": [
-        "ok",
-        "km"
+        "sykehus",
+        "helse",
+        "akuttmottak",
+        "leger",
+        "senger",
+        "helsetjenester"
       ],
+      "title": "Punkter",
       "primaryKeyColumn": "fid"
     },
     {
-      "id": "1zqeu4n",
+      "id": "kd0gpgj",
       "name": "areas",
       "description": "Dette laget inneholder polygoner som representerer definerte geografiske områder. Formålet er å identifisere og avgrense ulike regioner eller studieområder, hvor hvert område er utstyrt med en unik identifikator (`id`).",
       "properties": [],
@@ -513,15 +484,15 @@
         "fillOpacity": 1,
         "hatchStyle": "b_diagonal",
         "hatchThickness": 1,
-        "hatchSpacing": 6
+        "hatchSpacing": 10
       },
+      "title": "Områder",
       "keywords": [
-        "områder",
         "arealer",
-        "geometri",
-        "polygon",
-        "flater",
-        "kartdata"
+        "områder",
+        "geografi",
+        "romlig",
+        "datasett"
       ],
       "primaryKeyColumn": "fid"
     }
@@ -529,26 +500,25 @@
   "sharedTypes": [],
   "sharedEnums": [],
   "crs": "EPSG:25833",
-  "createdAt": "2026-03-13T18:36:56.982Z",
-  "updatedAt": "2026-03-27T11:52:40.029Z",
+  "createdAt": "2026-03-24T16:43:28.591Z",
+  "updatedAt": "2026-03-27T11:58:35.163Z",
   "metadata": {
-    "contactName": "Henrik Schüller",
+    "contactName": "Henrik S",
     "contactEmail": "schhen@kartverket.no",
     "contactOrganization": "Kartverket",
     "keywords": [
-      "Sykehus",
-      "Helsevesen",
-      "Helsetjenester",
-      "Medisinske fasiliteter",
-      "Lokasjoner",
-      "Infrastruktur",
-      "Akuttjenester",
-      "Helseinstitusjoner"
+      "sykehus",
+      "helse",
+      "helsevesen",
+      "medisin",
+      "institusjoner",
+      "punkter",
+      "områder"
     ],
-    "theme": "hh",
+    "theme": "",
     "license": "CC-BY-4.0",
     "accessRights": "public",
-    "purpose": "",
+    "purpose": "Dette datasettet gir geografisk informasjon om sykehus, presentert som punktdata for individuelle lokasjoner og tilhørende geografiske områder. Hovedformålet er å støtte lokalisering, analyse og planlegging av helsetjenester på et nasjonalt eller regionalt nivå. For hvert sykehus inkluderer nøkkelattributter informasjon om sykehusets navn, type og hvorvidt det har et akuttmottak. Dette gir et verdifullt grunnlag for analyser av helsetjenestetilgjengelighet, beredskapsplanlegging og infrastrukturutvikling.",
     "accrualPeriodicity": "unknown",
     "spatialExtent": {
       "westBoundLongitude": "-50686.015625",
@@ -560,8 +530,8 @@
     "temporalExtentTo": ""
   },
   "renderingOrder": [
-    "v39mttj",
-    "1zqeu4n"
+    "eq6kngk",
+    "kd0gpgj"
   ],
   "sourceConnection": {
     "type": "geopackage",
@@ -569,52 +539,51 @@
       "filename": "Hospitals.gpkg"
     },
     "layerMappings": {
-      "v39mttj": {
+      "eq6kngk": {
         "sourceTable": "hospitalpoints",
         "fieldMappings": {
-          "iuclgu5": "id",
-          "gis5rbv": "dataset",
-          "y45u8ph": "featuretype",
-          "bmkot5p": "name",
-          "0hcwur7": "type",
-          "br9jdl8": "emergencydepartment",
-          "2uxtmdz": "doctors",
-          "a5wac2e": "nurses",
-          "szgapq7": "operationrooms",
-          "wm1rd7x": "beds",
-          "1mhia2v": "employees",
-          "nmz2lpd": "address",
-          "lks2g0d": "telephonenumber",
-          "7j2w3l0": "email",
-          "xuopayw": "website",
-          "xhdzh7f": "latitude",
-          "2ngpwf0": "longitude",
-          "zcsr1xy": "mgrs",
-          "6oe6qf3": "classification",
-          "iotp5ej": "origin",
-          "hl2x5st": "datawithdrawaldate",
-          "jm8clwz": "datacapturedate",
-          "7iph9z0": "updatedate",
-          "l69stxf": "datasetttype",
-          "scki51z": "gradering",
-          "dvu10bs": "opphav",
-          "55ff5fp": "dgiffeaturealpha",
-          "fhbhze2": "dgiffeature531",
-          "49vfi1h": "dgifattributealpha",
-          "1lfprgt": "dgifattribute531",
-          "np3rffj": "dgifvaluealpha",
-          "vi6km2a": "dgifvalue531",
-          "udpn8fo": "dgifccode",
-          "itvfdor": "uuid",
-          "dcx2v2x": "kodeliste"
+          "2zbgmm3": "id",
+          "r5vii9s": "dataset",
+          "zj2f6qw": "featuretype",
+          "tegg9o0": "name",
+          "g01bjf8": "type",
+          "sjvefv3": "emergencydepartment",
+          "81fvb49": "doctors",
+          "oioq3ks": "nurses",
+          "hz5mrg8": "operationrooms",
+          "fijvxg6": "beds",
+          "i5sarr7": "employees",
+          "gxn7usi": "address",
+          "dkxvkvs": "telephonenumber",
+          "b18k4hj": "email",
+          "khm3iil": "website",
+          "7ul5no3": "latitude",
+          "d7eonsc": "longitude",
+          "7nk7t3w": "mgrs",
+          "zoxopem": "classification",
+          "bcc7zla": "origin",
+          "yxyr2r7": "datawithdrawaldate",
+          "a3ehiqs": "datacapturedate",
+          "k37k6qf": "updatedate",
+          "bh15qb6": "datasetttype",
+          "mnx080l": "gradering",
+          "pc9dp8w": "opphav",
+          "u16q1ry": "dgiffeaturealpha",
+          "qgwkejo": "dgiffeature531",
+          "bf4sumr": "dgifattributealpha",
+          "m03t8k7": "dgifattribute531",
+          "10t6rlo": "dgifvaluealpha",
+          "1vuzuqw": "dgifvalue531",
+          "pzxrx7g": "dgifccode",
+          "h3ey3ta": "uuid"
         },
         "timestampColumn": "",
         "primaryKeyColumn": "fid"
       },
-      "1zqeu4n": {
+      "kd0gpgj": {
         "sourceTable": "areas",
         "fieldMappings": {
-          "0nn7fer": "id"
+          "c4fthk4": "id"
         },
         "timestampColumn": "",
         "primaryKeyColumn": "fid"

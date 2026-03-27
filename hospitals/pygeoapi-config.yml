@@ -1,5 +1,5 @@
 # pygeoapi configuration for Hospitals
-# Generated: 2026-03-27T11:52:54.967Z
+# Generated: 2026-03-27T11:59:07.107Z
 # Source: geopackage
 
 server:
@@ -26,37 +26,41 @@ logging:
 metadata:
   identification:
     title: Hospitals
-    description: Dette datasettet inneholder geografiske punktrepresentasjoner av sykehus og tilhørende arealobjekter. Hvert sykehuspunkt gir detaljer om institusjonens navn, type og om det tilbyr akuttmottak. Arealobjektene kan representere sykehusområder eller tilhørende geografiske regioner. Formålet med datasettet er å fasilitere lokalisering og analyse av helseinstitusjoner basert på deres funksjonalitet og geografiske utbredelse.
+    description: Dette datasettet inneholder geografiske punktdata som representerer lokasjoner for sykehus. Formålet er å visualisere den romlige fordelingen av helseinstitusjoner, noe som er avgjørende for planlegging av helsetjenester, beredskapsanalyser og studier av tilgjengelighet. Hvert punkt inkluderer sentrale attributter som sykehusets navn, type institusjon, og viktig informasjon om hvorvidt sykehuset har en akuttmottak.
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
-      - Sykehus
-      - Helsevesen
-      - Helsetjenester
-      - Medisinske fasiliteter
-      - Lokasjoner
-      - Infrastruktur
-      - Akuttjenester
-      - Helseinstitusjoner
+      - sykehus
+      - helse
+      - helsevesen
+      - medisin
+      - institusjoner
+      - punkter
+      - områder
+    abstract: Dette datasettet gir geografisk informasjon om sykehus, presentert som punktdata for individuelle lokasjoner og tilhørende geografiske områder. Hovedformålet er å støtte lokalisering, analyse og planlegging av helsetjenester på et nasjonalt eller regionalt nivå. For hvert sykehus inkluderer nøkkelattributter informasjon om sykehusets navn, type og hvorvidt det har et akuttmottak. Dette gir et verdifullt grunnlag for analyser av helsetjenestetilgjengelighet, beredskapsplanlegging og infrastrukturutvikling.
   license:
     name: CC-BY-4.0
     url: https://creativecommons.org/licenses/by/4.0/
   contact:
-    name: Henrik Schüller
+    name: Henrik S
     email: schhen@kartverket.no
   provider:
-    name: Henrik Schüller
+    name: Henrik S
     organization: Kartverket
     email: schhen@kartverket.no
 
 resources:
   hospitalpoints:
     type: collection
-    title: hospitalpoints
+    title: Punkter
     description: Dette datasettet inneholder geografiske punktrepresentasjoner av sykehus og tilhørende arealobjekter. Hvert sykehuspunkt gir detaljer om institusjonens navn, type og om det tilbyr akuttmottak. Arealobjektene kan representere sykehusområder eller tilhørende geografiske regioner. Formålet med datasettet er å fasilitere lokalisering og analyse av helseinstitusjoner basert på deres funksjonalitet og geografiske utbredelse.
     keywords:
-      - ok
-      - km
+      - sykehus
+      - helse
+      - akuttmottak
+      - leger
+      - senger
+      - helsetjenester
     extents:
       spatial:
         bbox: [5.661964614014777, 58.01289713711848, 38.86783938382364, 77.15419161001824]
@@ -76,7 +80,7 @@ resources:
             - cql-text
 
     schema:
-      # Resolved properties for hospitalpoints (Local: 34, Total: 34)
+      # Resolved properties for hospitalpoints (Local: 33, Total: 33)
       # Generator Version: 1.0.2
       title: "hospitalpoints"
       type: object
@@ -186,24 +190,17 @@ resources:
         "uuid":
           title: "Uuid"
           type: string
-        "kodeliste":
-          title: "kodeliste"
-          type: string
-          enum:
-            - "1"
-            - "2"
 
   areas:
     type: collection
-    title: areas
+    title: Områder
     description: Dette laget inneholder polygoner som representerer definerte geografiske områder. Formålet er å identifisere og avgrense ulike regioner eller studieområder, hvor hvert område er utstyrt med en unik identifikator (`id`).
     keywords:
-      - områder
       - arealer
-      - geometri
-      - polygon
-      - flater
-      - kartdata
+      - områder
+      - geografi
+      - romlig
+      - datasett
     extents:
       spatial:
         bbox: [5.661964614014777, 58.01289713711848, 38.86783938382364, 77.15419161001824]
