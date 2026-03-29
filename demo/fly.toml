@@ -15,11 +15,11 @@ primary_region = "ams"
   # FIX: Pre-populated since Fly app names are deterministic.
   # Update if you configure a custom domain.
   PYGEOAPI_SERVER_URL = "https://sykehus-pygeoapi.fly.dev"
-  # Fly routes to internal_port (80) below — PORT env var is not used by Fly.
-  PORT = "80"
+  # Fly routes to internal_port (8080) below — PORT env var is not used by Fly.
+  PORT = "8080"
 
 [http_service]
-  internal_port = 80
+  internal_port = 8080
   force_https = true
   auto_stop_machines = "stop"
   auto_start_machines = true
@@ -38,7 +38,7 @@ primary_region = "ams"
 [checks]
   [checks.health]
     type = "http"
-    port = 80
+    port = 8080
     path = "/conformance"
     interval = "30s"
     timeout = "5s"

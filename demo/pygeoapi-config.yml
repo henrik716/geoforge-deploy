@@ -1,11 +1,11 @@
 # pygeoapi configuration for Sykehus
-# Generated: 2026-03-29T12:20:46.409Z
+# Generated: 2026-03-29T13:04:12.337Z
 # Source: geopackage
 
 server:
   bind:
-    host: 127.0.0.1
-    port: ${PORT:-80}
+    host: 0.0.0.0
+    port: ${PORT:-8080}
   url: ${PYGEOAPI_SERVER_URL}
   mimetype: application/json; charset=UTF-8
   encoding: utf-8
@@ -26,7 +26,7 @@ logging:
 metadata:
   identification:
     title: Sykehus
-    description: Dette datasettet inneholder geografiske punktdata som representerer lokasjoner for sykehus. Formålet er å visualisere den romlige fordelingen av helseinstitusjoner, noe som er avgjørende for planlegging av helsetjenester, beredskapsanalyser og studier av tilgjengelighet. Hvert punkt inkluderer sentrale attributter som sykehusets navn, type institusjon, og viktig informasjon om hvorvidt sykehuset har en akuttmottak.
+    description: Dette datasettet inneholder geografiske punktdata som representerer lokasjoner for sykehus. Formålet er å visualisere den romlige fordelingen av helseinstitusjoner, noe som er avgjørende for planlegging av helsetjenester, beredskapsanalyser og studier av tilgjengelighet. Hvert punkt inkluderer sentrale attributter som sykehusets navn, type institusjon, og viktig informasjon om hvorvidt sykehuset har en akuttmottak..
     url: https://example.com/dataset
     terms_of_service: https://example.com/terms
     keywords:
