@@ -83,7 +83,6 @@ resources:
         extensions:
           filters:
             - cql2-text
-            - cql2-json
             - cql-text
 
     schema:
