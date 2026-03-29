@@ -1,10 +1,10 @@
 # pygeoapi configuration for Sykehus
-# Generated: 2026-03-29T12:00:23.133Z
+# Generated: 2026-03-29T12:20:46.409Z
 # Source: geopackage
 
 server:
   bind:
-    host: 127.0.0.1
+    host: 0.0.0.0
     port: ${PORT:-80}
   url: ${PYGEOAPI_SERVER_URL}
   mimetype: application/json; charset=UTF-8
@@ -83,6 +83,7 @@ resources:
         extensions:
           filters:
             - cql2-text
+            - cql2-json
             - cql-text
 
     schema:
